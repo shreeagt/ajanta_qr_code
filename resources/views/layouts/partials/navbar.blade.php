@@ -25,9 +25,9 @@
             </div>
             @endrole
             @role('so')
-            <div class="sidebar_list_item">
+            {{-- <div class="sidebar_list_item">
               <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
-            </div>
+            </div> --}}
             <div class="sidebar_list_item">
               <a href="{{ route('doctors.show') }}" class="items-center">
                 <i class="flaticon-house mr15"></i>Doctors

@@ -1,0 +1,7120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800;900&family=Noto+Sans+Gujarati:wght@400;500;600;700;800;900&family=Noto+Sans+Gurmukhi:wght@400;500;600;700;800;900&family=Noto+Sans+Malayalam:wght@400;500;600;700;800;900&family=Noto+Sans+Oriya:wght@400;700;900&family=Noto+Sans+Tamil:wght@400;500;600;700;800;900&family=Noto+Sans+Telugu:wght@400;500;600;700;800;900&family=Noto+Sans:wght@400;500&family=Noto+Serif+Bengali:wght@400;500;600;700;800;900&family=Noto+Serif+Kannada:wght@400;500;600;700;800;900&display=swap');
+
+html, body {
+    height: 100%;
+    /*font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin-bottom: 45px;*/
+}
+
+.font11 {font-size: 11px !important;}
+.font12 {font-size: 12px !important;}
+.font14 {font-size: 14px !important;}
+.font15 {font-size: 15px !important;}
+.fw500 {font-weight: 500;}
+.fw600 {font-weight: 600;}
+
+.txt_fff {color: #ffffff;}
+.txt_fff:hover,
+.txt_fff:focus {color: #ffffff;}
+
+.txt_666 {color: #666666;}
+.txt_666:hover,
+.txt_666:focus {color: #666666;}
+
+.txt_999 {color: #999999;}
+.txt_999:hover,
+.txt_999:focus {color: #999999;}
+
+.txt_333 {color: #333333;}
+.txt_333:hover,
+.txt_333:focus {color: #333333;}
+
+.txt_000 {color: #000000;}
+.txt_000:hover,
+.txt_000:focus {color: #000000;}
+
+.lh-1 {line-height: 1;}
+.lh-n {line-height: normal;}
+
+.pt0 {
+    padding-top: 0 !important;
+}
+
+.pt3 {
+    padding-top: 3px;
+}
+
+.pt4 {
+    padding-top: 4px;
+}
+
+.pt5 {
+    padding-top: 5px;
+}
+
+.pt10 {
+    padding-top: 10px;
+}
+
+.pt15 {
+    padding-top: 15px;
+}
+
+.pt20 {
+    padding-top: 20px;
+}
+
+.pt25 {
+    padding-top: 25px;
+}
+
+.pt30 {
+    padding-top: 30px;
+}
+
+.pt35 {
+    padding-top: 35px;
+}
+
+.pt40 {
+    padding-top: 40px;
+}
+
+.pb0 {
+    padding-bottom: 0px !important;
+}
+
+.pb3 {
+    padding-bottom: 5px;
+}
+
+.pb4 {
+    padding-bottom: 5px;
+}
+
+.pb5 {
+    padding-bottom: 5px;
+}
+
+.pb10 {
+    padding-bottom: 10px;
+}
+
+.pb15 {
+    padding-bottom: 15px;
+}
+
+.pb20 {
+    padding-bottom: 20px;
+}
+
+.pb25 {
+    padding-bottom: 25px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.pb35 {
+    padding-bottom: 35px;
+}
+
+.pb40 {
+    padding-bottom: 40px;
+}
+
+.pbo0 {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+.pbo5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.pbo10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.pbo15 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pbo20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.pbo25 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.pbo30 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.pbo35 {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.pbo40 {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.pl0 {
+    padding-left: 0px !important;
+}
+
+.pl5 {
+    padding-left: 5px;
+}
+
+.pl10 {
+    padding-left: 10px;
+}
+
+.pl15 {
+    padding-left: 15px;
+}
+
+.pl20 {
+    padding-left: 20px;
+}
+
+.pl25 {
+    padding-left: 25px;
+}
+
+.pl30 {
+    padding-left: 30px;
+}
+
+.pl35 {
+    padding-left: 35px;
+}
+
+.pl40 {
+    padding-left: 40px;
+}
+
+.pl45 {
+    padding-left: 45px;
+}
+
+.pl50 {
+    padding-left: 50px;
+}
+
+.pr0 {
+    padding-right: 0px !important;
+}
+
+.pr5 {
+    padding-right: 5px;
+}
+
+.pr10 {
+    padding-right: 10px;
+}
+
+.pr15 {
+    padding-right: 15px;
+}
+
+.pr20 {
+    padding-right: 20px;
+}
+
+.pr25 {
+    padding-right: 25px;
+}
+
+.pr30 {
+    padding-right: 30px;
+}
+
+.pr35 {
+    padding-right: 35px;
+}
+
+.pr40 {
+    padding-right: 40px;
+}
+
+.pr45 {
+    padding-right: 45px;
+}
+
+.pr50 {
+    padding-right: 50px;
+}
+
+.pall0 {
+    padding: 0px !important;
+}
+
+.pall5 {
+    padding: 5px;
+}
+
+.pall10 {
+    padding: 10px;
+}
+
+.pall15 {
+    padding: 15px;
+}
+
+.pall20 {
+    padding: 20px;
+}
+
+.pall25 {
+    padding: 25px;
+}
+
+.pall30 {
+    padding: 30px;
+}
+
+.pall35 {
+    padding: 35px;
+}
+
+.pall40 {
+    padding: 40px;
+}
+
+.pall45 {
+    padding: 45px;
+}
+
+.pall50 {
+    padding: 50px;
+}
+
+.mt0 {
+    margin-top: 0px !important;
+}
+
+.mt5 {
+    margin-top: 5px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.mt25 {
+    margin-top: 25px;
+}
+
+.mt30 {
+    margin-top: 30px;
+}
+
+.mt35 {
+    margin-top: 35px;
+}
+
+.mt40 {
+    margin-top: 40px;
+}
+
+.mt50 {
+    margin-top: 50px;
+}
+
+.mb0 {
+    margin-bottom: 0px !important;
+}
+
+.mb5 {
+    margin-bottom: 5px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb25 {
+    margin-bottom: 25px;
+}
+
+.mb30 {
+    margin-bottom: 30px;
+}
+
+.mb35 {
+    margin-bottom: 35px;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
+.mbo0 {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.mbo5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mbo10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mbo15 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.mbo20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mbo25 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.mbo30 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.mbo35 {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.mbo40 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ml0 {
+    margin-left: 0px !important;
+}
+
+.ml5 {
+    margin-left: 5px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.ml15 {
+    margin-left: 15px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.ml25 {
+    margin-left: 25px;
+}
+
+.ml30 {
+    margin-left: 30px;
+}
+
+.ml35 {
+    margin-left: 35px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.mr0 {
+    margin-right: 0px !important;
+}
+
+.mr3 {
+    margin-right: 3px;
+}
+
+.mr4 {
+    margin-right: 4px;
+}
+
+.mr5 {
+    margin-right: 5px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr15 {
+    margin-right: 15px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr25 {
+    margin-right: 25px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mr35 {
+    margin-right: 35px;
+}
+
+.mr40 {
+    margin-right: 40px;
+}
+
+.mall0 {
+    margin: 0px !important;
+}
+
+.mall5 {
+    margin: 5px;
+}
+
+.mal10 {
+    margin: 10px;
+}
+
+.mal15 {
+    margin: 15px;
+}
+
+.mall20 {
+    margin: 20px;
+}
+
+.mall25 {
+    margin: 25px;
+}
+
+.mall30 {
+    margin: 30px;
+}
+
+.mall35 {
+    margin: 35px;
+}
+
+.mall40 {
+    margin: 40px;
+}
+
+img {
+	vertical-align: middle;
+	height: auto;
+	max-width: 100%;
+	border: 0;
+}
+
+a {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+
+.modal {
+	padding-right: 0!important;
+}
+
+.qr-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 15px 25px 55px;
+}
+
+.qr-bg-top {
+    height: 50%;
+    width: 100%;
+    background-color: #ff7c0c;
+}
+
+.qr-bg-bottom {
+    height: 50%;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.qr-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.qr-title {
+    color: #ffffff;
+    font-weight: 700;
+    padding: 10px 0 20px;
+}
+
+.qr-desc {
+    color: #ffffff;
+    font-weight: 400;
+    opacity: 0.75;
+}
+
+.qr-img img {
+    /* box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 14.1px 0.9px, rgba(0, 0, 0, 0.16) 0px 4px 19.6px 0.4px; */
+    max-width: 100%;
+}
+
+span.oi {
+    padding: 6px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.9;
+}
+
+
+.qr-btn a {
+    background-color: #333;
+    width: 100%;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0;
+    text-decoration: none;
+}
+
+.qr-options {
+    color: #fff;
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    font-size: 20px;
+}
+
+.qr-options i {
+    padding: 5px;
+    font-size: 22px;
+    position: absolute;
+    right: 35px;
+}
+
+.qr-img {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.qr-btn {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+.qr-bg.audio {
+    -moz-transform: translate(0px, -130px) skew(0deg, -13deg);
+    -webkit-transform: translate(0px, -130px) skew(0deg, -13deg);
+    -o-transform: translate(0px, -130px) skew(0deg, -13deg);
+    -ms-transform: translate(0px, -130px) skew(0deg, -13deg);
+    transform: translate(0px, -130px) skew(0deg, -13deg);
+}
+
+.qr-img.audio {
+    padding: 15% 10% 5%;
+}
+
+.qr-title.audio {
+    text-align: center;
+}
+
+.qr-title.audio h3 {
+    color: #000;
+    font-size: 24px;
+}
+
+.qr-title.audio .qr-desc {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/*Audio player start  */
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(1turn);
+    }
+}
+
+.green-audio-player {
+    /*  width: 400px; */
+    min-width: 300px;
+    height: 56px;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.07);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 4px;
+    user-select: none;
+    background-color: #fff;
+    position: relative;
+    z-index: 9999;
+}
+
+.green-audio-player svg,
+.green-audio-player img {
+    display: block;
+}
+
+.green-audio-player .play-pause-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.green-audio-player .loading .loading__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #b0b0b0;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.4s linear infinite;
+}
+
+.green-audio-player .slider {
+    flex-grow: 1;
+    background-color: #d8d8d8;
+    cursor: pointer;
+    position: relative;
+}
+
+.green-audio-player .slider .gap-progress {
+    background-color: #44bfa3;
+    border-radius: inherit;
+    position: absolute;
+    pointer-events: none;
+}
+
+.green-audio-player .slider .gap-progress .pin {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #44bfa3;
+    position: absolute;
+    pointer-events: all;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.32);
+}
+
+.green-audio-player .controls {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #55606e;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.green-audio-player .controls .controls__slider {
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.green-audio-player .controls .controls__slider .controls__progress {
+    width: 0;
+    height: 100%;
+}
+
+.green-audio-player .controls .controls__slider .controls__progress .progress__pin {
+    right: -8px;
+    top: -6px;
+}
+
+.green-audio-player .controls span {
+    cursor: default;
+}
+
+.green-audio-player .volume {
+    position: relative;
+}
+
+.green-audio-player .volume .volume__button {
+    cursor: pointer;
+}
+
+.green-audio-player .volume .volume__button.open path {
+    fill: #44bfa3;
+}
+
+.green-audio-player .volume .volume__controls {
+    width: 30px;
+    height: 135px;
+    background-color: rgba(0, 0, 0, 0.62);
+    border-radius: 7px;
+    position: absolute;
+    left: -3px;
+    bottom: 52px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+}
+
+.green-audio-player .volume .volume__controls.hidden {
+    display: none;
+}
+
+.green-audio-player .volume .volume__controls.top {
+    bottom: 52px;
+    left: -3px;
+}
+
+.green-audio-player .volume .volume__controls.middle {
+    bottom: -54px;
+    left: 54px;
+}
+
+.green-audio-player .volume .volume__controls.bottom {
+    bottom: -164px;
+    left: -3px;
+}
+
+.green-audio-player .volume .volume__controls .volume__slider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 6px;
+    border-radius: 3px;
+}
+
+.green-audio-player .volume .volume__controls .volume__slider .volume__progress {
+    bottom: 0;
+    height: 100%;
+    width: 6px;
+}
+
+.green-audio-player .volume .volume__controls .volume__slider .volume__progress .volume__pin {
+    left: -5px;
+    top: -8px;
+}
+
+
+/* Audio player end */
+
+.qr-btn.audio a {
+    background-color: #fff;
+    color: #666;
+    font-size: 13px;
+    border-radius: 20px;
+    border: 1px #ccc solid;
+    display: inline-block;
+    width: auto;
+    padding: 10px 30px;
+}
+
+.qr-btn.audio {
+    position: relative;
+    margin-top: 30px;
+    /* background-color: #fff; */
+    text-align: center;
+}
+
+
+/* Video style */
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.youtube-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("http://i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
+}
+
+
+/* video style end */
+
+.qr-bg.video .qr-bg-top,
+.qr-bg.video .qr-bg-bottom {
+    background-color: #FFFFFF;
+    /*dynamic color*/
+}
+
+.qr-container.qr-bg-middle {
+    background-color: #FFFFFF;
+    /*dynamic color*/
+}
+
+.qr-video-topic h3 {
+    color: #000000;
+    font-size: 24px;
+    text-align: center;
+    padding: 10px;
+}
+
+.qr-title.video h3 {
+    font-size: 24px;
+}
+
+.qr-options a i {
+    color: #000000;
+}
+
+.color-1-bg {
+    background-color: #7f1616;
+}
+
+.raha {
+    background: url("../images/raha-bg.png") no-repeat center top;
+    background-size: contain;
+}
+
+.raha .logo img {
+    padding-top: 22px;
+    max-width: 100%;
+    text-align: center;
+    margin-left: -52px;
+}
+
+.raha .qr-video-topic h5 {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.raha .card-header {
+    background: url("../images/raha-accordian-bg.png") no-repeat center 0;
+}
+
+.raha .btn-link {
+    display: block;
+    width: 100%;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.raha .btn-link:hover {
+    text-decoration: none;
+}
+
+.raha .card,
+.raha .card-header {
+    border: 0;
+    background-color: transparent;
+}
+
+.raha .card:after {
+    content: "";
+    background: url("../images/raha-separater.png") center 0;
+    width: 250px;
+    margin: 0 auto;
+    display: block;
+    height: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.psoriasis {
+    padding: 20px;
+    /*  height: 100%; */
+    background: #ffffff;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #c9d0e8 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #c9d0e8 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffffff 0%, #c9d0e8 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#c9d0e8', GradientType=0);
+    /* IE6-9 */
+}
+
+.psoriasis .container {
+    border: 2px #21336c solid;
+    height: 100%;
+}
+
+.psoriasis .logo img {
+    max-width: 80%;
+}
+
+.psoriasis .logo2 img {
+    max-width: 40%;
+}
+
+.psoriasis small {
+    font-size: 14px;
+    color: #0a6da1;
+    text-transform: uppercase;
+}
+
+#tps {
+    background-color: #9651a0;
+    color: #FFFFFF;
+}
+
+#tps ul.tps {
+    list-style: none;
+    padding: 0;
+}
+
+#tps .tps li {
+    display: block;
+    width: 100%;
+    float: left;
+    padding: 15px;
+    border-bottom: 1px #b56abf solid;
+}
+
+#tps .tps li img {
+    max-width: 100%;
+}
+
+.tps li div {
+    /*height: 60px;
+   display: table; */
+}
+
+#tps .tps p {
+    font-size: 22px;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#tps .tps a {
+    display: block;
+    float: left;
+    color: #FFFFFF;
+    position: relative;
+    width: 100%;
+}
+
+#tps .tps a:after {
+    content: '\25BA';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#tps h1 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 35px;
+    background-color: #fff;
+    margin: 0 0 10px;
+    color: #9651a0;
+    padding: 34px 0;
+}
+
+#aloja {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+#aloja img {
+    max-width: 80%;
+}
+
+.aloja-heading {
+    padding: 30px 0;
+}
+
+#aloja .logo {
+    margin-bottom: 30px;
+}
+
+#aloja p.title {
+    /* margin-top: 45px; */
+    color: #666;
+}
+
+#aloja .aloja-img-2 {
+    margin-top: 30px;
+}
+
+#aloja .aloja-img-1 {
+    padding: 30px 0;
+}
+
+.aloja-bg {
+    position: fixed;
+    width: 100%;
+    height: 185px;
+    bottom: 0;
+    z-index: -11;
+    opacity: 0.2;
+}
+
+.aloja-bg {
+    background: rgba(74, 153, 189, 0);
+    background: -moz-linear-gradient(top, rgba(74, 153, 189, 0) 0%, rgba(74, 153, 189, 0.44) 44%, rgba(74, 153, 189, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(74, 153, 189, 0)), color-stop(44%, rgba(74, 153, 189, 0.44)), color-stop(100%, rgba(74, 153, 189, 1)));
+    background: -webkit-linear-gradient(top, rgba(74, 153, 189, 0) 0%, rgba(74, 153, 189, 0.44) 44%, rgba(74, 153, 189, 1) 100%);
+    background: -o-linear-gradient(top, rgba(74, 153, 189, 0) 0%, rgba(74, 153, 189, 0.44) 44%, rgba(74, 153, 189, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(74, 153, 189, 0) 0%, rgba(74, 153, 189, 0.44) 44%, rgba(74, 153, 189, 1) 100%);
+    background: linear-gradient(to bottom, rgba(74, 153, 189, 0) 0%, rgba(74, 153, 189, 0.44) 44%, rgba(74, 153, 189, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#4a99bd', endColorstr='#4a99bd', GradientType=0);
+}
+
+#aloja .green-audio-player .slider .gap-progress .pin {
+    background-color: #0064b1;
+}
+
+.digi-img {
+    background: url(../images/Digi-bg.png) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    text-align: center;
+    margin: auto;
+    background-size: cover;
+}
+
+.color-bg {
+    background-color: #698b40;
+    height: 100%;
+}
+
+.digi-title {
+    color: #FFF;
+    line-height: 20px;
+    padding-bottom: 24px;
+    margin-top: -12px;
+}
+
+.qr-btn.audio img {
+    max-width: 100%;
+}
+
+img.digi-wave {
+    display: block;
+    position: relative;
+    z-index: 99;
+}
+
+
+/*Audio player start  */
+
+@keyframes spin {
+    from {
+        transform: rotateZ(0);
+    }
+    to {
+        transform: rotateZ(1turn);
+    }
+}
+
+.digi-audio-player {
+    /*  width: 400px; */
+    min-width: 300px;
+    height: 56px;
+    box-shadow: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15% 24px;
+    border-radius: 4px;
+    user-select: none;
+    background-color: transparent;
+    position: relative;
+    z-index: 9999;
+}
+
+.digi-audio-player svg,
+.digi-audio-player img {
+    display: block;
+}
+
+.digi-audio-player .play-pause-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.digi-audio-player .loading .loading__spinner {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #b0b0b0;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.4s linear infinite;
+}
+
+.digi-audio-player .slider {
+    flex-grow: 1;
+    background-color: #3c5728;
+    cursor: pointer;
+    position: relative;
+}
+
+.digi-audio-player .slider .gap-progress {
+    background-color: #3c5728;
+    border-radius: inherit;
+    position: absolute;
+    pointer-events: none;
+}
+
+.digi-audio-player .slider .gap-progress .pin {
+    height: 16px;
+    width: 16px;
+    border-radius: 8px;
+    background-color: #3c5728;
+    position: absolute;
+    pointer-events: all;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.32);
+}
+
+.digi-audio-player .controls {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: #3c5728;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.digi-audio-player .controls .controls__slider {
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.digi-audio-player .controls .controls__slider .controls__progress {
+    width: 0;
+    height: 100%;
+}
+
+.digi-audio-player .controls .controls__slider .controls__progress .progress__pin {
+    right: -8px;
+    top: -6px;
+}
+
+.digi-audio-player .controls span {
+    cursor: default;
+}
+
+.digi-audio-player .volume {
+    position: relative;
+}
+
+.digi-audio-player .volume .volume__button {
+    cursor: pointer;
+}
+
+.digi-audio-player .volume .volume__button.open path {
+    fill: #3c5728;
+}
+
+.digi-audio-player .volume .volume__controls {
+    width: 30px;
+    height: 135px;
+    background-color: rgba(0, 0, 0, 0.62);
+    border-radius: 7px;
+    position: absolute;
+    left: -3px;
+    bottom: 52px;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    z-index: 2;
+}
+
+.digi-audio-player .volume .volume__controls.hidden {
+    display: none;
+}
+
+.digi-audio-player .volume .volume__controls.top {
+    bottom: 52px;
+    left: -3px;
+}
+
+.digi-audio-player .volume .volume__controls.middle {
+    bottom: -54px;
+    left: 54px;
+}
+
+.digi-audio-player .volume .volume__controls.bottom {
+    bottom: -164px;
+    left: -3px;
+}
+
+.digi-audio-player .volume .volume__controls .volume__slider {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    width: 6px;
+    border-radius: 3px;
+}
+
+.digi-audio-player .volume .volume__controls .volume__slider .volume__progress {
+    bottom: 0;
+    height: 100%;
+    width: 6px;
+}
+
+.digi-audio-player .volume .volume__controls .volume__slider .volume__progress .volume__pin {
+    left: -5px;
+    top: -8px;
+}
+
+.digi-audio-player .play-pause-btn svg path,
+.digi-audio-player .volume svg path {
+    fill: #3c5728;
+}
+
+
+/* Audio player end */
+
+
+/* cetanil */
+
+.cetanil {
+    text-align: center;
+    background: rgb(244, 244, 244);
+    background: radial-gradient(circle, rgba(244, 244, 244, 1) 0%, rgba(223, 223, 223, 1) 100%);
+}
+
+.cetanil .cetanil-logo {
+    text-align: center;
+    border-bottom: 2px #2d2b75 solid;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.cetanil .title {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 30px;
+    border-bottom: 2px #2d2b75 solid;
+    margin: 10px auto;
+    padding-bottom: 10px;
+}
+
+.cetanil ul.language {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.cetanil .footer-logo {
+    padding: 20px 0;
+}
+
+.cetanil .footer-logo img {
+    max-width: 100%;
+}
+
+.cetanil .red {
+    color: #c61e54;
+}
+
+.cetanil .blue {
+    color: #2a388c;
+}
+
+.cetanil p {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.cetanil ul.language li {
+    font-size: 24px;
+    line-height: 60px;
+    border: 1px #c61e54 solid;
+    border-radius: 50px;
+    margin-bottom: 15px;
+    color: #c61e54;
+}
+
+.cetanil ul.language li a {
+    color: #c61e54;
+    text-decoration: none;
+    display: block;
+}
+
+.cetanil ul.language li a:hover {
+    color: #fff !important;
+    text-decoration: none;
+    display: block;
+}
+
+.cetanil ul.language li:hover {
+    background-color: #c61e54;
+    color: #FFFFFF;
+}
+
+.cetanil ul.language li:nth-child(odd) {
+    border: 1px #2a388c solid;
+    color: #2a388c;
+}
+
+.cetanil ul.language li:nth-child(odd) a {
+    color: #2a388c;
+}
+
+.cetanil ul.language li:hover:nth-child(odd) {
+    background-color: #2a388c;
+    color: #FFFFFF;
+}
+
+.cetanil .modal-dialog {
+    top: 30%;
+}
+
+a.cetanil-download {
+    display: block;
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 20px 0;
+    /* background-color: #ccc; */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.cetanil .modal-title {
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+/* .cetanil-download.red:before {
+  content:"";
+  background-image: url(../images/Cetanil-right-arrow.png);
+  width:50px;
+  height:50px;
+  display: block;
+}
+.cetanil-download.blue:after {
+  content:"";
+  background-image: url(../images/Cetanil-left-arrow.png);
+  width:50px;
+  height:50px;
+  display: block;
+} */
+
+#montair img.logo {
+    width: 100px;
+    float: right;
+    padding: 10px;
+}
+
+#montair a.title {
+    padding: 10px 0;
+    display: block;
+    text-decoration: none;
+    color: #000;
+    border: 2px #f18a42 solid;
+    border-radius: 50px;
+    margin: 30px auto 10px;
+    width: 300px;
+}
+
+#montair img {
+    max-width: 100%;
+    padding: 15px 24px;
+}
+
+.montair-img-footer img {
+    width: 65%;
+    /* margin-top: 35px; */
+}
+
+#montair .bg {
+    margin: 0 -15px;
+}
+
+#montair .bg img {
+    padding: 0;
+    /* margin: 0 -15px; */
+}
+
+#protone img.logo {
+    padding: 10px 0 0 0;
+}
+
+#protone a.title {
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+#protone img {
+    max-width: 100%;
+    padding: 24px 0;
+}
+
+.protone-img-footer {
+    margin: 0 -15px;
+}
+
+.protone-img-footer img {
+    width: 100%;
+    margin-top: 35px;
+}
+
+#protone .bg {
+    /* margin: 0 -15px; */
+}
+
+#protone .bg img {
+    padding: 0;
+    /* margin: 0 -15px; */
+}
+
+.logo.pm img {
+    margin-left: 0 !important;
+}
+
+#prohance-mom h3 {
+    color: #E7438E
+}
+
+#prohance-mom h5 {
+    color: #000000;
+    font-weight: 300;
+}
+
+#prohance-mom img.logo {
+    padding: 10px 0 0 0;
+    right: 6px;
+    position: absolute;
+    top: 0;
+}
+
+.prohance-mom-pic img {
+    padding: 0 !important;
+    display: block;
+    position: relative;
+    margin: 30px auto 0;
+    width: 200px;
+}
+
+#prohance-mom a.title {
+    padding: 20px 0;
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+#prohance-mom img {
+    max-width: 100%;
+    padding: 2px 0 25px;
+}
+
+.prohance-mom-img-footer {
+    margin: 0 -15px;
+}
+
+.prohance-mom-img-footer img {
+    width: 100%;
+    margin-top: 15px;
+    padding: 20px !important;
+}
+
+#prohance-mom .bg {
+    margin: 0 -15px;
+}
+
+#prohance-mom .bg img {
+    padding: 0;
+    /* margin: 0 -15px; */
+}
+
+#darolac img {
+    max-width: 100%;
+}
+
+#darolac .logo img {
+    margin: -70px auto 0;
+}
+
+#darolac .card-header {
+    border-radius: 100px;
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+    background-color: #0088cb;
+    color: #fff;
+}
+
+#darolac .card {
+    border: 0;
+}
+
+#darolac .card-header button {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#darolac .card-header button:before {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #0088cb;
+    content: " ";
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+#darolac .card-header button.btn.btn-link.collapsed:before {
+    display: none;
+}
+
+audio.playback {
+    width: 100%;
+}
+
+#zitaplus .color-bg {
+    background-color: #e5e5e5;
+}
+
+#zitaplus h4 {
+    color: chocolate;
+}
+
+#goldguidelines img {
+    max-width: 100%
+}
+
+#goldguidelines {
+    background: rgba(237, 237, 237, 1);
+    background: -moz-linear-gradient(top, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237, 237, 237, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(top, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(top, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(237, 237, 237, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(255, 255, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
+}
+
+#stresnil {
+    height: 100%;
+    background: rgba(226, 226, 226, 1);
+    background: -moz-linear-gradient(45deg, rgba(226, 226, 226, 1) 0%, rgba(254, 254, 254, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(226, 226, 226, 1)), color-stop(100%, rgba(254, 254, 254, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(226, 226, 226, 1) 0%, rgba(254, 254, 254, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(226, 226, 226, 1) 0%, rgba(254, 254, 254, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(226, 226, 226, 1) 0%, rgba(254, 254, 254, 1) 100%);
+    background: linear-gradient(45deg, rgba(226, 226, 226, 1) 0%, rgba(254, 254, 254, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=1);
+}
+
+#stresnil h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #e11f25;
+    font-weight: 600;
+}
+
+#stresnil h4 {
+    color: #333333;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+#stresnil .brand-logo {
+    text-align: center;
+    padding: 30px 50px;
+}
+
+#stresnil .brand-logo img {
+    max-width: 100%;
+}
+
+#tcoa {
+    height: 100%;
+    background: rgba(186, 182, 186, 1);
+    background: -moz-linear-gradient(top, rgba(186, 182, 186, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(186, 182, 186, 1)), color-stop(53%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(255, 255, 255, 1)));
+    background: -webkit-linear-gradient(top, rgba(186, 182, 186, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(top, rgba(186, 182, 186, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(186, 182, 186, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to bottom, rgba(186, 182, 186, 1) 0%, rgba(246, 246, 246, 1) 53%, rgba(255, 255, 255, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#bab6ba', endColorstr='#ffffff', GradientType=0);
+}
+
+#tcoa .dr_photo {
+    background-color: #FFF;
+    /* border: 4px #e31e25 solid; */
+    width: 300px;
+    margin: -18% auto 0;
+    z-index: 99;
+    position: relative;
+}
+
+#tcoa .dr_photo img {
+    max-width: 100%;
+    display: block;
+}
+
+#tcoa .qr-container {
+    padding: 0;
+    /* min-height: 750px; */
+}
+
+#tcoa h1 {
+    text-align: center;
+    font-size: 20px;
+    color: #5a5a5a;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+#tcoa .title-img {
+    max-width: 100%;
+    padding: 0 30px;
+}
+
+#tcoa .brand-logo {
+    text-align: center;
+    padding: 30px 50px;
+}
+
+#tcoa .brand-logo img {
+    max-width: 100%;
+}
+
+#tcoa .form-control {
+    position: relative;
+    height: 50px;
+    line-height: 38px;
+    text-transform: uppercase;
+    text-align: left;
+    background: rgba(255, 255, 255, 1);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+}
+
+#tcoa select {
+    -webkit-appearance: none;
+}
+
+#tcoa a.form-control::after {
+    font-family: 'Icons';
+    content: '\e03c';
+    /* background: url(images/Taking_Control_of_Asthma-5.png) no-repeat 4px 6px #e31e25; */
+    position: absolute;
+    z-index: 999;
+    width: 50px;
+    height: 46px;
+    display: inline-block;
+    /* padding: 0; */
+    right: 2px;
+    padding: 5px;
+    border-radius: 6px;
+    top: 2px;
+    font-size: 30px;
+    background-color: #e31e25;
+    color: #fff;
+    text-align: center;
+}
+
+#tcoa .form-group {
+    position: relative;
+}
+
+#tcoa .form-group span {
+    position: absolute;
+    z-index: 999;
+    width: 50px;
+    height: 46px;
+    display: inline-block;
+    right: 2px;
+    padding: 5px;
+    border-radius: 6px;
+    top: 2px;
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    background-color: #e31e25;
+}
+
+#tcoa-form {
+    padding: 30px;
+    margin-top: 30px;
+}
+
+#tcoa .lang_pdf {
+    display: none;
+}
+
+#tcoa .top-bg {
+    height: 215px;
+    width: 100%;
+    background-color: #e31e25;
+}
+
+#tcoa .top-bg img {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+}
+
+#tcoa.bottom-band {
+    width: 100%;
+    height: 60px;
+    background-color: #e31e25;
+    position: relative;
+    bottom: 0;
+}
+
+#sgltr img {
+    max-width: 100%;
+}
+
+#sgltr .card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    background-color: transparent;
+    margin: 30px 15px;
+    border: 0 none;
+}
+
+#sgltr .card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#sgltr .card .back {
+    /* background: blue; */
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+#sgltr .card.flipped {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+#sgltr .logo img {
+    width: 150px;
+    position: relative;
+    float: right;
+    display: block;
+}
+
+#sgltr a.flip-btn {
+    position: absolute;
+    z-index: 999;
+    margin-top: 50px;
+}
+
+#sgltr .qr-options {
+    display: none;
+}
+
+#dynaglipt img {
+    max-width: 100%;
+}
+
+#dynaglipt .card {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+    background-color: transparent;
+    margin: 0;
+    border: 0 none;
+}
+
+#dynaglipt .card div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#dynaglipt .card .back {
+    /* background: blue; */
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+#dynaglipt .card.flipped {
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY( 180deg);
+    -o-transform: rotateY( 180deg);
+    transform: rotateY( 180deg);
+}
+
+#dynaglipt a.flip-btn {
+    position: absolute;
+    z-index: 999;
+    margin-top: 30px;
+}
+
+#dynaglipt .logo img {
+    width: 150px;
+    position: relative;
+    float: right;
+    display: block;
+}
+
+.dynaglipt {
+    background: rgba(255, 255, 255, 1);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 48%, rgba(150, 217, 241, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(0%, rgba(255, 255, 255, 1)), color-stop(48%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(150, 217, 241, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 48%, rgba(150, 217, 241, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 48%, rgba(150, 217, 241, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 48%, rgba(150, 217, 241, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 48%, rgba(150, 217, 241, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#96d9f1', GradientType=1);
+}
+
+#luliz img {
+    max-width: 100%;
+}
+
+#luliz {
+    text-align: center;
+    background: #dae4ed;
+}
+
+#luliz .modal-content,
+#luliz .modal-body {
+    background-color: transparent;
+    border: 0 none;
+}
+
+#lulizModal .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#lulizModal button.close {
+    color: #fff;
+}
+
+#qrModal .modal-content,
+#qrModal .modal-body {
+    background-color: transparent;
+    border: 0 none;
+}
+
+#qrModal .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#qrModal button.close {
+    color: #fff;
+}
+
+#qrModal iframe {
+    width: 100%;
+    height: 300px;
+}
+
+/* #qrModal-1 */
+#qrModal-1 .modal-content,
+#qrModal-1 .modal-body {
+    background-color: transparent;
+    border: 0 none;
+}
+
+#qrModal-1 .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#qrModal-1 button.close {
+    color: #fff;
+}
+
+#qrModal-1 iframe {
+    width: 100%;
+    height: 300px;
+}
+/* end */
+
+/* #qrModal-2 */
+#qrModal-2 .modal-content,
+#qrModal-2 .modal-body {
+    background-color: transparent;
+    border: 0 none;
+}
+
+#qrModal-2 .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#qrModal-2 button.close {
+    color: #fff;
+}
+
+#qrModal-2 iframe {
+    width: 100%;
+    height: 300px;
+}
+/* end */
+
+/* #qrModal-3 */
+#qrModal-3 .modal-content,
+#qrModal-3 .modal-body {
+    background-color: transparent;
+    border: 0 none;
+}
+
+#qrModal-3 .modal-dialog {
+    -webkit-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    top: 50%;
+    margin: 0 auto;
+}
+
+#qrModal-3 button.close {
+    color: #fff;
+}
+
+#qrModal-3 iframe {
+    width: 100%;
+    height: 300px;
+}
+/* end */
+
+
+
+#dvt {
+    background: url('images/dvt-img-bg.jpg') no-repeat center 0 #77070a;
+}
+
+#dvt img {
+    max-width: 100%;
+}
+
+#dvt hr {
+    border-top: 1px solid #a01116;
+}
+
+.acne {
+    background-color: #fef0e5;
+}
+
+.acne img.photo {
+    padding: 30px;
+}
+
+.acne img.company-logo {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.acne img.play {
+    width: 33px;
+    margin-bottom: 5px;
+}
+
+.acne h5 {
+    color: #8d2929;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* #st-2 {
+    display: none !important;
+} */
+
+.acne .btn-video {
+    font-size: 14px;
+    color: #8d2929;}
+
+    .acne .btn-video span {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .monocef img.play {
+        width: 33px;
+        margin-bottom: 5px;
+    }
+    .monocef .btn-video {
+        font-size: 14px;
+        color: #8d2929;}
+    
+        .monocef .btn-video span {
+            display: block;
+            margin-bottom: 15px;
+        }
+        .acutret {
+            background-color: #fef0e5;
+        }
+        
+        .acutret img.photo {
+            padding: 30px;
+        }
+       
+        
+        .acutret img.play {
+            width: 75px;
+            margin-bottom: 30px;
+        }
+        
+        .acutret h5 {
+            color: #8d2929;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        #megacholin .color-bg {
+            background-color: #FFF;
+        }
+        #megacholin h4 {
+            color: #cc1a5b;
+        }
+
+        .azaadi_asthma {
+            background: url("http://pitchman.in/images/azaadi-bg.png") no-repeat center center;
+            background-size: contain;
+        }
+
+        .azaadi_asthma .logo img {
+            width: 190px;
+        }
+
+        .azaadi_asthma .lang-head {
+            text-align: center;
+            margin: 25px 0;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #fff;
+            background-color: #6b9489;
+            padding: 7px;
+            border-radius: 50px;
+        }
+
+        .azaadi_asthma ul.lang-btn {
+            list-style: none;
+            padding: 0 0 50px 0; 
+            text-align: center;
+        }
+
+        .azaadi_asthma ul.lang-btn li {
+            padding: 5px 0;
+        }
+
+        .azaadi_asthma .lang-btn a {
+            color: #000;
+            text-align: center;
+            padding: 5px 0;
+            display: block;
+            text-decoration: none;
+        }
+
+        .azaadi_asthma .modal-body .btn-primary {
+            background-color: transparent;
+            border: 0 none;
+            color: #709a8f !important;
+            border-radius: 50px;
+            padding-left: 0;
+        }
+
+        .azaadi_asthma .fa,
+        .azaadi_asthma .fas {
+            font-weight: 900;
+            width: 20px;
+        }
+
+        .azaadi_asthma .modal-body h5 {
+            font-size: 15px;
+            margin-top: 30px;
+            /* border-bottom: 1px #ccc solid; */
+        }
+
+        .azaadi_asthma #qrModal iframe {
+            width: 100%;
+            height: auto !important;
+        }
+        .qrModal .modal-content,
+        .qrModal .modal-body {
+            background-color: transparent;
+            border: 0 none;
+        }
+
+        .qrModal .modal-dialog {
+            -webkit-transform: translate(0, -50%);
+            -o-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            margin: 0 auto;
+        }
+
+        .qrModal button.close {
+            color: #fff;
+        }
+
+        .qrModal iframe {
+            width: 100%;
+            height: auto;
+        }
+
+        .bph .title {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+        }
+
+        .frame {
+            position: relative;
+            top: 40px;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            width: 320px;
+    margin: 0 auto;
+        }
+
+        .bph img.photo-bg {
+            width: 320px;
+        }
+
+        .bph img.photo {
+            position: absolute;
+            top: 188px;
+            left: 101px;
+            width: 118px;
+            /* right: 0; */
+            margin: 0 auto;
+        }
+
+        .bph .frame h3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 360px;
+            font-size: 20px;
+            color: #253B7F;
+        }
+
+        .bph .frame h5 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 390px;
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .bph .text-1 {
+            position: relative;
+            background-color: #253B7F;
+            margin: -50px 15px 37px;
+            color: yellow;
+            padding: 5px 10px;
+            border-radius: 10px;
+            z-index: 99;
+        }
+
+        .bph i.fa-play {
+            display: block;
+            color: #FFF;
+            background-color: #253B7F;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            padding-top: 17px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bph a span {
+            font-size: 13px;
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .bph .frame.name h3 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 232px;
+            font-size: 20px;
+            color: #253B7F;
+        }
+
+
+        .bph .frame.name h5 {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 269px;
+            font-size: 18px;
+            color: #000000;
+        }
+        #bph {
+            width: 320px;
+            margin: 0 auto;
+        }
+        .oab {
+            background-color: #f0f9ff;
+        }
+
+        .oab .frame {
+            position: relative;
+            text-align: right;
+            padding: 0 15px;
+            top: 0;
+        }
+        .oab .frame h2 {
+            position: relative;     
+            color: #253B7F;
+            font-size: 20px;
+        }
+
+        .oab .frame h3 {
+            position: relative;
+            color: #000000;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .oab .frame p {
+            position: relative;
+            color: #000000;
+            font-size: 13px;
+        }
+
+
+        .oab .oab-btn i {
+            display: block;
+            color: #FFF;
+            background-color: #253B7F;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            padding-top: 13px;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 24px;
+        }
+
+        .oab a span {
+            font-size: 13px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .raha2 .title {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+        }
+
+        .raha2 .frame {
+            position: relative;
+            width: 150px;
+            margin: 0 auto 15px;
+            top: 0;
+        }
+
+        .raha2 img.photo-bg {
+            width: 320px;
+        }
+
+        .raha2 h3 {
+            font-size: 20px;
+            color: #253B7F;
+        }
+
+        .raha2 h5 {
+            font-size: 13px;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .raha2 a span {
+            font-size: 13px;
+            color: #000000;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        .caldkind .title {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+        }
+
+        .caldkind .frame {
+            position: relative;
+            width: 200px;
+            margin: 0 auto 15px;
+            top: 0;
+            border: 2px #84150c solid;
+            border-radius: 150px;
+        }
+
+        .caldkind .frame img.photo {
+            border-radius: 100px;
+        }
+
+        .caldkind h3 {
+            font-size: 20px;
+            color: #82170e;
+        }
+
+        .caldkind h4 {
+            font-size: 14px;
+            color: #000000;
+            margin-bottom: 30px;
+        }
+
+        .caldkind ul.language {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .caldkind ul.language li a {
+            font-size: 20px;
+            padding: 10px 0;
+            display: block;
+            text-decoration: none;
+            color: #82170e;
+            border-bottom: 1px #ccc solid;
+        }
+        .caldkind .modal {
+            z-index: 99999;
+        }
+
+        .no-share #st-2 {
+            display: none;
+            
+        }
+
+        .bularid .frame {
+            top: 0;
+            width: 320px;
+            padding: 30px;
+            /* border: 2px #ccc solid; */
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+
+        .bularid h3 {
+            font-size: 20px;
+            padding: 20px 0 0;
+            color: #e50110;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .bularid img.photo {
+            width: 150px;
+            border: 2px #de020e solid;
+            border-radius: 15px;
+        }
+
+
+        .bularid i.fa-play {
+            display: block;
+            color: #FFF;
+            background-color: #005ca9;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            padding-top: 17px;
+            text-align: center;
+            margin: 3px auto;
+        }
+
+        .bularid a span {
+            font-size: 13px;
+            color: #000000;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+        .bularid .frame.name {
+            top: 0;
+            width: 100%;
+            padding: 30px;
+            /* border: 2px #ccc solid; */
+            margin: 28px auto 20px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        .bularid .frame.name img {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .bularid .frame h3 {
+            color: #005ca9;
+        }
+        #bularid {
+            width: 480px;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .tenglyn .frame {
+            top: 0;
+            width: 320px;
+            padding: 30px;
+            /* border: 2px #ccc solid; */
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+
+        .tenglyn h3 {
+            font-size: 20px;
+            padding: 20px 0 0;
+            color: #e50110;
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .tenglyn img.photo {
+            width: 150px;
+            /* border: 2px #de020e solid; */
+            border-radius: 15px;
+        }
+
+
+        .tenglyn i.fa-play {
+            display: block;
+            color: #FFF;
+            background-color: #005ca9;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            padding-top: 17px;
+            text-align: center;
+            margin: 3px auto;
+        }
+
+        .tenglyn a span {
+            font-size: 13px;
+            color: #000000;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+        }
+
+        .allergic-rhinitis .title {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            right: 0;
+        }
+
+        .allergic-rhinitis .frame {
+            position: relative;
+            width: 200px;
+            margin: 0 auto 15px;
+            top: 0;
+            /* border: 2px #006BB5 solid; */
+            /* border-radius: 150px; */
+        }
+
+        .allergic-rhinitis .frame img.photo {
+           /*  margin-left: 14px; */
+            padding: 14px 0;
+        }
+
+        .allergic-rhinitis h3 {
+            font-size: 20px;
+            color: #006BB5;
+        }
+
+        .allergic-rhinitis h5 {
+
+            font-size: 18px;
+            color: #000000;
+        }
+
+        .allergic-rhinitis ul.language {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .allergic-rhinitis ul.language li a {
+            font-size: 20px;
+            padding: 10px 0;
+            display: block;
+            text-decoration: none;
+            color: #006BB5;
+            border-bottom: 1px #ccc solid;
+        }
+        .abhay_kumar img.top-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .abhay_kumar img.bottom-bg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .abhay_kumar .dr_photo img,
+        .abhay_kumar .contact2 img {
+            max-width: 100%;
+        }
+
+        .abhay_kumar .bdr {
+            border-left: 1px #ccc solid;
+            border-right: 1px #ccc solid;
+        }
+
+        div#abhay_kumar {
+            max-width: 480px;
+            margin: 0 auto;
+            padding: 15px;
+            position: relative;
+        }
+
+        .abhay_kumar p {
+            font-size: 14px;
+        }
+
+        .abhay_kumar .contact3 {
+            text-align: left;
+        }
+
+        .abhay_kumar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .abhay_kumar a {
+            display: block;
+            text-decoration: none;
+            color: #222;
+        }
+
+        .abhay_kumar a img {
+            margin-right: 5px;
+        }
+
+        .luliz-2 img {max-width: 100%;}
+        .luliz-2 .inner-container {
+            background: rgb(246,249,252);
+            background: radial-gradient(circle, rgba(246,249,252,1) 0%, rgba(192,217,232,1) 100%);
+        }
+        .luliz-2 .doc-photo-wrap .doc-photo {
+            border: 2px solid #006189;
+            border-radius: 8px;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        .luliz-2 .doc-photo-wrap .doc-photo img {
+            max-width: 200px;
+            border-radius: 8px;
+        }
+        .luliz-2 .doc-photo-wrap .doc-name {
+            color: #006189;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .luliz-2 footer .small-txt {
+            font-size: 11px;
+            text-align: right;
+            padding-right: 10px;
+        }
+        .luliz-2 .info-link a {
+            background-color: #fbb800;
+        }
+        .luliz-2 .info-link a:hover {
+            background-color: #f7cd5c;
+            color: #222;
+        }
+       
+		.luliz-2 .doc-name-box {
+			border: 2px solid #006189;
+			text-align: center;
+			padding: 25px 8px;
+		}
+		.luliz-2 .doc-name-box .doc-name {
+            color: #006189;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+		@media (max-width: 575.98px) {
+			.luliz-2 .inner-container h4 {
+				font-size: 20px;
+			}
+        }
+        .raha.calendar a span {
+            font-size: 11px;
+            display: table-cell;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 16px;
+            vertical-align: middle;
+            height: 30px;
+        }
+
+        .raha.calendar a {
+            display: table;
+            margin: 0 auto;
+            width: 250px;
+        }
+
+        .raha.calendar .card-header {
+            height: 52px;
+        }
+
+        .raha.calendar .frame {
+            position: relative;
+            top: 0;
+            z-index: 1;
+            left: 0;
+            right: 0;
+            width: 150px;
+            margin: 0 auto;
+            border: 1px #edf3f9 solid;
+        }
+
+        .raha.calendar h3 {
+            color: #0053a0;
+            font-size: 18px;
+            padding: 10px 0 0;
+            margin: 0;
+        }
+        .raha.calendar h5 {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+        
+html {
+			scroll-behavior: smooth;
+		}
+
+		body.wdd2 {
+			margin: 0;
+			padding: 0;
+			background: url(http://pitchman.in/images/wdd2-bg.png) no-repeat top left;
+			background-size: cover;
+			height: 100%;
+			background-color: #004540;
+		}
+
+		.clear {
+			clear: both;
+			margin: 0;
+			padding: 0;
+		}
+
+		.wdd2 .flt-lft {
+			float: left;
+		}
+
+		.wdd2 .flt-rgt {
+			float: right;
+		}
+
+		.wdd2 .txt-left {
+			text-align: left !important;
+		}
+
+		.wdd2 .txt-center {
+			text-align: center !important;
+		}
+
+		.wdd2 .txt-right {
+			text-align: right !important;
+		}
+
+		.wdd2 a {
+			text-decoration: none;
+		}
+
+		.wdd2 .mrgauto {
+			margin: 0 auto;
+		}
+
+		.wdd2 .container {
+			margin: 0 auto;
+			padding: 0;
+			max-width: 980px;
+			width: 100%;
+			position: relative;
+		}
+
+		.wdd2 header {
+			width: 100%;
+			height: 85px;
+			display: inline-block;
+		}
+
+		.wdd2 header .logo {
+			margin-top: 24px;
+			float: right;
+		}
+
+		.wdd2 header .logo img {
+			width: 80px;
+			height: auto;
+		}
+
+		.wdd2 section {
+			width: 100%;
+			display: inline-block;
+		}
+
+		.wdd2 section h1 {
+			margin: 0;
+			padding: 0;
+			text-transform: uppercase;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 75px;
+			font-weight: bold;
+			color: #ffff00;
+		}
+
+		.wdd2 section h2 {
+			margin: 10px 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 40px;
+			font-weight: normal;
+			color: #ffff00;
+		}
+
+		.wdd2 section h3 {
+			margin: 20px 0;
+			padding: 0;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 32px;
+			font-weight: normal;
+			color: #ffffff;
+		}
+
+		.wdd2 .diabetes-quote {
+			margin: 20px auto 0;
+			text-align: center;
+			padding: 0;
+		}
+
+		.wdd2 .diabetes-quote img {
+			width: 660px;
+			height: 125px;
+		}
+
+		.wdd2 .together-banner {
+			width: 55%;
+			margin: 50px auto;
+			padding: 0 20px;
+			display: table;
+			border: 2px solid #fff;
+		}
+
+		.wdd2 .together-banner .together-text {
+			width: 50%;
+			float: left;
+			text-align: left;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 75px;
+			font-weight: bold;
+			color: #ffff00;
+		}
+
+		.wdd2 .together-banner .makedifference-text {
+			width: 45%;
+			padding-left: 5%;
+			padding-top: 10px;
+			float: left;
+			text-align: left;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 30px;
+			font-weight: normal;
+			color: #ffffff;
+		}
+
+		.wdd2 .client-talk {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		.wdd2 .client-talk img {
+			max-width: 100%;
+			height: auto;
+		}
+
+		.wdd2 .mediaarea {
+			margin: 50px auto 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		.wdd2 .mediaarea img {
+			width: 350px;
+			height: 350px;
+		}
+
+		.wdd2 footer {
+			width: 100%;
+			display: inline-block;
+		}
+
+		.wdd2 footer .footerlogo {
+			margin: 50px auto;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		.wdd2 footer .footerlogo img {
+			width: 300px;
+			height: 120px;
+		}
+
+		@media screen and (max-width:768px) and (min-width:481px) {
+
+			.wdd2 .container {
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.wdd2 section h1 {
+				font-size: 45px;
+			}
+
+			.wdd2 .diabetes-quote img {
+				width: 70%;
+				height: auto;
+			}
+
+			.wdd2 .together-banner {
+				width: 70%;
+			}
+
+			.wdd2 .together-banner .together-text {
+				font-size: 45px;
+			}
+
+			.wdd2 .together-banner .makedifference-text {
+				width: 47%;
+				padding-left: 3%;
+				padding-top: 4px;
+				font-size: 20px;
+			}
+
+			.wdd2 .client-talk img {
+				width: 70%;
+				height: auto;
+			}
+
+			.wdd2 section h2 {
+				margin: 0;
+				font-size: 30px;
+			}
+
+			.wdd2 .mediaarea img {
+				width: 40%;
+				height: auto;
+			}
+
+			.wdd2 section h3 {
+				font-size: 24px;
+			}
+
+			.wdd2 footer .footerlogo img {
+				width: 100%;
+				height: auto;
+			}
+
+		}
+
+
+
+		@media screen and (max-width:480px) {
+
+			.wdd2 .container {
+				width: 90%;
+				margin: 0 auto;
+			}
+
+			.wdd2 header .logo {
+				/* float: none; */
+				text-align: center;
+			}
+
+			.wdd2 section h1 {
+				font-size: 21px;
+			}
+
+			.wdd2 .diabetes-quote {
+				margin: 10px auto 0;
+			}
+
+			.wdd2 .diabetes-quote img {
+				width: 70%;
+				height: auto;
+			}
+
+			.wdd2 .together-banner {
+				margin: 20px auto;
+				padding: 0 10px;
+				width: 90%;
+			}
+
+			.wdd2 .together-banner .together-text {
+				text-align: center;
+				font-size: 20px;
+			}
+
+			.wdd2 .together-banner .makedifference-text {
+				width: 50%;
+				padding-left: 0%;
+				padding-top: 0px;
+				font-size: 11px;
+			}
+
+			.wdd2 .client-talk img {
+				width: 75%;
+				height: auto;
+			}
+
+			.wdd2 section h2 {
+				/* margin: 0; */
+				font-size: 18px;
+			}
+
+			.wdd2 .mediaarea {
+				margin: 20px auto 0;
+			}
+
+			.wdd2 .mediaarea img {
+				width: 40%;
+				height: auto;
+			}
+
+			.wdd2 section h3 {
+				font-size: 14px;
+			}
+
+			.wdd2 footer .footerlogo {
+				margin: 20px auto;
+			}
+
+			.wdd2 footer .footerlogo img {
+				width: 75%;
+				height: auto;
+			}
+        }
+
+.caldikind-osteoporosis body {font-family: 'Open Sans', sans-serif; background-color: #ffffff !important; color: #1A1A18 !important;}
+.caldikind-osteoporosis img {max-width: 100%;}
+.caldikind-osteoporosis .inner-container {
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-osteoporosis-bg.jpg") no-repeat scroll 0 0 transparent;
+    background-size: cover;
+    border: 6px solid #FBCA98;
+}
+.caldikind-osteoporosis .doc-photo-wrap .doc-photo {
+    border: 4px solid #82140B;
+    margin-bottom: 20px;
+}
+.caldikind-osteoporosis .doc-photo-wrap .doc-photo img {
+    max-width: 130px;
+}
+.caldikind-osteoporosis .doc-photo-wrap .doc-name {
+    color: #82140B;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.caldikind-osteoporosis .highlight-txt {
+    color: #82140B;
+    font-weight: 600;
+    border: 1px solid #82140B;
+    font-size: 26px;
+}
+.caldikind-osteoporosis .highlight-txt span {
+    display: inline-block;
+    position: relative;
+}
+.caldikind-osteoporosis .highlight-txt span:before {
+    content: "";
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-osteoporosis-quotes-up.png") no-repeat scroll 0 0 transparent;
+    background-size: 24px auto;
+    position: absolute;
+    color: #FBCA98;
+    left: -25px;
+    top: 8px;
+    width: 25px;
+    height: 25px;
+}
+.caldikind-osteoporosis .highlight-txt span:after {
+    content: "";
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-osteoporosis-quotes-down.png") no-repeat scroll 0 0 transparent;
+    background-size: 24px auto;
+    position: absolute;
+    color: #FBCA98;
+    right: -26px;
+    bottom: 4px;
+    width: 25px;
+    height: 25px;
+}
+.caldikind-osteoporosis .modal-title {color: #82140B;}
+.abhay_kumar h5 {
+    font-size: 12px;
+    padding-top: 15px;
+    font-weight: bold;
+}
+.abhay_kumar .contact2.custom {
+    font-size: 12px;
+}
+.abhay_kumar .contact2.custom h5 {
+    font-size: 14px;
+    color: #034ea2;
+} 
+.unmasking-melasma img {max-width: 100%;}
+        .unmasking-melasma .inner-container {
+            background-color: #f0e6e1;
+        }
+        .unmasking-melasma .doc-photo-wrap .doc-photo {
+            border: 4px solid #592363;
+            margin-bottom: 10px;
+        }
+        .unmasking-melasma .doc-photo-wrap .doc-photo img {
+            max-width: 150px;
+        }
+        .unmasking-melasma .doc-photo-wrap .doc-name {
+            color: #592363;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        body.acs-smart-kit {
+           background: url('http://pitchman.in/images/raha-bg.png') no-repeat center 0 ;
+    background-size: cover;
+       }
+       .acs-smart-kit input {
+    background-color: transparent;
+       }
+       body.asicon2020 {
+            background: url('https://edumedc.b-cdn.net/pm/images/asicon-bg.jpg')no-repeat center 0;
+            background-size: cover;
+        }
+        
+body.unmasking-melasma {
+    background-color: #f0e6e1;
+}
+.unmasking-melasma a{
+    padding: 0 20px;
+}
+
+ body.pcos {
+    background-color: #7b8ec6;
+}
+.pcos_bg {
+	position:relative;
+}
+.pcos_wrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 80px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.pcos_photo img {
+    width: 145px;
+    background-color: #fff;
+}
+.pcos_photo span {
+    display: inline-block;
+    border: 2px #afb3d9 solid;
+    padding: 5px;
+}
+        .pcos_name {
+    font-size: 16px;
+    color: #fff;
+    padding-top: 6px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+span.pcos_cred {
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    font-weight: normal;
+}
+.pcos .pcos_btn a {
+    color: #5c3d62;
+    border: 1px #ccc solid;
+    padding: 5px 15px;
+    border-radius: 20px;
+    display: block;
+    /* width: 200px; */
+    margin: 6px auto;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 12px;
+    background-color: #AFB3DA;
+}
+.pcos-color-1 {
+    color: #fc86b8;
+}
+.dj-alaspan {
+	background-color: #e3db46;
+}
+
+/* zydus pregnancy chart css */
+.zydus-preg-chart .region-btns .blue-btn {
+	background: url("https://edumedc.b-cdn.net/pm/zydus/pregnancy-diet-chart/pregnancy-diet-chart-blue-btn.png") no-repeat scroll 0 0 transparent;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 300px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 0 28px 0;
+	text-decoration: none;
+}
+.zydus-preg-chart .region-btns .pink-btn {
+	background: url("https://edumedc.b-cdn.net/pm/zydus/pregnancy-diet-chart/pregnancy-diet-chart-pink-btn.png") no-repeat scroll 0 0 transparent;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 300px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 0 28px 0;
+	text-decoration: none;
+}
+.zydus-preg-chart .region-btns a:hover {
+	text-decoration: none;
+}
+.zydus-preg-chart .language-btns .blue-btn {
+	background: url("https://edumedc.b-cdn.net/pm/zydus/pregnancy-diet-chart/pregnancy-diet-chart-blue-btn.png") no-repeat scroll center 0 transparent;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 222px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0 20px 0;
+	text-decoration: none;
+	background-size: 230px auto;
+	font-size: 14px;
+}
+.zydus-preg-chart .language-btns .pink-btn {
+	background: url("https://edumedc.b-cdn.net/pm/zydus/pregnancy-diet-chart/pregnancy-diet-chart-pink-btn.png") no-repeat scroll center 0 transparent;
+	color: #ffffff;
+	text-transform: uppercase;
+	width: 222px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0 20px 0;
+	text-decoration: none;
+	background-size: 230px auto;
+	font-size: 14px;
+}
+/* zydus pregnancy chart css end */
+
+
+#cipla_newmonr_lp {
+	background-color: #fefefe;
+	padding: 10px 5px;
+}
+#cipla_newmonr_lp .list-group .list-group-item {
+	background: url("https://edumedc.b-cdn.net/pm/images/cipla_newmonr_bullet.svg") no-repeat scroll 5px 1px transparent;
+	background-size: 24px;
+	border: 0;
+	padding: 0 0 4px 40px;
+	margin-bottom: 20px;
+	border-radius: 0;
+	border-bottom: 1px dashed #000000;
+}
+#cipla_newmonr_lp .list-group .list-group-item:last-child {
+	border-bottom: 0;
+}
+#cipla_newmonr_lp .list-group .question {
+    color: #66103F;
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+#cipla_newmonr_lp .list-group ol {
+	padding: 0 0 0 18px;
+}
+#cipla_newmonr_lp .list-group ol li {
+    padding-left: 5px;
+	margin-bottom: 12px;
+}
+/* cipla newmonr css end */
+		
+
+/* zotide save bones css start */
+#zotide_save_bones {height: 100%;}
+#zotide_save_bones .inner-container {}
+#zotide_save_bones .box {
+	color: #fff;
+	padding: 10px;
+	display: none;
+	margin-top: 10px;
+}
+
+/* Remove IE arrow */
+#zotide_save_bones select::-ms-expand {
+	display: none;
+}
+#zotide_save_bones .select-topic {
+	text-align: center;
+	position: relative;
+	line-height: 3;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-left: 7px;
+}
+#zotide_save_bones .select-topic select {		
+	width: 245px;
+	height: 56px;
+	position: relative;
+	background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(234,234,234,1) 100%);
+	color: #414042;
+	border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 14px 7px 14px 14px;
+}
+#zotide_save_bones .select-topic select:focus,
+#zotide_save_bones .select-topic select:active {
+	outline: 0;
+	border: 0;
+}
+#zotide_save_bones .select-topic img {
+	width: 65px;
+	margin-right: 7px;
+	vertical-align: middle;
+	display: inline-block
+}
+#zotide_save_bones .select-topic span {
+	position: relative;
+	display: inline-block;
+}
+/* Arrow */
+#zotide_save_bones .select-topic span::after {
+	content: '\25BC';
+	position: absolute;
+	top: 4px;
+	right: 4px;
+	padding: 0 1em;
+	cursor: pointer;
+	pointer-events: none;
+	color: #ffffff;
+	border-radius: 4px;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+	background: rgb(38,44,107);
+	background: linear-gradient(0deg, rgba(38,44,107,1) 0%, rgba(39,170,225,1) 100%);
+}
+/* Transition */
+#zotide_save_bones .select-topic:hover::after {
+	color: #90d6ec;
+}
+#zotide_save_bones .box .language_box {
+	position: relative;
+	display: flex;
+	line-height: 3;
+	overflow: hidden;
+	width: 328px;
+	height: 60px;
+	margin: 0 auto;
+}
+#zotide_save_bones .box .language_box:after {
+	content: '\25BC';
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	padding: 0 1em;
+	cursor: pointer;
+	pointer-events: none;
+	color: #ffffff;
+	border-radius: 4px;
+	-webkit-transition: .25s all ease;
+	-o-transition: .25s all ease;
+	transition: .25s all ease;
+	background: rgb(38,44,107);
+	background: linear-gradient(0deg, rgba(38,44,107,1) 0%, rgba(39,170,225,1) 100%);
+}
+#zotide_save_bones .box .language_box span {
+	width: 65px;
+    display: inline-block;
+    margin-right: 18px;
+}
+#zotide_save_bones .box .language_box .btn {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+		-ms-appearance: none;
+			appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0 !important;
+	background: rgb(204,204,204);
+	background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(234,234,234,1) 100%);
+	padding: 5px;
+	border-radius: 5px;
+	color: #414042;
+	font-weight: 400;
+	font-size: 17px;
+	flex: 1;
+	padding: 0 15px;
+	cursor: pointer;
+	text-align: left;
+	line-height: 60px;
+}
+#zotide_save_bones .box .language_box:hover::after {
+	color: #90d6ec;
+}
+#zotide_save_bones .bg {
+	background: url("https://edumedc.b-cdn.net/pm/images/zotide_save_bones_banner_bg.png") no-repeat scroll 0 center transparent;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+#zotide_save_bones .bone_img {
+	text-align: center;
+	margin-bottom: 30px
+}
+#zotide_save_bones .bone_img .img-1 {
+	width: 400px;
+}
+#zotide_save_bones .stamp_img {
+	text-align: center;
+}
+#zotide_save_bones .stamp_img .img-2 {
+	width: 175px;
+}
+#zotide_save_bones h3 {
+	color: #005fab;
+}
+#zotide_save_bones .disclaimer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 10px;
+	padding: 0 10px 10px;
+}
+#zotide_save_bones ~ #st-2 {
+	display: none !important;
+	visibility: hidden !important;
+}
+#zotide_save_bones .new-vide-btn {
+	margin: 0 auto 20px;
+	text-align: center;
+}
+#zotide_save_bones .new-vide-btn .btn {
+	padding: 0;
+}
+#zotide_save_bones .new-vide-btn .btn:focus,
+#zotide_save_bones .new-vide-btn .btn:active {
+	outline: 0;
+	border: 0;
+}
+#zotide_save_bones .new-vide-btn .btn span {
+	display: inline-block;
+	background: linear-gradient(0deg, rgba(204,204,204,1) 0%, rgba(234,234,234,1) 100%);
+	color: #414042;
+	padding: 14px 7px 14px 14px;
+	border: 0;
+	font-size: 18px;
+	line-height: normal;
+	vertical-align: middle;
+	text-align: left;
+	position: relative;
+	width: 245px;
+	border-radius:5px;
+	height: 56px;
+}
+
+#zotide_save_bones .new-vide-btn img {
+	width: 75px;
+	margin-right: 7px;
+	vertical-align: middle;
+	display: inline-block;
+}
+/* zotide save bones css end */
+
+
+/* allergo-facts css start */
+#allergo-facts .doc-photo {
+	position: relative;
+	background-color: #ffffff;
+	margin: 0 auto;
+}
+#allergo-facts .doc-photo img {
+	width: 230px;
+	/*height: 253px;*/
+	border: 0px solid #E63C30;
+	position: relative;
+}
+#allergo-facts .doc-name {
+	color: #E63C30;
+}
+#allergo-facts .pdf-block a {
+	background-color: #e73b31;
+	color: #ffffff;
+	width: 200px;
+	vertical-align: middle;
+	padding: 10px;
+	font-size: 20px;
+}
+#allergo-facts .modal-body .btn {
+	background-color: #4f2360;
+	color: #ffffff;
+}
+#allergo-facts .box {
+	width: 236px;
+	margin: 0 auto;
+	padding: 3px 0px;
+	background-color: #e63c30; /* gold */
+	/* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+	/* background-image: gold, gold, white */
+	background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0OCA3OS4xNjQwMzYsIDIwMTkvMDgvMTMtMDE6MDY6NTcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRkJFNEYyQTc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRkJFNEYyQjc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQkU0RjI4NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZGQkU0RjI5NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAQABAwERAAIRAQMRAf/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8ALX751dfVh1//2Q=='),  url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0OCA3OS4xNjQwMzYsIDIwMTkvMDgvMTMtMDE6MDY6NTcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRkJFNEYyQTc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRkJFNEYyQjc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQkU0RjI4NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZGQkU0RjI5NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAQABAwERAAIRAQMRAf/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8ALX751dfVh1//2Q=='),
+	url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+	background-repeat: no-repeat;
+	background-size: 0 2px, 0 100%, 0% 2px;
+	background-position: top center, top center, bottom center;
+	-webkit-animation: drawBorderFromCenter 4s;
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes drawBorderFromCenter {
+	0% {
+	  background-size: 0 2px, 0 0, 100% 100%;
+	}
+	20% {
+	  background-size: 100% 2px, 100% 0, 100% 100%;
+	}
+	66%
+	{
+	  background-size: 100% 2px, 100% 98%, 100% 100%;
+	}
+	99%
+	{
+	  background-size: 100% 2px, 100% 98%, 0 2px;
+	}
+}
+/* allergo-facts css end */
+
+
+#st-2 {
+	position: absolute !important;
+	z-index: auto !important;
+	top: 50% !important;
+	display: block !important;
+	width: auto !important;
+	left: auto !important;
+	-webkit-transform: translateY(-50%) !important;
+			transform: translateY(-50%) !important;
+}
+#st-2 .st-toggle {
+	right: 0 !important;
+}
+#st-2 > div {
+    clear: right !important;
+    float: right !important;
+}
+
+body {padding: 0 !important; margin: 0 !important;}
+
+.animate__delay-05s {
+	animation-delay: calc(var(--animate-delay)*0.5);
+}
+.animate__delay-1s {
+	animation-delay: calc(var(--animate-delay)*1);
+}
+.animate__delay-2s {
+	animation-delay: calc(var(--animate-delay)*2);
+}
+
+
+/* ipca-tfct-nib css start */
+#ipca-tfct-nib {
+	background-color: #f2efea;
+}
+#ipca-tfct-nib .inner-container {
+	background-color: #ffffff;
+}
+#ipca-tfct-nib .bg-text {
+	background-color: #732374;
+	color: #ffffff;
+	text-align: center;
+	font-size: 32px;
+	line-height: normal;
+	text-transform: uppercase;
+	padding: 15px;
+	margin-bottom: 15px;
+	font-weight: bold;
+}
+#ipca-tfct-nib .heading3 {
+	text-align: center;
+	color: #732374;
+	font-size: 30px;
+	position: relative;
+}
+#ipca-tfct-nib .arrow-down {
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #732374;
+}
+/* ipca-tfct-nib css ends */
+
+
+
+/* bayer zydus pregnancy tips css start */
+#bz_preg_tips {
+	background-color: rgba(224, 55, 39, 0.02);
+}
+#bz_preg_tips .inner-container {
+	background-color: #fdfefb;
+}
+#bz_preg_tips .doc-photo {
+	position: relative;
+	background-color: #ffffff;
+	margin: 0 auto;
+	border-radius: 16px;
+	padding: 14px 0;
+	width: 97%;
+}
+#bz_preg_tips .doc-photo img {
+	width: 175px;
+	border: 0px solid #E63C30;
+	position: relative;
+	border-radius: 20px;
+}
+#bz_preg_tips .doc-name {
+	color: #E03828;
+}
+#bz_preg_tips .knowMoreBtn {
+	border: 1px solid #1A1A18;
+	text-transform: uppercase;
+	padding: 11px 22px;
+	position: relative;
+	border-radius: 50rem;
+	color: #ffffff;
+}
+#bz_preg_tips .knowMoreBtn:before {
+	content: "";
+	border-radius: 50rem;
+	background-color: #e03727;
+	position: absolute;
+	left: -3px;
+	top: 5px;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	-webkit-transition: all 0.3s ease 0s;
+	   -moz-transition: all 0.3s ease 0s;
+			transition: all 0.3s ease 0s;
+}
+#bz_preg_tips .knowMoreBtn:hover:before {
+	top: 0;
+	left: 0;
+}
+#bz_preg_tips .modal-body .btn {
+	background-color: #0A384F;
+	color: #ffffff;
+}	
+#bz_preg_tips .box {
+	width: 211px;
+	margin: 0 auto;
+	padding: 3px 0px;
+	border-radius: 20px;
+	background-color: #E03828; /* gold */
+	/* Single pixel data uri image http://jsfiddle.net/LPxrT/ 
+	/* background-image: gold, gold, white */
+	background-image: url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0OCA3OS4xNjQwMzYsIDIwMTkvMDgvMTMtMDE6MDY6NTcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRkJFNEYyQTc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRkJFNEYyQjc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQkU0RjI4NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZGQkU0RjI5NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAQABAwERAAIRAQMRAf/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8ALX751dfVh1//2Q=='),  url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QMsaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0OCA3OS4xNjQwMzYsIDIwMTkvMDgvMTMtMDE6MDY6NTcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCAyMS4wIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGRkJFNEYyQTc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGRkJFNEYyQjc4MDYxMUVCOThGMjgzMUEwNUExM0NBNyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZGQkU0RjI4NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkZGQkU0RjI5NzgwNjExRUI5OEYyODMxQTA1QTEzQ0E3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQICAgICAgICAgICAwMDAwMDAwMDAwEBAQEBAQECAQECAgIBAgIDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/8AAEQgAAQABAwERAAIRAQMRAf/EAaIAAAAGAgMBAAAAAAAAAAAAAAcIBgUECQMKAgEACwEAAAYDAQEBAAAAAAAAAAAABgUEAwcCCAEJAAoLEAACAQMEAQMDAgMDAwIGCXUBAgMEEQUSBiEHEyIACDEUQTIjFQlRQhZhJDMXUnGBGGKRJUOhsfAmNHIKGcHRNSfhUzaC8ZKiRFRzRUY3R2MoVVZXGrLC0uLyZIN0k4Rlo7PD0+MpOGbzdSo5OkhJSlhZWmdoaWp2d3h5eoWGh4iJipSVlpeYmZqkpaanqKmqtLW2t7i5usTFxsfIycrU1dbX2Nna5OXm5+jp6vT19vf4+foRAAIBAwIEBAMFBAQEBgYFbQECAxEEIRIFMQYAIhNBUQcyYRRxCEKBI5EVUqFiFjMJsSTB0UNy8BfhgjQlklMYY0TxorImNRlUNkVkJwpzg5NGdMLS4vJVZXVWN4SFo7PD0+PzKRqUpLTE1OT0laW1xdXl9ShHV2Y4doaWprbG1ub2Z3eHl6e3x9fn90hYaHiImKi4yNjo+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8ALX751dfVh1//2Q=='),
+	url('data:image/gif;base64,R0lGODlhAQABAPAAAP///////yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==');
+	background-repeat: no-repeat;
+	background-size: 0 2px, 0 100%, 0% 2px;
+	background-position: top center, top center, bottom center;
+	-webkit-animation: drawBorderFromCenter 4s;
+}
+#bz_preg_tips .modal-body {
+			background: url("https://edumedc.b-cdn.net/pm/images/bz_preg_tips_bg_img.png") no-repeat scroll center bottom transparent;
+}
+#bz_preg_tips .modal-body span {
+	line-height: 1;
+	margin-top: 3px;
+}
+/* bayer zydus pregnancy tips css end */		
+		
+
+/* bayer zydus Loratadine issue-3 css start */	
+#bz_alaspan_i3_a1 .inner-container {
+	background-color: #E4DB47;
+}
+#bz_alaspan_i3_a1 .logo img {
+	width: 130px;
+}
+#bz_alaspan_i3_a1 h6 {
+	display: inline-block;
+	margin: 0;
+	padding: 3px 15px;
+	border-top: 2px dotted #030304;
+	border-bottom: 2px dotted #030304;
+	text-transform: uppercase;
+	line-height: 1;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#bz_alaspan_i3_a2 .inner-container {
+	background-color: #E4DB47;
+}
+#bz_alaspan_i3_a2 .logo img {
+	width: 130px;
+}
+#bz_alaspan_i3_a2 h6 {
+	display: inline-block;
+	margin: 0;
+	padding: 3px 15px;
+	border-top: 2px dotted #030304;
+	border-bottom: 2px dotted #030304;
+	text-transform: uppercase;
+	line-height: 1;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}	
+/* bayer zydus Loratadine issue-3 css end */	
+
+
+
+/* msn Patient Urology landing page css start */	
+#msn_patient_urology_lp .inner-container {
+	background-color: #d2d2d2;
+	color: #58595B;
+	position: relative;
+}
+#msn_patient_urology_lp .logo img {
+	width: 100px;
+}
+#msn_patient_urology_lp .doc-photo {
+	background-color: #A7A9AC;
+	position: relative;
+	z-index: 1;
+}
+#msn_patient_urology_lp .doc-photo img {
+	width: 175px;
+	height: 175px;
+}
+#msn_patient_urology_lp .angle-top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 70%;
+	z-index: 1;
+}
+#msn_patient_urology_lp .angle-bottom {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 75px;
+	z-index: 0;
+}
+/* msn Patient Urology landing page css start */	
+
+/* glenmark_respiaudicle landing page css start */
+#glenmark_respiaudicle .playButtonBox {
+	width: 85%;
+	background-color: #ffffff;
+	border-radius: 25px;
+	position: relative;
+	margin: -25px auto 0;
+	text-align: center;	
+	padding: 22px 15px 0;
+}
+#glenmark_respiaudicle .playButtonBox a {
+	display: block;
+	text-decoration: none;
+}
+#glenmark_respiaudicle .playButtonBox h4 {
+	color: #006eb7;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin: 0;
+}
+#glenmark_respiaudicle .playButtonBox h5 {
+	color: #39b54a;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+#glenmark_respiaudicle .playButtonBox img {
+	width: 125px;
+}
+#glenmark_respiaudicle .footer {
+	padding: 30px 0 50px;
+	width: 65%;
+	margin: 25px auto 0;
+	border-top: 1px solid #a7a9ac;
+	text-align: center;	
+}
+/* glenmark_respiaudicle landing page css end */
+
+
+
+/* ipca alkaston landing page css start */
+#ipca-alkaston .page-content {
+	text-align: center;
+	color: #124194;
+	text-transform: uppercase;
+	margin-top: -91px;
+	position: relative;
+	margin-bottom: 45px;
+}
+#ipca-alkaston .page-content .text1 {
+	font-size: 100px;
+	font-weight: bold;
+	line-height: 1;
+	margin-bottom: 5px;
+}
+#ipca-alkaston .page-content .text2 {
+	margin: 0;
+	display: inline-block;
+	border-top: 2px solid #124194;
+	border-bottom: 2px solid #124194;
+	font-size: 34px;
+	font-weight: bold;
+	padding: 1px 6px;
+}
+#ipca-alkaston .page-content .text3 {
+	background-color: #124194;
+	display: inline-block;
+	color: #fff;
+	font-size: 42px;
+	font-weight: bold;
+	padding: 1px 12px 8px;
+	line-height: 1;
+	margin: 0;
+}
+#ipca-alkaston .page-content .text4 {
+	font-weight: bold;
+	font-size: 42px;
+}
+#ipca-alkaston .modalBtn {
+	background-color: #124194;
+	color: #ffffff;
+	font-weight: 500;
+	display: inline-block;
+	font-size: 24px;
+	border-radius: 54px;
+	padding: 0 25px 3px 25px;
+	text-align: left;
+	width: 185px;
+	position: relative
+}
+#ipca-alkaston .modalBtn:hover {
+	text-decoration: none;
+}
+#ipca-alkaston .modalBtn:after {
+	content: "";
+	background: url("../images/angle.svg") no-repeat scroll center center transparent;
+	background-size: 16px 16px;
+	position: absolute;
+	top: 0;
+	right:0;
+	width: 38px;
+	height: 100%;
+	border-left: 1px solid #ffffff;
+}
+#ipca-alkaston .lead {
+    font-weight: 500;
+	text-align: center;
+	line-height: normal;
+	margin-bottom: 15px;
+}
+#ipca-alkaston #languageModal .language-btns a {
+	display: block;
+	background-color: #124194;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 30px;
+	padding: 8px 8px 10px 8px;
+}
+#ipca-alkaston #languageModal .language-btns a:hover {
+	text-decoration: none;
+}
+/* ipca alkaston landing page css end */
+	
+	
+/* cipla ph booklet css start */
+#cipla_ph_booklet .page-btn {
+	background-color: #f5f6f2;
+	text-align: center;
+	padding: 60px 10px 80px 10px;
+}
+#cipla_ph_booklet .page-btn a {
+	background-color: #0b3e82;
+	color: #91ceea;
+	text-decoration: none;
+	padding: 8px 15px;
+	display: inline-block;
+	border-radius: 8px;
+}
+#cipla_ph_booklet ~ #st-2 {
+	display: none !important;
+	opacity: 0;
+}
+/* cipla ph booklet css end */
+	
+
+/* qr_code_linked_demo_sample css start */
+#qr_code_linked_demo_sample {
+	background-color: #000000;
+	min-height: 100%;
+}
+#qr_code_linked_demo_sample .inner-container {
+	padding-top: 10rem;
+	padding-bottom: 2rem;
+}
+#qr_code_linked_demo_sample .pitchman_img {
+	text-align: center;
+	margin-bottom: 5rem;
+}
+#qr_code_linked_demo_sample .pitchman_img span {
+	display: inline-block;
+}
+#qr_code_linked_demo_sample .pitchman_img img {
+	max-width: 100%;
+	width: auto;
+	height: 35px;
+}
+#qr_code_linked_demo_sample .page-btns .btn {
+	width: 265px;
+}
+#qr_code_linked_demo_sample .page-btns .btn,
+#qr_code_linked_demo_sample .language-btns .btn {
+	color: #ffffff;
+	margin: 0 5px 14px;
+	border: 0;
+	background: rgb(241,148,95);
+	background: -moz-linear-gradient(90deg, rgba(241,148,95,1) 0%, rgba(227,25,87,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(241,148,95,1) 0%, rgba(227,25,87,1) 100%);
+	background: linear-gradient(90deg, rgba(241,148,95,1) 0%, rgba(227,25,87,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f1945f",endColorstr="#e31957",GradientType=1);
+}
+/* qr_code_linked_demo_sample css end */	
+		
+
+
+/* ipca-acrylic-standee css start */
+
+#ipca-acrylic-standee {
+	padding: 6rem 0;
+	/*height: 100%;*/
+	background: url("https://edumedc.b-cdn.net/pm/ipca/acrylic-standee/ipca-acrylic-standee_bg.jpg") no-repeat scroll center 0 transparent;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+			background-size: cover;
+}
+#ipca-acrylic-standee .inner-container {
+	background-color: #ffffff;
+	padding: 40px 20px;
+	position: relative;
+}
+#ipca-acrylic-standee .inner-container:before {
+	content:"";
+	position: absolute;
+    left: 20px;
+    right: 20px;
+    top: -30px;
+    background-color: #ffffff;
+    height: 30px;
+    border: 0;
+	border-radius: 8px 8px 0 0;
+}
+#ipca-acrylic-standee .inner-container:after {
+	content:"";
+	position: absolute;
+    left: 20px;
+    right: 20px;
+	bottom: -30px;
+	background-color: #ffffff;
+    height: 30px;
+    border: 0;
+	border-radius: 0 0 8px 8px;
+}
+#ipca-acrylic-standee .doctor_info {
+	text-align: center;
+	margin-bottom: 35px;
+}
+#ipca-acrylic-standee .doctor_info .name { 
+	color: #252e46;
+	font-size: 26px;
+}
+#ipca-acrylic-standee .call-to-action {
+	margin-bottom: 20px;
+}
+#ipca-acrylic-standee .call-to-action .card {
+	background-color: #e6e7e8;
+	border-radius: 10px;
+	border: 0;
+	text-align: center;
+	padding: 0 0 30px;
+	margin-bottom: 15px;
+}
+#ipca-acrylic-standee .call-to-action .card .card-title {
+	font-size: 16px;
+}
+#ipca-acrylic-standee .call-to-action .card img {
+	width: 45px;
+    display: inline-block;
+    margin: 0 auto;
+}
+#ipca-acrylic-standee .pec-wrap .heading {
+	background-color: #375479;
+    color: #ffffff;
+    padding: 12px 5px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: normal;
+}
+#ipca-acrylic-standee .pec-wrap .item {
+	text-align: center;
+    padding: 20px 3px;
+    border: 0;
+	position: relative;
+}
+#ipca-acrylic-standee .pec-wrap .item-img {
+	width: 45px;
+	height: 45px;
+	display: inline-block;
+}
+#ipca-acrylic-standee .pec-wrap .item img {
+	/*width: 45px;
+	margin: 0 auto;*/
+}
+#ipca-acrylic-standee .pec-wrap .item-title {
+	font-size: 12px;
+	margin-top: 12px;
+}
+#ipca-acrylic-standee .pec-wrap .d-left:before {
+	content: "";
+	position: absolute;
+    left: 0;
+    top: 14px;
+    width: 1px;
+    background-color: #bcbdc0;
+    height: 80%;
+}
+#ipca-acrylic-standee .pec-wrap .d-top:after {
+	content: "";
+	position: absolute;
+    top: 0;
+    width: 80%;
+    margin: 0 auto;
+    background-color: #bcbdc0;
+    height: 1px;
+    left: 0;
+    right: 0;
+}
+#ipca-acrylic-standee .language-btns .btn {
+	background-color: #375479;
+    color: #ffffff;
+}
+
+/* ipca-acrylic-standee css end */
+
+
+/* aristo sinus infection css start */
+@font-face {
+	font-family: 'Rubrik Bold';
+	src: url('fonts/RubrikBold 400.eot');
+	src: url('fonts/RubrikBold 400.woff') format('woff'),
+		 url('fonts/RubrikBold 400.ttf') format('truetype'),
+		 url('fonts/RubrikBold 400.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/** Generated by FG **/
+@font-face {
+	font-family: 'Rubrik SemiBold';
+	src: url('fonts/RubrikSemiBold 400.eot');
+	src: url('fonts/RubrikSemiBold 400.woff') format('woff'),
+		 url('fonts/RubrikSemiBold 400.ttf') format('truetype'),
+		 url('fonts/RubrikSemiBold 400.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#aristo-sinus-infection .inner-container {
+	padding-top: 80px;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-sinus-infection-bg.png") no-repeat scroll 0 0 transparent;
+	-webkit-background-size: contain;
+	   -moz-background-size: contain;
+			background-size: contain;
+}
+#aristo-sinus-infection .doc-info {
+	margin-bottom: 50px;
+	text-align: center;
+}
+#aristo-sinus-infection .doc-info .doc-photo {
+	width: 180px;
+	border-radius: 100%;
+	border: 2px dashed #808285;
+	padding: 4px;
+	position: relative;
+	margin: 0 auto 25px;
+}
+#aristo-sinus-infection .doc-info .doc-photo:before {
+	content: "";
+	position: absolute;
+	top: -9px;
+	right: -9px;
+	bottom: -9px;
+	left: -9px;
+	border: 2px dashed #808285;
+	border-radius: 100%;
+}
+#aristo-sinus-infection .doc-info .doc-name {
+	color: #ed1c24;
+	font-weight: 700;
+}
+#aristo-sinus-infection .title-box {
+	text-align: center;
+	position: relative;
+	margin-bottom: 20px;
+}
+#aristo-sinus-infection .title-box:before {
+	content: "";
+	background-color: #ed1c24;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 80%;
+	top: 20px;
+	margin: 0 auto;
+}
+#aristo-sinus-infection .title-box .title-small {
+    display: inline-block;
+	background-color: #2e3092;
+	color: #ffffff;
+	font-size: 20px;
+	padding: 6px 16px;
+	line-height: normal;
+	-webkit-transform: skewX(-30deg);
+	   -moz-transform: skewX(-30deg);
+			transform: skewX(-30deg);
+}
+#aristo-sinus-infection .title-box .title-small span {
+	line-height: normal;
+	display: inline-block;
+	font-family: 'Rubrik SemiBold';
+	-webkit-transform: skewX(30deg);
+	   -moz-transform: skewX(30deg);
+			transform: skewX(30deg);
+}
+#aristo-sinus-infection .title-box .title-big {
+	color: #ed1c24;
+	font-weight: bold;
+	font-size: 50px;
+	text-transform: uppercase;
+	line-height: 1;
+	font-family: 'Rubrik Bold';
+}
+#aristo-sinus-infection .know-more-btn a {
+	display: inline-block;
+	text-decoration: none;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-sinus-infection-button.png") no-repeat scroll 0 0 #2e3092;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 14px 60px 15px 25px;
+	border-radius: 50px;
+	background-position: 97% center;
+	background-size: 38px 38px;
+	box-shadow: 0 6px 6px rgba(0,0,0,.15);
+}
+#aristo-sinus-infection footer {
+	text-align: center;
+	overflow: hidden;
+}
+#aristo-sinus-infection footer .logo img {
+	width: 230px;
+}
+#aristo-sinus-infection footer .firstband {
+	background-color: #b9babc;
+	height: 25px;
+	position: relative;
+	width: 60%;
+	float: right;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-sinus-infection footer .firstband:before {
+	content: "";
+	position: absolute;
+	right: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #b9babc;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+#aristo-sinus-infection footer .secondband {
+	background-color: #c82730;
+	height: 20px;
+	position: relative;
+	width: 90%;
+	float: right;
+	margin-top: -1px;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-sinus-infection footer .secondband:before {
+	content: "";
+	position: absolute;
+	right: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #c82730;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+/*#aristo-sinus-infection #videoModal .modal-dialog {
+	max-width: 80%!important;
+}*/
+/* aristo sinus infection css end */
+
+/* aristo snore issue css start */
+#aristo-snore-issue .page-banner {
+	background-color: #383186;
+	text-align: center;
+	padding: 0 15px 150px 15px;
+	-webkit-background-size: 90% auto;
+	   -moz-background-size: 90% auto;
+			background-size: 90% auto;
+}
+#aristo-snore-issue .doc-info .doc-photo {
+	width: 180px;
+	border-radius: 100%;
+	position: relative;
+	margin: -100px auto 15px;
+	border: 8px solid #383186;
+}
+#aristo-snore-issue .doc-info .doc-name {
+	color: #231f20;
+	font-weight: 700;
+}
+#aristo-snore-issue .doc-info p {
+	color: #ed1c24;
+}
+#aristo-snore-issue .know-more-btn a {
+	display: inline-block;
+	text-decoration: none;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-snore-issue-button.png") no-repeat scroll 0 0 #2e3092;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 14px 60px 15px 25px;
+	border-radius: 50px;
+	background-position: 97% center;
+	background-size: 38px 38px;
+	box-shadow: 0 6px 6px rgba(0,0,0,.15);
+}
+#aristo-snore-issue .logo img {
+	width: 230px;
+}
+#aristo-snore-issue footer {
+	text-align: center;
+	overflow: hidden
+}
+#aristo-snore-issue .page-banner .firstband {
+	background-color: #f37436;
+	height: 25px;
+	position: relative;
+	width: 90%;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-snore-issue .page-banner .firstband:before {
+	content: "";
+	position: absolute;
+	left: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #f37436;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+#aristo-snore-issue .page-banner .secondband {
+	background-color: #b62333;
+	height: 18px;
+	position: relative;
+	width: 60%;
+	margin-bottom: 50px;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-snore-issue .page-banner .secondband:before {
+	content: "";
+	position: absolute;
+	left: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #b62333;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+#aristo-snore-issue footer .firstband {
+	background-color: #b62333;
+	height: 18px;
+	position: relative;
+	width: 60%;
+	float: right;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-snore-issue footer .firstband:before {
+	content: "";
+	position: absolute;
+	right: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #b62333;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+#aristo-snore-issue footer .secondband {
+	background-color: #f37436;
+	height: 25px;
+	position: relative;
+	width: 90%;
+	float: right;
+	margin-top: -1px;
+	-webkit-transform: skewX(-60deg);
+	   -moz-transform: skewX(-60deg);
+			transform: skewX(-60deg);
+}
+#aristo-snore-issue footer .secondband:before {
+	content: "";
+	position: absolute;
+	right: -25px;
+	top: 0;
+	width: 80px;
+	height: 100%;
+	background-color: #f37436;
+	-webkit-transform: skewX(60deg);
+	   -moz-transform: skewX(60deg);
+			transform: skewX(60deg);
+}
+/*#aristo-snore-issue #videoModal .modal-dialog {
+	max-width: 80%!important;
+}*/
+/* aristo snore issue css end */
+
+
+/* aristo ear infection css start */
+#aristo-ear-infection {
+	background: rgb(254,231,219);
+	background: -moz-linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	background: linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fee7db",endColorstr="#fee7db",GradientType=1);
+}
+#aristo-ear-infection .maroon-band {
+	background-color: #b62434;
+	height: 30px;
+}
+#aristo-ear-infection .yellow-band {
+	background-color: #f47537;
+	height: 15px;
+}
+#aristo-ear-infection .doc-info .doc-photo {
+	width: 170px;
+	border-radius: 100%;
+	border: 6px solid #b62434;
+	position: relative;
+	margin: 0 auto 25px;
+}
+#aristo-ear-infection .doc-info .doc-name {
+	color: #231f20;
+	font-weight: 700;
+}
+#aristo-ear-infection .doc-info p {
+	color: #ed1c24;
+}
+#aristo-ear-infection .know-more-btn a {
+	display: inline-block;
+	text-decoration: none;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-snore-infection-button.png") no-repeat scroll 0 0 #2e3092;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 14px 60px 15px 25px;
+	border-radius: 50px;
+	background-position: 97% center;
+	background-size: 38px 38px;
+	box-shadow: 0 6px 6px rgba(0,0,0,.15);
+}
+#aristo-ear-infection .logo img {
+	width: 230px;
+}
+/*#aristo-ear-infection #videoModal .modal-dialog {
+	max-width: 80%!important;
+}*/
+/* aristo ear infection css end */
+
+
+
+/* aristo hearing loss css start */
+#aristo-hear-loss .doc-info {
+	text-align: center;
+	border-bottom: 15px solid #ed2024;
+	padding: 30px 15px 55px 15px;
+	background: rgb(249,159,30);
+	background: -moz-linear-gradient(90deg, rgba(249,159,30,1) 0%, rgba(255,204,4,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(249,159,30,1) 0%, rgba(255,204,4,1) 100%);
+	background: linear-gradient(90deg, rgba(249,159,30,1) 0%, rgba(255,204,4,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f99f1e",endColorstr="#ffcc04",GradientType=1);
+}
+#aristo-hear-loss .doc-info .doc-photo {
+	width: 170px;
+	border-radius: 100%;
+	border: 8px solid #ed2024;
+	position: relative;
+	margin: 0 auto 25px;
+}
+#aristo-hear-loss .doc-info .doc-name {
+	color: #231f20;
+	font-weight: 700;
+	font-size: 18px;
+}
+#aristo-hear-loss .doc-info p {
+	color: #ed1c24;
+}
+#aristo-hear-loss .aristo-hear-loss-img {
+	margin-bottom: 1rem;
+	width: 125px;
+	margin: -65px auto 1rem;
+}
+#aristo-hear-loss h2 {
+	color: #ed2024;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 2.5rem;
+}
+#aristo-hear-loss .know-more-btn a {
+	display: inline-block;
+	text-decoration: none;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-snore-infection-button.png") no-repeat scroll 0 0 #2e3092;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 14px 60px 15px 25px;
+	border-radius: 50px;
+	background-position: 97% center;
+	background-size: 38px 38px;
+	box-shadow: 0 6px 6px rgba(0,0,0,.15);
+}
+#aristo-hear-loss footer .logo img {
+	width: 230px;
+}
+#aristo-hear-loss .footer-band {
+	background-color: #010202;
+	height: 30px;
+	border-radius: 0px 10px 0px 0;
+	position: relative;
+	margin-left: 15px;
+	width: 80%;
+	-webkit-transform: skewX(-40deg);
+	   -moz-transform: skewX(-40deg);
+			transform: skewX(-40deg);
+}
+#aristo-hear-loss .footer-band:before {
+	content: "";
+	position: absolute;
+	left: -15px;
+	top: 0;
+	width: 50px;
+	height: 30px;
+	background-color: #010202;
+	-webkit-transform: skewX(40deg);
+	   -moz-transform: skewX(40deg);
+			transform: skewX(40deg);
+}
+/*#aristo-hear-loss #videoModal .modal-dialog {
+	max-width: 80%!important;
+}*/
+/* aristo hearing loss css end */
+
+
+/* glenmark ryaltris AZ css start */
+#ryaltris-az-lp {
+	height: 100%;
+	background: url("https://edumedc.b-cdn.net/pm/glenmark/ryaltris-az-bg.jpg") no-repeat scroll center center transparent;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+			background-size: cover;
+}
+#ryaltris-az-lp .heading {
+	display: inline-block;
+	background-color: #ce202c;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 21px;
+	padding: 4px 15px;
+	position: relative;
+	box-shadow: 0 2px 7px rgb(0 0 0 / 30%);
+}
+#ryaltris-az-lp .heading:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(206, 32, 44, 0);
+	border-top-color: #ce202c;
+	border-width: 10px;
+	margin-left: -10px;
+}
+#ryaltris-az-lp #ryaltrisAZLanguageModal .btn {
+	color: #ffffff;
+}
+/* glenmark ryaltris AZ css end */
+
+
+
+/* ipca acutret css start */
+#ipca-acutret .top-bar {
+	background-color: #520004;
+	height: 35px;
+}
+#ipca-acutret .bottom-bar {
+	background-color: #520004;
+	text-transform: uppercase;
+	color: #ffffff;
+	text-align: center;
+	border-bottom: 5px solid #d29c45;
+	font-size: 22px;
+	padding: 5px;
+}
+#ipca-acutret .language-btns a {
+	color: #d29c45;
+	font-size: 18px;
+	text-decoration: none;
+}
+/* ipca acutret css end */
+
+
+/* alkem donep M css start */
+#donep-m-lp {
+	padding: 10px;
+	min-height: 100%;
+	background: rgb(245,159,48);
+	background: -moz-linear-gradient(180deg, rgba(245,159,48,1) 0%, rgba(251,209,128,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(245,159,48,1) 0%, rgba(251,209,128,1) 100%);
+	background: linear-gradient(180deg, rgba(245,159,48,1) 0%, rgba(251,209,128,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f59f30",endColorstr="#fbd180",GradientType=1);
+}
+#donep-m-lp .inner-container {
+	text-align: center;
+	background-color: #48332d;
+	padding: 10px 10px 0 10px;
+	text-transform: uppercase;
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+			border-radius: 15px;
+}
+#donep-m-lp .inner-container .heading1 {
+	color: #ffd400;
+	font-size: 50px;
+	line-height: 1;
+	font-weight: 700;
+}
+#donep-m-lp .inner-container .heading2 span {
+	display: block;
+	font-size: 26px;
+	line-height: 1;
+	font-weight: 700;
+}
+#donep-m-lp .inner-container .heading2 .line1 {
+	color: #ffffff;
+}
+#donep-m-lp .inner-container .heading2 .line2 {
+	color: #ffd400;
+	margin: 1px 0;
+}
+#donep-m-lp .inner-container .heading2 .line3 {
+	color: #f7941d;
+}
+#donep-m-lp .inner-container .image img {
+	max-width: 275px;
+}
+#donep-m-lp .bottom-container {
+	background-color: #fce3ac;
+	padding: 60px 15px;
+	margin: 0 12px;
+	text-align: center;
+	-webkit-border-radius: 0 0 15px 15px;
+	   -moz-border-radius: 0 0 15px 15px;
+			border-radius: 0 0 15px 15px;
+}
+#donep-m-lp .bottom-container h6 {
+	text-transform: uppercase;
+	color: #48332d;
+	margin: 0;
+	font-weight: 700;
+	position: relative;
+	display: inline-block;
+	padding: 0 5px 12px 5px;
+}
+#donep-m-lp .bottom-container h6:before {
+	content: "";
+	position: absolute;
+	left: -38px;
+	top: 7px;
+	background: url("https://edumedc.b-cdn.net/pm/alkem/donep-m-line-left.svg") no-repeat scroll 0 0 transparent;
+	width: 40px;
+	height: 32px;
+}
+#donep-m-lp .bottom-container h6:after {
+	content: "";
+	position: absolute;
+	right: -38px;
+	top: 7px;
+	background: url("https://edumedc.b-cdn.net/pm/alkem/donep-m-line-right.svg") no-repeat scroll 0 0 transparent;
+	width: 40px;
+	height: 32px;
+}
+#donep-m-lp .bottom-container img {
+	width: 115px;
+}
+#donep-m-lp footer {
+	padding: 40px 15px 50px 15px;
+	text-align: center;
+	color: #000000;
+	font-size: 13px;
+	font-weight: 500;
+}
+#donep-m-lp footer img {
+	width: 70px;
+}
+#donep-m-lp .modal-body .btn {
+	background-color: #48332d;
+}
+/* alkem donep M css end */
+
+
+/* msn > mirabig > oum issue 2 css start */
+#oum-ldg-page header .firstband {
+	background-color: #F58220;
+	height: 55px;
+}
+#oum-ldg-page header .secondband {
+	background-color: #F7941D;
+	height: 60px;
+	position: relative;
+	z-index: 1;
+}
+#oum-ldg-page header .secondband:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 20px;
+	background-color: #FBB040;
+}
+#oum-ldg-page .inner-container {
+	position: relative;
+	padding: 0 30px 50px;
+	margin-top: -45px;
+}
+#oum-ldg-page .inner-container:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 30px;
+	background: url("https://edumedc.b-cdn.net/pm/images/oum-ldg-page-cross-border.png") repeat-y scroll 0 0 transparent;
+	z-index: -1;
+}
+#oum-ldg-page .inner-container:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 30px;
+	background: url("https://edumedc.b-cdn.net/pm/images/oum-ldg-page-cross-border.png") repeat-y scroll 0 0 transparent;
+	z-index: -1;
+}
+#oum-ldg-page .inner-container .doc-info {
+	position: relative;
+	text-align: center;
+	z-index: 1;
+}
+#oum-ldg-page .inner-container .doc-photo {
+	display: inline-block;
+	position: relative;
+	margin-bottom: 18px;
+	background-color: #fff;
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+    		border-radius: 100%;
+}
+#oum-ldg-page .inner-container .doc-photo:after {
+	content: "";
+	position: absolute;
+	bottom: -22px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 78px;
+	background: url("https://edumedc.b-cdn.net/pm/images/oum-ldg-page-photo-border.svg") no-repeat scroll 0 0 transparent;
+}
+#oum-ldg-page .inner-container .doc-photo img {
+	border: 10px solid #ffffff;
+}
+#oum-ldg-page .inner-container .doc-name {
+	color: #000000;
+	font-weight: 700;
+	margin-bottom: 0px;
+}
+#oum-ldg-page .inner-container .doc-info p {
+	color: #000000;
+	font-size: 18px;
+}
+#oum-ldg-page .inner-container .know-more-btn {
+	background-color: #009245;
+	color: #ffffff;
+	padding: 6px 12px 8px 12px;
+	display: inline-block;
+	-webkit-border-radius: 6px;
+	   -moz-border-radius: 6px;
+			border-radius: 6px;
+}
+#oum-ldg-page .inner-container .know-more-btn:hover {
+	text-decoration: none;
+	background-color: #39B54A;
+}
+#oum-ldg-page footer .firstband {
+	background-color: #8DC63F;
+	height: 7px;
+}
+#oum-ldg-page footer .secondband {
+	background-color: #39B54A;
+	height: 15px;
+}
+#oum-ldg-page footer .thirdband {
+	background-color: #009444;
+	height: 15px;
+}
+/* msn > mirabig > oum issue 2 css end */
+
+
+
+/* ipca > kera xl css start */
+#ipca-keraXL {
+	position: relative;
+}
+#ipca-keraXL .inner-container {
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-info-bg.svg") no-repeat scroll 0 0 transparent;
+	padding: 30px 10px 0 10px;
+}
+#ipca-keraXL .doc-info {
+	margin-bottom: 40px;
+}
+#ipca-keraXL .doc-info .doc-photo {
+	display: inline-block;
+	padding: 8px;
+	margin-bottom: 10px;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px
+			border-radius: 15px
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.80)!important;
+	   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.80)!important;
+			box-shadow: 0px 0px 10px rgba(0,0,0,.80)!important;
+	/*background: url("https://edumedc.b-cdn.net/pm/images/keraxl-photo-bg.svg") no-repeat scroll center 0 transparent;*/
+}
+#ipca-keraXL .doc-info .doc-photo img {
+	max-width: 160px;
+	-webkit-border-radius: 12px;
+	   -moz-border-radius: 12px;
+			border-radius: 12px;
+}
+#ipca-keraXL .doc-info .doc-name {
+	color: #722E75;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+	font-weight: 700;
+}
+#ipca-keraXL .middle-row {
+	text-align: center;
+	position: relative;
+}
+#ipca-keraXL .middle-row:after {
+	content: "";
+	position: absolute;
+	top: 25px;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 48%;
+	border: 2px dotted #0095DA;
+	border-radius: 13px;
+	z-index: -1;
+}
+#ipca-keraXL .middle-row .heading {
+	color: #ffffff;
+	display: inline-block;
+	line-height: normal;
+	padding: 5px 14px 8px;
+	position: relative;
+	margin: 0 0 20px 0;
+	font-weight: 700;
+	font-size: 29px;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+	-webkit-border-radius: 9px;
+	   -moz-border-radius: 9px;
+			border-radius: 9px;
+}
+#ipca-keraXL .middle-row .heading:after {
+	content: "";
+	position: absolute;
+	bottom: -18px;
+	left: 0;
+	right: 0;
+	height: 20px;
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-heading-shadow.png") no-repeat scroll center 0 transparent;
+	width: 183px;
+	z-index: -1;
+	margin: 0 auto;
+}
+#ipca-keraXL .middle-row .big-text {
+	color: #0095DA;
+	font-weight: 700;
+	font-size: 32px;
+	line-height: normal;
+	margin: 0px 0 25px 0;
+}
+#ipca-keraXL .buttons {
+	background-color: #ffffff;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	margin-bottom: 30px;
+}
+#ipca-keraXL .buttons .btn {
+	border: 0;
+	background-color: #0095DA;
+	color: #ffffff;
+	font-size: 17px;
+	padding: 5px 54px 6px 15px;
+	text-align: left;
+	position: relative;
+	margin-bottom: 25px;
+	-webkit-border-radius: 7px;
+	   -moz-border-radius: 7px;
+			border-radius: 7px;
+	-webkit-background-size: 45px 36px;
+	   -moz-background-size: 45px 36px;
+			background-size: 45px 36px;
+}
+#ipca-keraXL .buttons .btn:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -20px;
+	z-index: -1;
+	width: 100%;
+	height: 22px;
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-button-shadow.svg") no-repeat scroll center 0 transparent;
+}
+#ipca-keraXL .buttons .btn.pdf-btn {
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-pdf-icon.svg") no-repeat scroll right 0 #0095DA;
+	margin-right: 8px;
+}
+#ipca-keraXL .buttons .btn.video-btn {
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-video-icon.svg") no-repeat scroll right 0 #0095DA;
+	margin-left: 8px;
+}
+#ipca-keraXL .buttons .btn.feedback-btn {
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-feedback-icon.svg") no-repeat scroll 99.8% 0 #722E75;
+}
+#ipca-keraXL .contact-details {
+	position: relative;
+	text-align: center;
+	margin-bottom: 10px;
+}
+#ipca-keraXL .contact-details .heading {
+	color: #ffffff;
+	display: inline-block;
+	font-size: 19px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 3px 16px;
+	position: relative;
+	margin-bottom: 20px;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+	-webkit-border-radius: 25px;
+	   -moz-border-radius: 25px;
+			border-radius: 25px;
+}
+#ipca-keraXL .contact-details .heading:after {
+	content: "";
+	position: absolute;
+	top: 16px;
+	right: -25px;
+	left: -25px;
+	height: 2px;
+	z-index: -1;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,0) 0%, rgba(162,70,131,1) 35%, rgba(155,68,125,1) 65%, rgba(40,34,38,0) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,0) 0%, rgba(162,70,131,1) 35%, rgba(155,68,125,1) 65%, rgba(40,34,38,0) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,0) 0%, rgba(162,70,131,1) 35%, rgba(155,68,125,1) 65%, rgba(40,34,38,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+}
+#ipca-keraXL .contact-details .social-wrap {
+	padding: 2px;
+	margin-bottom: 15px;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(40,34,38,0) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(40,34,38,0) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(40,34,38,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+}
+#ipca-keraXL .contact-details .social-wrap .inner {
+	background-color: #ffffff;
+	padding: 4px 20px 5px 20px;
+}
+#ipca-keraXL .contact-details .social-wrap span {
+	margin: 0 0 3px 0;
+	display: block;
+	font-weight: 500;
+	font-size: 15px;
+}
+#ipca-keraXL .contact-details .social-icon {
+	display: inline-block;
+	margin: 0 4px;
+}
+#ipca-keraXL .contact-details .social-icon img {
+	width: 45px;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	   		border-radius: 3px;
+}
+#ipca-keraXL .contact-details .address {
+	line-height: normal;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+#ipca-keraXL .contact-details .address h6 {
+	color: #0095DA;
+	text-transform: uppercase;
+	margin-bottom: 3px;
+	font-size: 18px;
+}
+#ipca-keraXL .contact-details .address a {
+	color: #212529;
+}
+#ipca-keraXL .bottom-line {
+	height: 5px;
+	background: rgb(162,70,131);
+	background: -moz-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	background: linear-gradient(90deg, rgba(162,70,131,1) 0%, rgba(0,146,215,1) 45%, rgba(123,92,151,1) 78%, rgba(40,34,38,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#a24683",endColorstr="#282226",GradientType=1);
+}
+#ipca-keraXL #ipcakeraXLVideoModal .modal-body .btn {
+	background-color: #0095DA;
+	color: #ffffff;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-content {
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-feedback-form-bg.svg") no-repeat scroll 0 0 #ffffff;
+	border-radius: 0;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-header {
+	color: #fff;
+	text-transform: uppercase;
+	padding: 30px 0 0 15px;
+	border: 0;
+	margin-bottom: 110px;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-body .feedback-from {
+	padding-right: 65px;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-body .form-group {
+	position: relative;
+	margin-bottom: 1.8rem;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-body .form-group:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -20px;
+	width: 100%;
+	height: 22px;
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-button-shadow.svg") no-repeat scroll 0 0 transparent;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-body label {
+	margin-bottom: 2px;
+	font-size: 14px;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .modal-body .form-control {
+	border-radius: 0;
+	position: relative;
+	z-index: 1;
+	border-color: #939598;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .submit-btn {
+	background-color: #722E75;
+	text-transform: uppercase;
+	position: relative;
+	color: #ffffff
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .submit-btn:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -11px;
+	width: 82px;
+	height: 10px;
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-button-shadow.svg") no-repeat scroll 0 0 transparent;
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .thankyou .btn {
+	background-color: #0095DA;
+	text-transform: uppercase;
+	position: relative;
+	color: #ffffff
+}
+#ipca-keraXL #ipcakeraXLFeedbackModal .thankyou .btn:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: -11px;
+	width: 82px;
+	height: 10px;
+	background: url("https://edumedc.b-cdn.net/pm/images/keraxl-button-shadow.svg") no-repeat scroll 0 0 transparent;
+}
+/* ipca > kera xl css end */
+
+
+#ipca-luliz-pe-folio-1 .v-content {
+	padding: 0px 10px 0px;
+	/*height: 100%;
+	max-height: 500px;*/
+	max-width: 860px;
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+}
+#ipca-luliz-pe-folio-2 .v-content {
+	/*height: 100%;
+	max-height: 500px;*/
+	position: relative;
+	margin: 0 auto;
+	height: 100vh;
+}	
+
+
+/* aristo ear infection standard css start */
+#aristo-ear-infection-std {
+	background: rgb(254,231,219);
+	background: -moz-linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	background: linear-gradient(90deg, rgba(254,231,219,1) 0%, rgba(255,247,243,1) 50%, rgba(254,231,219,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fee7db",endColorstr="#fee7db",GradientType=1);
+}
+#aristo-ear-infection-std .maroon-band {
+	background-color: #b62434;
+	height: 30px;
+}
+#aristo-ear-infection-std .yellow-band {
+	background-color: #f47537;
+	height: 15px;
+}
+
+#aristo-ear-infection-std .know-more-btn a {
+	display: inline-block;
+	text-decoration: none;
+	background: url("https://edumedc.b-cdn.net/pm/aristo/aristo-snore-infection-button-std.png") no-repeat scroll 0 0 #b72434;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 14px 60px 15px 25px;
+	border-radius: 50px;
+	background-position: 97% center;
+	background-size: 38px 38px;
+	box-shadow: 0 6px 6px rgba(0,0,0,.15);
+}
+#aristo-ear-infection-std .logo img {
+	width: 230px;
+}
+#aristo-ear-infection-std .videoModal .modal-dialog {
+	max-width: 80%!important;
+}
+#aristo-ear-infection-std .heading {
+	margin-bottom: 80px;
+	display: inline-block;
+	border: 2px solid #f47537;
+	padding: 3px;
+	border-radius: 30px;
+}
+#aristo-ear-infection-std .heading .heading-inner {
+	background-color: #393388;
+	padding: 8px 25px;
+	color: #ffffff;
+	border-radius: 25px;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+/* aristo ear infection standard css end */
+
+
+/* video landing page css start */
+#video-landing-page.super-container {
+    margin: 0;
+    height: 100%;
+    padding: 0;
+    position: relative;
+}
+#video-landing-page .v-content {
+    padding: 0px 10px 0px;
+    max-width: 860px;
+    position: relative;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+/* video landing page css end */
+
+
+
+
+/* caldikind-orthopedic landing page css start */
+#caldikind-orthopedic {
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-bg.jpg") repeat scroll 0 0 transparent;
+	position: relative;
+}
+#caldikind-orthopedic:before {
+	content:"";
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	width:100%;
+	height:10px;
+	background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-top-band.svg") no-repeat scroll center 0 transparent;
+	-webkit-background-size:cover;
+	   -moz-background-size:cover;
+			background-size:cover;
+}
+#caldikind-orthopedic .inner-container {
+	margin-bottom: 32px;
+}
+#caldikind-orthopedic .doc-photo-wrap .doc-photo {
+    border: 6px solid #82140b;
+    margin-bottom: 15px;
+}
+#caldikind-orthopedic .doc-photo-wrap .doc-photo img {
+    max-width: 185px;
+}
+#caldikind-orthopedic .doc-photo-wrap .doc-name {
+    color: #82140B;
+    font-weight:700;
+    margin-bottom: 2px;
+}
+#caldikind-orthopedic .highlight-txt {
+    color: #82140B;
+    font-weight: 600;
+    border: 1px solid #82140B;
+    font-size: 26px;
+	width: 90%;
+	margin: 0 auto 25px;
+	text-align: center;
+	padding: 0.5rem 1rem;
+}
+#caldikind-orthopedic .highlight-txt span {
+    display: inline-block;
+    position: relative;
+	font-weight:700;
+}
+#caldikind-orthopedic .highlight-txt span:before {
+    content: "";
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-quotes-up.png") no-repeat scroll 0 0 transparent;
+    background-size: 24px auto;
+    position: absolute;
+    color: #FBCA98;
+    left: -25px;
+    top: 8px;
+    width: 25px;
+    height: 25px;
+}
+#caldikind-orthopedic .highlight-txt span:after {
+    content: "";
+    background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-quotes-down.png") no-repeat scroll 0 0 transparent;
+    background-size: 24px auto;
+    position: absolute;
+    color: #FBCA98;
+    right: -25px;
+    bottom: 4px;
+    width: 25px;
+    height: 25px;
+}
+#caldikind-orthopedic .inner-container .media {
+	padding: 20px 15px;
+	margin: 0;
+	position: relative;
+	border-bottom: 1px dotted #818180;			
+}
+#caldikind-orthopedic .inner-container .media:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 115px;
+	right: 0;
+	width: 200px;
+	height: 23px;
+	background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-click-arrow.svg") no-repeat scroll 0 0 transparent;
+}
+#caldikind-orthopedic .inner-container .media img {
+	width: 140px;
+	position: relative;
+	z-index: 1;
+}
+#caldikind-orthopedic .inner-container .media .heading1 {
+	color: #000000;
+	font-weight:800;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-left: 15px;
+	margin: 0;
+	font-size: 20px;
+	line-height: 1;
+}
+#caldikind-orthopedic .inner-container .media .heading2 {
+	color: #82140c;
+	font-weight:800;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-left: 15px;
+	margin: 0;
+	padding-top: 4px;
+	margin-top: 5px;
+	font-size: 22px;
+	line-height: 1;
+}
+#caldikind-orthopedic .inner-container .media .heading3 {
+	color: #82140c;
+	font-weight:800;
+	font-style: italic;
+	text-transform: uppercase;
+	padding-left: 15px;
+	margin: 0;
+	font-size: 16px;
+}
+#caldikind-orthopedic .modal-title {
+	color: #82140B;
+}
+#caldikind-orthopedic footer {
+	padding: 35px 15px 65px 15px;
+	text-align: center;
+	background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-footer-img.svg") no-repeat scroll right bottom transparent;
+	background-size: cover;
+}
+#caldikind-orthopedic .spl-video-btn {
+	text-align: center;
+	padding: 25px 5px;
+}	
+#caldikind-orthopedic .spl-video-btn a {
+	background: url("https://edumedc.b-cdn.net/pm/images/caldikind-orthopedic-play-circle-outline.svg") no-repeat scroll 5px 4px #82140b;
+	display: inline-block;
+	border: 2px solid #82140b;
+	border-radius: 50px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding: 8px 12px 8px 40px;
+    -webkit-background-size: 30px;
+       -moz-background-size: 30px;
+    		background-size: 30px;
+}
+#caldikind-orthopedic .spl-video-btn a:hover,
+#caldikind-orthopedic .spl-video-btn a:focus {
+	text-decoration: none;
+}
+#caldikind-orthopedic .spl-video-btn img {
+	width: 30px;
+	margin-right: 6px;
+	vertical-align: middle;
+	display: none;
+}
+/* caldikind-orthopedic landing page css end */
+
+
+
+
+/* cipla smart RX & flip it landing page css start */
+#cipla-drishti-smartrx {
+	position: relative;
+	color: #414142;
+}
+#cipla-drishti-smartrx:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 540px;
+	height: 388px;
+	background: url("images/cipla-drishti-smartrx-left-bg.png") no-repeat scroll 0 0 transparent;
+}
+#cipla-drishti-smartrx:after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 540px;
+	height: 388px;
+	background: url("images/cipla-drishti-smartrx-right-bg.png") no-repeat scroll 0 0 transparent;
+}
+#cipla-drishti-smartrx header {
+	padding: 20px 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1;
+}
+#cipla-drishti-smartrx .logo img {
+	width: 100px;
+}
+#cipla-drishti-smartrx main {
+	height: 100vh;
+	padding-top: 75px;
+	padding-bottom: 65px;
+}
+#cipla-drishti-smartrx main .container {
+	height: 100%;
+}
+#cipla-drishti-smartrx main .inner-container {
+	height: 100%;
+	position: relative;
+}
+#cipla-drishti-smartrx main .inner-container h4 {
+	color: #414142;
+	font-weight: normal;
+}
+#cipla-drishti-smartrx main .inner-container .btn {
+	color: #414142;
+	font-size: 20px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	border: 1px solid #e4e4e4;
+	line-height: normal;
+	border-radius: 8px;
+	background: rgb(255,255,255);
+	background: -moz-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(167,169,172,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(167,169,172,1) 100%);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(167,169,172,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#a7a9ac",GradientType=1);
+}
+#cipla-drishti-smartrx .modal .btn {
+	border-radius: 8px;
+}
+
+/* cipla smart RX & flip it landing page css end */
+
+
+/* usv derma-de-stress landing page css start */
+#usv-derma-destress .inner-container h2 {
+	color: #009FE3;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+#usv-derma-destress .inner-container p {
+	font-style: italic;
+	font-size: 20px;
+	color: #414042;
+}
+#usv-derma-destress .inner-container .video-btn {
+	background-color: #276FBB;
+	color: #ffffff;
+	font-weight: 400;
+	min-width: 180px;
+	display: inline-block;
+	border-radius: 26px;
+	font-size: 18px;
+	padding: 7px 10px 10px 10px;
+}
+#usv-derma-destress .inner-container .video-btn:hover,
+#usv-derma-destress .inner-container .video-btn:focus {
+	text-decoration: none;;
+}
+#usv-derma-destress h3 {
+	color: #276FBB;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+/* usv derma-de-stress landing page css end */	
+		
+
+
+/* glenmark psoriasis landing page css start */	
+#glenmark_psoriasis_symptoms .inner-container {
+	background: url("https://edumedc.b-cdn.net/pm/images/glenmark-psoriasis-bg.jpg") no-repeat scroll 0 0 #005281;
+}
+#glenmark_psoriasis_symptoms .inner-container .logo {
+	text-align: center;
+	margin-bottom: 60px;
+}
+#glenmark_psoriasis_symptoms .content-1 {
+	text-align: center;
+}
+#glenmark_psoriasis_symptoms .content-1 h3 {
+	color: #D3EEF9;
+	font-weight: 800;
+	text-transform: uppercase;
+	margin: 0;
+}
+#glenmark_psoriasis_symptoms .content-1 h5 {
+	display: inline-block;
+	margin: 0;
+	color: #005180;
+	background-color: #D3EEF9;
+	font-weight: 400;
+	padding: 2px 15px 7px 15px;
+	line-height: 1;
+	max-width: 90%;
+}
+#glenmark_psoriasis_symptoms .content-1 h1 {
+	color: #D3EEF9;
+	font-size: 70px;
+	font-weight: 800;
+	line-height: 1;
+	margin: 0 0 5px 0;
+}
+#glenmark_psoriasis_symptoms .ice-img {
+	margin-top: -40px;
+	text-align: center;
+}
+#glenmark_psoriasis_symptoms .content-2 {
+	background-color: #D3EEF9;
+	text-align: center;
+	color: #273573;
+	padding: 15px 0 50px 0;
+	margin-top: -1px;
+}
+#glenmark_psoriasis_symptoms .content-2 h3 {
+	font-size: 24px;
+	font-weight: 400;
+	margin: 0;
+	position: relative;
+	display: inline-block;
+}
+#glenmark_psoriasis_symptoms .content-2 h3:before {
+	content: "";
+	background: url("https://edumedc.b-cdn.net/pm/images/glenmark-psoriasis-border-img.png") no-repeat scroll 0 0 transparent;
+	position: absolute;
+	left: -75px;
+	top: 14px;
+	width: 70px;
+	height: 6px;
+	-webkit-background-size: contain;
+	   -moz-background-size: contain;
+			background-size: contain;
+}
+#glenmark_psoriasis_symptoms .content-2 h3:after {
+	content: "";
+	background: url("https://edumedc.b-cdn.net/pm/images/glenmark-psoriasis-border-img.png") no-repeat scroll 0 0 transparent;
+	position: absolute;
+	right: -75px;
+	top: 14px;
+	width: 70px;
+	height: 6px;
+	-webkit-background-size: contain;
+	   -moz-background-size: contain;
+			background-size: contain;
+}
+#glenmark_psoriasis_symptoms .content-2 h2 {
+	font-weight: 800;
+	font-size: 40px;
+	margin: 0;
+} 
+#glenmark_psoriasis_symptoms .language-wrap {
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+#glenmark_psoriasis_symptoms .language-wrap h4 {
+	text-transform: uppercase;
+	color: #1677A8;
+	font-size: 16px;
+	font-weight: 700;
+}
+#glenmark_psoriasis_symptoms .language-wrap button {
+	background-color: #005180;
+	color: #ffffff;
+	text-transform: uppercase;
+	padding: 5px 30px 7px 30px;
+	border: 0;
+	border-radius: 22px;
+	font-weight: 700;
+	font-size: 18px;
+}
+#glenmark_psoriasis_symptoms #psoriasisSymptomsLanguageModal .btn {
+	background-color: #005180;
+}
+/* glenmark psoriasis landing page css end */	
+
+
+/* glenmark deriva CMS landing page css start */
+#glenmark_deriva_cms {
+	background: url("https://edumedc.b-cdn.net/pm/images/glenmark-deriva-cms-bg3.png") no-repeat scroll center bottom #FEF0E5;
+	-webkit-background-size: contain;
+	   -moz-background-size: contain;
+			background-size: contain;
+}
+#glenmark_deriva_cms h3 {
+	font-weight:700;
+	text-align:center;
+}
+#glenmark_deriva_cms button.btn,
+#glenmark_deriva_cms #derivaCMSLanguageModal .btn {
+	color: #ffffff;
+	border: 2px solid #c71515;
+	border-radius: 25px;
+	font-size: 18px;
+	background: rgb(170,89,88);
+	background: -moz-linear-gradient(180deg, rgba(170,89,88,1) 0%, rgba(199,21,21,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(170,89,88,1) 0%, rgba(199,21,21,1) 100%);
+	background: linear-gradient(180deg, rgba(170,89,88,1) 0%, rgba(199,21,21,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aa5958",endColorstr="#c71515",GradientType=1);
+}
+#glenmark_deriva_cms footer {
+	margin-bottom: 3rem;
+	font-size: 7px;
+}
+#glenmark_deriva_cms footer label {
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #000000;
+}
+#glenmark_deriva_cms footer ol {
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+#glenmark_deriva_cms footer ol li {
+	margin-bottom: 2px;
+	line-height: normal;
+}
+#glenmark_deriva_cms footer a {
+	color: #000000;
+}
+#glenmark_deriva_cms footer a:hover,
+#glenmark_deriva_cms footer a:focus {
+	text-decoration: none;
+}
+/* glenmark deriva CMS landing page css end */
+
+.super-container {
+	margin: 0;
+	min-height: 100%;
+	padding: 0;
+	position: relative;
+}
+
+/* oaknet smartRX standard landing page css start */
+#oaknet-smartrx-lp .inner-container {
+	background-color: #e6e8e9;
+	height: 100%;
+}
+#oaknet-smartrx-lp .lp-banner {
+	background-color: #00a551;
+	text-align: center;
+	padding: 20px 0 0 0;
+	color: #ffffff;
+	position: relative;
+}
+#oaknet-smartrx-lp .lp-banner h5 {
+	font-weight:700;
+	margin: 0;
+	color:#231f20;
+}
+#oaknet-smartrx-lp .lp-banner h1 {
+	font-weight: 700;
+	font-size: 48px;
+	margin: 0 0 18px 0;
+	line-height: 1;
+}
+#oaknet-smartrx-lp .content {
+	text-align: center;
+	background-color: #ffffff;
+	padding: 10px 0 65px 0;
+	position: relative;	
+}
+#oaknet-smartrx-lp .content .inner {
+	display: inline-block;
+	padding: 0 8px 6px 8px;
+	border-bottom: 2px solid #ec1c24;
+	color: #404041;
+	line-height: normal;
+	font-weight: 500;
+	font-size: 18px;
+}
+#oaknet-smartrx-lp .lang-btn {
+    line-height: 18px;
+	padding: 8px 30px;
+	color: #ffffff;
+	border: 0;
+	position: relative;
+	border-radius: 50rem;
+	background: rgb(236,28,36);
+	background: -moz-linear-gradient(180deg, rgba(236,28,36,1) 9%, rgba(133,28,37,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(236,28,36,1) 9%, rgba(133,28,37,1) 100%);
+	background: linear-gradient(180deg, rgba(236,28,36,1) 9%, rgba(133,28,37,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ec1c24",endColorstr="#851c25",GradientType=1);
+}
+#oaknet-smartrx-lp .lang-btn:after {
+	content:"";
+	position: absolute;
+	border: 1px solid #ec1c24;
+	left: -3px;
+	right: -3px;
+	top: -3px;
+	bottom: -2px;
+	border-radius: 50rem;
+}
+/* oaknet smartRX standard landing page css end */
+
+
+
+/* glenmark nebulization process standard landing page css start */
+#nebzmart-snp-lp .first-row {
+	background-color: #e9f6fe;
+}
+#nebzmart-snp-lp .inner-content {
+	background: url("https://edumedc.b-cdn.net/pm/images/nebzmart-snp-landing-page-bg.png") repeat-x scroll right 0 transparent;
+}
+#nebzmart-snp-lp .logo {
+	text-align: right;
+	padding-top: 12px;
+}
+#nebzmart-snp-lp .logo img {
+	width: 130px;
+}
+#nebzmart-snp-lp .head-img {
+	text-align: center;
+	margin-bottom: 60px;
+}
+#nebzmart-snp-lp .head-img img {
+	max-width: 100%;
+	width: 400px;
+	margin-top: -10px;
+}
+#nebzmart-snp-lp .heading {
+	padding-bottom: 50px;
+}
+#nebzmart-snp-lp .heading .head-content {
+	color: #2f2483;
+	font-size: 30px;
+	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	line-height: normal;
+	border-right: 2px solid #2f2483;
+	border-top: 2px solid #2f2483;
+	padding: 13px 10px 20px 0px;
+	margin-bottom: -2px;
+	position: relative;
+}
+#nebzmart-snp-lp .heading .head-content:before {
+	content: "";
+	position: absolute;
+	top: -5px;
+	left: -2px;
+	width: 8px;
+	height: 8px;
+	background-color: #2f2483;
+	border-radius: 100%;
+}
+#nebzmart-snp-lp .heading .heading-inner {
+	border-bottom: 2px solid #2f2483;
+}
+#nebzmart-snp-lp .second-row {
+	margin-top: -25px;
+	margin-bottom: 50px;
+}
+#nebzmart-snp-lp .second-row .row-heading {
+	text-align: center;
+	position: relative;
+	margin-bottom: 35px;
+}
+#nebzmart-snp-lp .second-row .row-heading h2 {
+	display: inline-block;
+	background-color: #942b31;
+	font-size: 28px;
+	font-weight: 700;
+	padding: 5px 30px 10px 30px;
+	border-radius: 30px;
+	margin: 0;
+	color: #ffffff;
+	position: relative;
+}
+#nebzmart-snp-lp .second-row .row-heading:before {
+	content: "";
+	background-color: #942b31;
+	height: 4px;
+	position: absolute;
+	top: 24px;
+	left: 0px;
+	right: 0;
+	width: 100%;
+}
+#nebzmart-snp-lp .second-row .button-box {
+	background-color: #009ee3;
+	border: 0;
+	text-align: center;
+	height: 190px;
+	margin-bottom: 20px;
+	position: relative;			
+}
+#nebzmart-snp-lp .second-row .button-box.highlight {
+	background-color: #e3000f;
+}
+#nebzmart-snp-lp .second-row .button-box img {
+	width: 115px;
+}
+
+/* glenmark nebulization process standard landing page css end */
+
+
+/* dr.reddy's standard toon magazine landing page css start */
+#reddys-toon-magazine {
+    background-color: #f2f2f2;
+}	
+#reddys-toon-magazine header {
+    background-color: #5124b5;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 25px 10px;
+    text-align: center;
+    margin-bottom: 45px;
+}
+#reddys-toon-magazine .card {
+    padding: 12px 12px 0 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+}
+#reddys-toon-magazine .card .btn {
+    background-color: #5124b5;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 35px 7px 35px;
+    font-size: 18px;
+}
+#reddys-toon-magazine .card img {
+    box-shadow: 0 2px 10px rgba(0,0,0,.15);
+}
+/* dr.reddy's standard toon magazine landing page css end */
+
+
+/* aristo atchol dispenser standard landing page css start */
+#aristo-atchol-dispenser.super-container{
+    font-family: Montserrat;
+    background-image: url('https://edumedc.b-cdn.net/pm/Customised-Dispenser/background-1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#aristo-atchol-dispenser .first-title h5{
+    font-family: Montserrat;
+    color: #004A85;
+    font-size: 35px;
+}
+#aristo-atchol-dispenser .first-title h3{
+    font-family: Montserrat;
+    color: #EC1C24;
+    font-size: 40px;
+    font-weight: 800;
+}
+#aristo-atchol-dispenser .icon{
+    color: #ED1C24;
+    font-size: 20px;
+}
+#aristo-atchol-dispenser .select-input-group{
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    background-color: #F2F3F3;
+    border-radius: 10px;
+}
+#aristo-atchol-dispenser .select-input-group .input-group-text{
+    background-color: #dbdbdd;
+    border-right: 1px solid #bfb2b2;
+}
+#aristo-atchol-dispenser .select-input-group select,
+#aristo-atchol-dispenser .select-input-group select:focus{
+    color: #ffffff;
+    background: #024881;
+    position: relative;
+    font-size: 20px;
+}
+#aristo-atchol-dispenser .select-input-group::after{
+    content: '\f078';
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    top: 2px;
+    font-weight: 600;
+    right: 2px;
+    font-size: 17px;
+    padding: 7px 15px;
+    cursor: pointer;
+    pointer-events: none;
+    color: #fff;
+    transition: .25s all ease;
+    background-color: #024881;
+    z-index: 100;
+}
+#aristo-atchol-dispenser .select-input-group select option{
+    background-color: #F2F3F3;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    padding:10px 15px;
+    color: #999999;
+    border-bottom: 5px solid #999999;
+}
+#aristo-atchol-dispenser .select-input-group select option:hover{
+    background-color: #204C81;
+    color: #ffffff;
+}
+/* aristo atchol dispenser standard landing page css end */
+
+
+/* curatio-healthcare-card standard landing page css start */
+.curatio-healthcare-card {
+    background: url("https://edumedc.b-cdn.net/pm/images/curatio-healthcare-visiting-card-bg.png") no-repeat scroll 0 0 transparent;
+    background-size: cover;
+}
+.curatio-healthcare-card #patient-form .form-control {
+    background-color: #F4F5FA;
+    border: 0;
+    height: 45px;
+    border-radius: 10px;
+}
+.curatio-healthcare-card #patient-form .form-check {
+    background-color: #F4F5FA;
+    border: 0;
+    height: 45px;
+    padding: 9px 32px;
+    border-radius: 10px;
+}
+.curatio-healthcare-card #patient-form .form-check-input {
+    margin-top: 0.4rem;
+}
+.curatio-healthcare-card #patient-form .custom-file-label {
+    background-color: #F4F5FA;
+    border: 0;
+    height: 45px;
+    border-radius: 10px;
+    padding-top: 9px;
+}
+.curatio-healthcare-card #patient-form .custom-file-label::after {
+    background-color: #9EB8F8;
+    height:100%;
+    padding-top: 9px;
+    color: #404040;
+    border: 0;
+    border-radius: 0 10px 10px 0;
+}
+.curatio-healthcare-card #patient-form .btn {
+    background-color: #004896;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 8px 20px;
+    border: 0;
+}
+.curatio-healthcare-card #patient-form label {
+    margin-bottom: 0.3rem;
+}
+.curatio-healthcare-card #patient-form .form-group {
+    margin-bottom: 0.6rem;
+}
+.curatio-healthcare-card #ThankyouModal svg {
+    fill: #31B52C;
+}
+.curatio-healthcare-card .inner-container > h4 {
+    font-style: italic;
+    color: #151516;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.curatio-healthcare-card .inner-container > h4:before {
+    content: "";
+    position: absolute;
+    left: -70px;
+    top: 14px;
+    width: 60px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #5b2281;
+}
+.curatio-healthcare-card .inner-container > h4:after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    top: 14px;
+    width: 60px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #5b2281;
+}
+.curatio-healthcare-card .inner-container .grad-band {
+    margin: 0 -15px;
+    padding: 7px 5px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #151516;
+    background: rgb(255,66,210);
+    background: -moz-linear-gradient(90deg, rgba(255,66,210,1) 0%, rgba(255,207,221,1) 50%, rgba(255,66,210,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255,66,210,1) 0%, rgba(255,207,221,1) 50%, rgba(255,66,210,1) 100%);
+    background: linear-gradient(90deg, rgba(255,66,210,1) 0%, rgba(255,207,221,1) 50%, rgba(255,66,210,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff42d2",endColorstr="#ff42d2",GradientType=1);
+}
+.curatio-healthcare-card .inner-container .form-btn {
+    color: #ffffff;
+    font-style: italic;
+    border: 0;
+    border-radius: 30px;
+    padding: 10px 25px 10px 25px;
+    font-weight: 500;
+    position: relative;
+    background: rgb(226,0,98);
+    background: -moz-linear-gradient(90deg, rgba(226,0,98,1) 0%, rgba(104,9,251,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(226,0,98,1) 0%, rgba(104,9,251,1) 100%);
+    background: linear-gradient(90deg, rgba(226,0,98,1) 0%, rgba(104,9,251,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e20062",endColorstr="#6809fb",GradientType=1);
+}
+.curatio-healthcare-card .inner-container .form-btn:before {
+    content: "";
+    border: 2px solid #ffffff;
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+    border-radius: 30px;
+}
+/* curatio-healthcare-card standard landing page css end */
+
+
+
+/* ipca urinary incontinence questionnaire standard landing page css start */
+#ipca-urinary-incontinence {
+    font-family: 'Noto Sans', 'Noto Sans Devanagari', 'Noto Serif Bengali', 'Noto Sans Gujarati', 'Noto Serif Kannada', 'Noto Sans Malayalam', 'Noto Sans Oriya', 'Noto Sans Gurmukhi', 'Noto Sans Tamil', 'Noto Sans Telugu', sans-serif;
+}
+#ipca-urinary-incontinence.super-container {
+    background: rgb(30,104,133);
+    background: -moz-radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    background: radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e6885",endColorstr="#1f2e5e",GradientType=1);
+}
+#ipca-urinary-incontinence .doc-info .doc-name {
+    color: #ffffff;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0 15px 8px 15px;
+    border-bottom: 3px solid #2373a4;
+    margin-bottom: 10px;
+    position: relative;
+}
+#ipca-urinary-incontinence .doc-info h6 {
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    font-weight: 400;
+}
+#ipca-urinary-incontinence .doc-info .doc-name:before {
+    content:"";
+    position: absolute;
+    left: -5px;
+    bottom: -7px;
+    width: 11px;
+    height: 11px;
+    background-color: #2373a4;
+    border-radius: 30px;
+}
+#ipca-urinary-incontinence .doc-info .doc-name:after {
+    content:"";
+    position: absolute;
+    right: -5px;
+    bottom: -7px;
+    width: 11px;
+    height: 11px;
+    background-color: #2373a4;
+    border-radius: 30px;
+}
+#ipca-urinary-incontinence .box-content {
+    border: 3px solid #2373a4;
+    border-radius: 15px;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+#ipca-urinary-incontinence .box-content figure {
+    margin-top: -50px;
+    margin-bottom: 5px;
+}
+#ipca-urinary-incontinence .box-content img {
+    width: 120px;
+}
+#ipca-urinary-incontinence .box-content h6 {
+    color: #f47920;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#ipca-urinary-incontinence .box-content h2 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size:36px;
+    line-height: 1;
+    margin-bottom: 50px;
+}
+#ipca-urinary-incontinence .box-content .btn {
+    background-color: #fdb003;
+    color: #1e6885;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 10px;
+}
+#ipca-urinary-incontinence .modal {
+    padding-left: 0 !important;
+}
+#ipca-urinary-incontinence .modal .modal-content {
+    background: rgb(30,104,133);
+    background: -moz-radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    background: radial-gradient(circle, rgba(30,104,133,1) 0%, rgba(31,46,94,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1e6885",endColorstr="#1f2e5e",GradientType=1);
+}
+#ipca-urinary-incontinence .modal .modal-title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+#ipca-urinary-incontinence .modal .close {
+    color: #ffffff;
+}
+#ipca-urinary-incontinence .modal .btn {
+    color: #1e6885;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: #ededed;
+    width: 230px;
+    max-width: 75%;
+    margin: 0 auto;
+}
+/* ipca urinary incontinence questionnaire standard landing page css end */
+
+
+/* glenmark ryaltris az mono landing page css start */
+#ryaltris-az-mono-lp {
+    background: url("https://edumedc.b-cdn.net/pm/glenmark/ryaltris-az-bg.jpg") no-repeat scroll center center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+#ryaltris-az-mono-lp .doc-photo {
+    border: 2px solid #ce202c;
+    display: inline-block;
+    padding: 8px;
+    margin-bottom: 12px;
+}
+#ryaltris-az-mono-lp .doc-photo img {
+    max-width: 250px;
+}
+#ryaltris-az-mono-lp .doc-info {
+    color: #9e4871;
+    margin-bottom: 35px;
+}
+#ryaltris-az-mono-lp .doc-info .doc-name {
+    font-weight: 700;
+}
+#ryaltris-az-mono-lp .heading {
+    display: inline-block;
+    background-color: #ce202c;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 21px;
+    padding: 4px 15px;
+    position: relative;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 30%);
+}
+#ryaltris-az-mono-lp .heading:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(206, 32, 44, 0);
+    border-top-color: #ce202c;
+    border-width: 10px;
+    margin-left: -10px;
+}
+#ryaltris-az-mono-lp .modal-body .btn {
+    background-color: #9e4871;
+}
+#ryaltris-az-mono-lp .modal-body .btn:hover,
+#ryaltris-az-mono-lp .modal-body .btn:focus {
+    background-color: #7670b1;
+}
+#ryaltris-az-mono-lp .page-head {
+    color: #ffffff;
+    background-color: #cf202d;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    display: inline-block;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+/* glenmark ryaltris az mono landing page css end */
+
+
+/* dr-reddys-diabetes-gum-care landing page css start */
+#dr-reddys-diabetes-gum-care {
+    background: url("https://edumedc.b-cdn.net/pm/images/dr-reddys-diabetes-gum-care-bg.png") repeat-x scroll center center rgba(166,176,244,0.10);
+}
+#dr-reddys-diabetes-gum-care .card {
+    background-color: transparent;
+    border: 0;
+    padding: 0 15px;
+}
+#dr-reddys-diabetes-gum-care .card figure {
+    margin: 0;
+    padding: 8px 20px 8px 8px;
+    border-bottom: 3px solid #5124b5;
+    border-left: 3px solid #5124b5;
+    border-radius: 0 0px 0px 8px;
+    position: relative;
+}
+#dr-reddys-diabetes-gum-care .card figure:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -10px;
+    background-color: #ffffff;
+    border: 4px solid #5124b5;
+    width: 15px;
+    height: 14px;
+    border-radius: 30px;
+}
+#dr-reddys-diabetes-gum-care .card figure:after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    right: -20px;
+    width: 25px;
+    height: 3px;
+    border-radius: 30px;
+}
+#dr-reddys-diabetes-gum-care .card .card-title {
+    color: #5124b5;
+    font-weight: 700;
+}
+#dr-reddys-diabetes-gum-care .card .card-body .btn {
+    background-color: #5124b5;
+    color: #ffffff;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: -14px;
+}
+#dr-reddys-diabetes-gum-care .modal .btn {
+    background-color: #5124b5;	
+    color: #ffffff;
+}
+/* dr-reddys-diabetes-gum-care landing page css end */
+
+/* ipca alkaston2 landing page css start */
+#ipca-alkaston2 .page-content {
+    text-align: center;
+    color: #124194;
+    text-transform: uppercase;
+    margin-top: -40px;
+    position: relative;
+    margin-bottom: 45px;
+}
+#ipca-alkaston2 .doc-info .doc-name {
+    color: #0f4d90;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 3px;
+    font-size: 25px;
+}
+#ipca-alkaston2 .doc-info p {
+    color: #1a1a18;
+}
+#ipca-alkaston2 .page-content .text1 {
+    font-size: 100px;
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+#ipca-alkaston2 .page-content .text2 {
+    margin: 0;
+    display: inline-block;
+    border-top: 2px solid #124194;
+    border-bottom: 2px solid #124194;
+    font-size: 34px;
+    font-weight: bold;
+    padding: 1px 6px;
+}
+#ipca-alkaston2 .page-content .text3 {
+    background-color: #124194;
+    display: inline-block;
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+    padding: 1px 12px 8px;
+    line-height: 1;
+    margin: 0;
+}
+#ipca-alkaston2 .page-content .text4 {
+    font-weight: bold;
+    font-size: 42px;
+}
+#ipca-alkaston2 .modalBtn {
+    background-color: #124194;
+    color: #ffffff;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 24px;
+    border-radius: 54px;
+    padding: 0 25px 3px 25px;
+    text-align: left;
+    width: 185px;
+    position: relative;
+}
+#ipca-alkaston2 .lead {
+    font-weight: 500;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+#ipca-alkaston2 #languageModal .language-btns a {
+    display: block;
+    background-color: #124194;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 8px 8px 10px 8px;
+}
+/* ipca alkaston2 landing page css end */
+        
+		
+/* dr. reddy's dapagliflozin landing page css start */	
+#drl-dapagliflozin-lp {
+	font-family: 'Montserrat', sans-serif, 'Noto Sans Devanagari', 'Noto Serif Bengali', 'Noto Sans Gujarati', 'Noto Serif Kannada', 'Noto Sans Malayalam', 'Noto Sans Oriya', 'Noto Sans Gurmukhi', 'Noto Sans Tamil', 'Noto Sans Telugu', sans-serif;
+	padding: 35px 0 15px 0;
+	background: rgb(88,48,132);
+	background: -moz-linear-gradient(180deg, rgba(88,48,132,1) 0%, rgba(241,90,36,1) 100%);
+	background: -webkit-linear-gradient(180deg, rgba(88,48,132,1) 0%, rgba(241,90,36,1) 100%);
+	background: linear-gradient(180deg, rgba(88,48,132,1) 0%, rgba(241,90,36,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#583084",endColorstr="#f15a24",GradientType=1);
+}
+#drl-dapagliflozin-lp .inner-container {
+	background: url("https://edumedc.b-cdn.net/pm/images/dapagliflozin-in-bg.jpg") no-repeat scroll center center #ffffff;
+	-webkit-background-size: cover;
+	   -moz-background-size: cover;
+			background-size: cover;
+	border-radius: 20px;
+	padding: 20px 35px 35px 35px;
+	box-shadow: 0 0px 16px rgba(0,0,0,.50);
+}
+#drl-dapagliflozin-lp .heading-card {
+	background-color: #f7931e;
+	padding: 24px 5px 20px 5px;
+	border-radius: 20px;
+	position: relative;
+	margin-bottom: 50px;
+}
+#drl-dapagliflozin-lp .heading-card:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -22px;
+	width: 0px;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 22px solid #f7931e;
+	margin-left: -15px;
+	right: auto;
+}
+#drl-dapagliflozin-lp .heading-card .heading-1 {
+	text-transform: uppercase;
+	color: #583084;
+	text-align: center;
+	font-size: 38px;
+	font-weight: 700;
+	line-height: 1;
+}
+#drl-dapagliflozin-lp .heading-card .heading-2 {
+	text-transform: uppercase;
+	color: #583084;
+	text-align: center;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 1;
+}
+#drl-dapagliflozin-lp .heading-card .center-card {
+	background-color: #583084;
+	border: 4px solid #ed1e79;
+	border-radius: 20px;
+	padding: 18px 12px;
+	margin: 15px -25px 21px -25px;
+	color: #ffffff;
+	font-weight: 800;
+	font-size: 26px;
+	line-height: normal;
+}
+#drl-dapagliflozin-lp .heading-card .center-card .divider {
+	border-right: 2px solid #ed1e79;
+	position: relative;
+}
+#drl-dapagliflozin-lp .heading-card .center-card .divider:after {
+	content: "";
+	background-color: #ed1e79;
+	height: 18px;
+	width: 18px;
+	border-radius: 100%;
+	position: absolute;
+	right: -10px;
+	top: 50px;
+}
+#drl-dapagliflozin-lp .heading-card .center-card .txt-left {
+	text-align: right;
+	padding-right: 25px;
+
+}
+#drl-dapagliflozin-lp .heading-card .center-card .txt-right {
+	text-align: left;
+	padding-left: 25px;
+}
+#drl-dapagliflozin-lp .language-btns .btn {
+	background: rgb(204,204,204);
+	background: -moz-linear-gradient(90deg, rgba(204,204,204,0.5) 0%, rgba(255,255,255,1) 49%, rgba(204,204,204,0.5) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(204,204,204,0.5) 0%, rgba(255,255,255,1) 49%, rgba(204,204,204,0.5) 100%);
+	background: linear-gradient(90deg, rgba(204,204,204,0.5) 0%, rgba(255,255,255,1) 49%, rgba(204,204,204,0.5) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc",endColorstr="#cccccc",GradientType=1);
+	color: #583084;
+	font-weight: 600;
+	font-size: 20px;
+	margin: 0 auto;
+	margin: 0 auto;
+	width: 100%;
+	border-radius: 33px;
+	border-color: #583084;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+#drl-dapagliflozin-lp .language-btns .btn:hover {
+	color: #ffffff;
+	background: rgb(88,48,132);
+	background: -moz-linear-gradient(90deg, rgba(88,48,132,1) 0%, rgba(88,48,132,1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(88,48,132,1) 0%, rgba(88,48,132,1) 100%);
+	background: linear-gradient(90deg, rgba(88,48,132,1) 0%, rgba(88,48,132,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#583084",endColorstr="#583084",GradientType=1);
+}	
+		
+/* dr. reddy's dapagliflozin landing page css end */		
+		
+
+/* glenmark ryaltris mono standard landing page css start */	
+#ryaltris-az-mono-lp-std {
+    background: url("https://edumedc.b-cdn.net/pm/glenmark/ryaltris-az-bg.jpg") no-repeat scroll center center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+#ryaltris-az-mono-lp-std .heading {
+    display: inline-block;
+    background-color: #ce202c;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 21px;
+    padding: 4px 15px;
+    position: relative;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 30%);
+}
+#ryaltris-az-mono-lp-std .heading:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: "";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(206, 32, 44, 0);
+    border-top-color: #ce202c;
+    border-width: 10px;
+    margin-left: -10px;
+}
+#ryaltris-az-mono-lp-std .modal-body .btn {
+    background-color: #9e4871;
+}
+#ryaltris-az-mono-lp-std .modal-body .btn:hover,
+#ryaltris-az-mono-lp-std .modal-body .btn:focus {
+    background-color: #7670b1;
+}
+
+/* glenmark ryaltris mono standard landing page css end */     
+        
+        
+        
+/* cipla drishti new landing page css start */ 
+
+#cipla-drishti-smartrx-new {
+    position: relative;
+    color: #414142;
+}
+#cipla-drishti-smartrx-new:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 540px;
+    height: 388px;
+    background: url("https://qrcode.yourclinic.in/24746/images/cipla-drishti-smartrx-left-bg.png") no-repeat scroll 0 0 transparent;
+}
+#cipla-drishti-smartrx-new:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 540px;
+    height: 388px;
+    background: url("https://qrcode.yourclinic.in/24746/images/cipla-drishti-smartrx-right-bg.png") no-repeat scroll right 0 transparent;
+}
+#cipla-drishti-smartrx-new header {
+    padding: 20px 0 45px;
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+#cipla-drishti-smartrx-new header .logo img {
+    width: 100px;
+}
+#cipla-drishti-smartrx-new .logo-caption {
+    border-top: 2px solid #2b2a29;
+    color: #000000;
+    padding-top: 10px;
+    font-size: 16px;
+}
+#cipla-drishti-smartrx-new .inner-container:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 540px;
+    height: 388px;
+    background: url("cipla-drishti-smartrx-bottom-left-bg.png") no-repeat scroll 0 0 transparent;
+}
+#cipla-drishti-smartrx-new .inner-container:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 540px;
+    height: 388px;
+    background: url("cipla-drishti-smartrx-bottom-right-bg.png") no-repeat scroll right 0 transparent;
+}
+/* cipla drishti new landing page css end */ 
+
+
+/* glenmark nebzmart winter asthma triggers landing page css start */ 
+#nebzmart-asthama-lp {
+    background: url("https://edumedc.b-cdn.net/pm/images/nebzmart-asthama-lp-bg.png") no-repeat scroll right 0 transparent;
+}
+#nebzmart-asthama-lp .head-img {
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+#nebzmart-asthama-lp .head-img img {
+    width: 225px;
+}
+#nebzmart-asthama-lp .doc-info {
+    margin-bottom: 50px;
+}
+#nebzmart-asthama-lp .doctor-photo {
+    background-color: #e5e6e7;
+    border: 3px solid #008ccd;
+    border-bottom: 0;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    max-width: 185px;
+    margin: 0 auto;
+}
+#nebzmart-asthama-lp .doc-name {
+    background: url("https://edumedc.b-cdn.net/pm/images/nebzmart-asthama-lp-name-bg.png") no-repeat scroll right 0 transparent;
+    text-align: center;
+    height: 37px;
+    width: 340px;
+    line-height: 35px;
+    color: #ffffff;
+    font-weight: 500;
+    margin: 0 auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+#nebzmart-asthama-lp .snp-logo {
+    margin-bottom: 15px;
+    text-align: center;
+}
+#nebzmart-asthama-lp .snp-logo img {
+    max-width: 285px;
+}
+#nebzmart-asthama-lp .lp-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+#nebzmart-asthama-lp .lp-buttons img {
+    max-width: 345px;
+}
+#nebzmart-asthama-lp .lp-buttons a {
+    display: inline-block;
+}
+#nebzmart-asthama-lp .division {
+    text-align: center;
+    font-size: 14px;
+}
+#nebzmart-asthama-lp .gm-logo {
+    text-align: center;
+    padding-bottom: 50px;
+}
+#nebzmart-asthama-lp .gm-logo img {
+    width: 100px;
+}
+#nebzmart-asthama-lp .std-img {
+    margin-bottom: 25px;
+}
+#nebzmart-asthama-lp .std-img img {
+    max-width: 275px;
+}
+/* glenmark nebzmart winter asthma triggers landing page css end */ 
+
+
+/* sunpharma > RAHA QR code stamp landing page css start */ 
+#raha-diet-after-attack {
+    background: rgb(225,244,253);
+    background: -moz-linear-gradient(180deg, rgba(225,244,253,1) 0%, rgba(255,255,255,1) 50%, rgba(212,239,252,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(225,244,253,1) 0%, rgba(255,255,255,1) 50%, rgba(212,239,252,1) 100%);
+    background: linear-gradient(180deg, rgba(225,244,253,1) 0%, rgba(255,255,255,1) 50%, rgba(212,239,252,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1f4fd",endColorstr="#d4effc",GradientType=1);
+}
+#raha-diet-after-attack .header-img img,
+#raha-diet-after-attack .footer-img img {
+    max-width: 60%;
+}
+#raha-diet-after-attack .head-title img {
+    width: 90%;
+}
+#raha-diet-after-attack .heart-btn img {
+    width: 80%;
+}
+#raha-diet-after-attack #dietVideoLanguageModal .btn {
+    background-color: #00539e;
+    color: #ffffff;
+}
+/* sunpharma > RAHA QR code stamp landing page css end */
+
+
+/* Akumentis Healthcare Switglim M & Vilmax M landing page css start */
+#akumentis-switglim-vilmax {
+    background: url("https://edumedc.b-cdn.net/pm/images/akumentis-switglim-vilmax-lp-bg.png") no-repeat scroll center center transparent;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+#akumentis-switglim-vilmax .doc-photo {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: rgb(32,161,219);
+    background: -moz-linear-gradient(90deg, rgba(32,161,219,1) 50%, rgba(7,110,170,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(32,161,219,1) 50%, rgba(7,110,170,1) 100%);
+    background: linear-gradient(90deg, rgba(32,161,219,1) 50%, rgba(7,110,170,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20a1db",endColorstr="#076eaa",GradientType=1);
+}
+#akumentis-switglim-vilmax .doc-photo img {
+    max-width: 200px;
+}
+#akumentis-switglim-vilmax .lp-heading img {
+    max-width: 325px;
+}
+#akumentis-switglim-vilmax .doc-info .doc-name {
+    color: #221f1f;
+}
+#akumentis-switglim-vilmax .doc-info h6 {
+    color: #414141;
+    font-size: 18px;
+    font-weight: normal;
+}
+#akumentis-switglim-vilmax .language-btn {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    border: 2px solid #157eba;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: rgb(26,157,232);
+    background: -moz-linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    background: linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a9de8",endColorstr="#1456a9",GradientType=1);
+}
+#akumentis-switglim-vilmax .modal-body a {
+    display: block;
+    color: #172b75;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    background-color: transparent;
+    text-align: center;
+    padding: 6px 2px;
+    border-radius: 8px;
+    border: 2px solid transparent;
+}
+#akumentis-switglim-vilmax .modal-body a:hover,
+#akumentis-switglim-vilmax .modal-body a:active {
+    border-color: #157eba;
+    background: rgb(26,157,232);
+    text-decoration: none;
+    background: -moz-linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    background: linear-gradient(180deg, rgba(26,157,232,1) 50%, rgba(20,86,169,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1a9de8",endColorstr="#1456a9",GradientType=1);
+}
+/* Akumentis Healthcare Switglim M & Vilmax M landing page css end */       
+        
+        
+        
+@media screen and (min-width: 768px) { }
+		
+/* below 1024 screens */
+@media (min-width: 992px) {
+	#zotide_save_bones .container-fluid,
+	#zotide_save_bones .row {height: 100%;}
+}
+			
+/* below 1024 screens */
+@media (max-width: 992px) { }
+
+@media (max-width: 768px) {
+
+#cipla-drishti-smartrx-new:before {
+    width: 50%;
+    height: 180px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    }
+    #cipla-drishti-smartrx-new:after {
+        width: 50%;
+        height: 180px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    #cipla-drishti-smartrx-new .inner-container:before {
+        width: 50%;
+        height: 180px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    #cipla-drishti-smartrx-new .inner-container:after {
+        width: 50%;
+        height: 180px;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    #cipla-drishti-smartrx-new main {
+        height: auto;
+    }
+
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	
+	#st-2 {
+		position: fixed !important;
+		top: auto !important;
+		display: flex !important;
+		left: 0 !important;
+		transform:  none !important;
+	}
+	
+	#ipca-tfct-nib .bg-text {font-size: 18px;}
+	#ipca-tfct-nib .heading3 {font-size: 22px;}
+	
+	#ipca-alkaston .page-content {margin-top: -45px;}
+	#ipca-alkaston .page-content .text1 {font-size: 60px;}
+	#ipca-alkaston .page-content .text2 {font-size: 22px;}
+	#ipca-alkaston .page-content .text3 {font-size: 24px;}
+	#ipca-alkaston .page-content .text4 {font-size: 24px;}
+	#ipca-alkaston .modalBtn {font-size: 20px; width: 165px;}
+	#ipca-alkaston .modalBtn {width: 150px;padding: 2px 25px 4px 18px;font-size: 18px;}
+	
+	#ipca-acrylic-standee .call-to-action .card .card-title {font-size: 12px; margin-top: 5px;}
+	
+	#aristo-ear-infection-std .heading .heading-inner {padding: 8px; font-size: 18px;}
+	
+	#video-landing-page .v-content {padding-bottom: 35px;}		
+			
+	#zotide_save_bones .box .language_box {width: 318px;}
+	#zotide_save_bones .box .language_box span {margin-right: 9px;}
+	
+	#glenmark_psoriasis_symptoms .content-1 h3 {font-size: 20px;}
+	#glenmark_psoriasis_symptoms .content-1 h5 {font-size: 18px;}
+	#glenmark_psoriasis_symptoms .content-1 h1 {font-size: 58px;}
+	#glenmark_psoriasis_symptoms .ice-img {margin-top: -25px;}
+	#glenmark_psoriasis_symptoms .content-2 h2 {font-size: 35px;}
+	#glenmark_psoriasis_symptoms .content-2 h3:before {left: -40px; width: 40px;}
+	#glenmark_psoriasis_symptoms .content-2 h3:after {right: -40px; width: 40px;}
+	
+	#glenmark_deriva_cms {-webkit-background-size: auto;-moz-background-size: auto;background-size: auto;}
+	
+	#oaknet-smartrx-lp .lp-banner::before {content:"";position: absolute;top: -34%;left: -50%;bottom: -10%;
+		border: 80px solid #ffffff;border-radius: 100%;right: -50%;}
+	#oaknet-smartrx-lp .lp-banner::after {content:"";position: absolute;top: -45%;left: -45%;bottom: -4px;
+		border: 3px solid #ec1c24;border-radius: 100%;right: -45%;}
+	#oaknet-smartrx-lp .content {margin-top: 50px;background-color: transparent;}
+	#oaknet-smartrx-lp .content:before {content:"";border: 80px solid #ffffff;left: -50%;right: -50%;
+		position: absolute;border-radius: 100%;top: -18px;bottom: -600%;z-index: -1;}
+	#oaknet-smartrx-lp .content .inner {margin-top: -15px;}
+	
+	
+	#nebzmart-snp-lp .head-img {margin-bottom: 30px;}
+	#nebzmart-snp-lp .heading {padding-left:15px;padding-right:15px;}
+	#nebzmart-snp-lp .heading .head-content {font-size: 15px;}
+	#nebzmart-snp-lp .heading .head-content:before {width: 7px;height: 7px;}
+	#nebzmart-snp-lp .second-row .row-heading h2 {font-size: 20px;}
+	#nebzmart-snp-lp .second-row .row-heading:before {top: 19px;}
+	#nebzmart-snp-lp .second-row .button-box {height:110px;}
+	#nebzmart-snp-lp .second-row .button-box img {width: 75px;}	
+    
+    #reddys-toon-magazine .card .btn {padding: 4px 20px 6px 20px; font-size: 15px;}
+    
+    #dr-reddys-diabetes-gum-care .card .card-title {font-size: 16px;}
+    
+    #ipca-alkaston2 .page-content .text1 {font-size: 70px;}
+    #ipca-alkaston2 .page-content .text2 {font-size: 26px;}
+    #ipca-alkaston2 .page-content .text3 {font-size: 26px;}
+    #ipca-alkaston2 .page-content .text4 {font-size: 26px;}
+    #ipca-alkaston2 .modalBtn {width: 140px; padding: 2px 18px 4px 18px; font-size: 18px;}
+	
+	#drl-dapagliflozin-lp .heading-card {padding-top: 18px;}
+	#drl-dapagliflozin-lp .inner-container {padding-left: 25px;padding-right: 25px;}
+	#drl-dapagliflozin-lp .heading-card .heading-1 {font-size: 24px;}
+	#drl-dapagliflozin-lp .heading-card .heading-2 {font-size: 19px;}
+	#drl-dapagliflozin-lp .heading-card .center-card {font-size: 16px; margin-top: 10px; margin-bottom: 15px;}
+	#drl-dapagliflozin-lp .heading-card .center-card .txt-left {padding-right: 10px;}
+	#drl-dapagliflozin-lp .heading-card .center-card .txt-right {padding-left: 10px;}
+	#drl-dapagliflozin-lp .heading-card .center-card .divider:after {top: 28px;}
+    
+    #raha-diet-after-attack .footer-img {padding-bottom: 32px;}
+    
+}
+
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	
+	#ipca-alkaston .page-content {margin-top: -45px;}
+	#ipca-alkaston .page-content .text1 {font-size: 60px;}
+	#ipca-alkaston .page-content .text2 {font-size: 22px;}
+	#ipca-alkaston .page-content .text3 {font-size: 24px;}
+	#ipca-alkaston .page-content .text4 {font-size: 24px;}
+	#ipca-alkaston .modalBtn {font-size: 20px; width: 165px;}
+	#ipca-alkaston .modalBtn {width: 150px;padding: 2px 25px 4px 18px;font-size: 18px;}
+	
+	#nebzmart-snp-lp .head-img {margin-bottom: 30px;}
+	#nebzmart-snp-lp .heading .head-content {font-size: 24px;}
+	#nebzmart-snp-lp .second-row .row-heading h2 {font-size: 20px;}
+	#nebzmart-snp-lp .second-row .row-heading:before {top: 19px;}
+	#nebzmart-snp-lp .second-row .button-box {height:150px;}
+	#nebzmart-snp-lp .second-row .button-box img {width: 90px;}
+	
+	#drl-dapagliflozin-lp .heading-card {padding-top: 18px;}
+	#drl-dapagliflozin-lp .inner-container {padding-left: 25px;padding-right: 25px;margin-bottom: 60px;}
+	#drl-dapagliflozin-lp .heading-card .heading-1 {font-size: 34px;}
+	#drl-dapagliflozin-lp .heading-card .heading-2 {font-size: 26px;}
+	#drl-dapagliflozin-lp .heading-card .center-card {margin-top: 10px; margin-bottom: 15px;}
+	#drl-dapagliflozin-lp .heading-card .center-card .txt-left {padding-right: 10px;}
+	#drl-dapagliflozin-lp .heading-card .center-card .txt-right {padding-left: 10px;}
+    
+    #cipla-drishti-smartrx-new:before {height: 200px;}
+    #cipla-drishti-smartrx-new:after {height: 200px;}
+    #cipla-drishti-smartrx-new .inner-container:before {height: 200px;}
+    #cipla-drishti-smartrx-new .inner-container:after {height: 200px;}
+	
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	#zotide_save_bones .bg {background: url("https://edumedc.b-cdn.net/pm/images/zotide_save_bones_banner_bg_m.png") no-repeat scroll center -220px transparent;}
+	#zotide_save_bones .bone_img {margin-bottom: 20px;}
+	#zotide_save_bones .bone_img .img-1 {width: 260px;}
+	#zotide_save_bones .stamp_img .img-2 {width: 150px;}
+    
+    #cipla-drishti-smartrx-new:before {height: 275px;}
+    #cipla-drishti-smartrx-new:after {height: 275px;}
+    #cipla-drishti-smartrx-new .inner-container:before {height: 275px;}
+    #cipla-drishti-smartrx-new .inner-container:after {height: 275px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	#zotide_save_bones .bg {background-position-x: -95%;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	.embed-responsive-16by9::before {
+		padding-top: 44.25%;
+	}
+}
+	
+@media (min-width: 1280px) and (max-width: 1366px) {
+	#zotide_save_bones .bg {background-position-x: -20%;}
+}
+		
+/* phone landscape view  */
+@media (min-width: 480px) and (max-width: 767px) {
+	#zotide_save_bones .disclaimer {position: relative;}
+	#zotide_save_bones .bg {background: url("https://edumedc.b-cdn.net/pm/images/zotide_save_bones_banner_bg_m.png") no-repeat scroll center -265px transparent;}
+	#zotide_save_bones .bone_img .img-1 {width: 230px;}
+	#zotide_save_bones .stamp_img .img-2 {width: 130px;}
+	#zotide_save_bones .inner-container h3 {font-size: 22px;}
+}
+
+/* phone portrait view  */
+@media (max-width: 479px) {
+	#zotide_save_bones .bg {background: url("https://edumedc.b-cdn.net/pm/images/zotide_save_bones_banner_bg_m.png") no-repeat scroll center -265px transparent;}
+	#zotide_save_bones .bone_img {margin-bottom: 15px;}	
+	#zotide_save_bones .bone_img .img-1 {width: 230px;}
+	#zotide_save_bones .stamp_img .img-2 {width: 130px;}
+	#zotide_save_bones .inner-container h3 {font-size: 22px;}
+	#zotide_save_bones .disclaimer {position: relative;}
+	
+	#ipca-keraXL {padding-bottom: 32px;}
+			
+}
+
+/*Sanofi Allegra Nasal Spray css start*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+#sanofi-allegra-nasal-spray.super-container {
+    background-image: url("https://edumedc.b-cdn.net/pm/sanofi/allegra-nasal-spray/background-02.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sanofi-allegra-nasal-spray .banner-img-container {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #fbd716;
+}
+
+#sanofi-allegra-nasal-spray .banner-img {
+    border-radius: 50%;
+}
+#sanofi-allegra-nasal-spray .doctor-name {
+    color: #fbd716;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#sanofi-allegra-nasal-spray .doctor-credentials {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+}
+#sanofi-allegra-nasal-spray .info-section-1 h1 {
+    color: #fff;
+    font-family: poppins;
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#sanofi-allegra-nasal-spray .know-more-img {
+    width: calc(100% - 50px);
+}
+
+#sanofi-allegra-nasal-spray .divider {
+    border: 1px solid #fff;
+    margin: 5px;
+    color: transparent;
+}
+
+#sanofi-allegra-bottom-section .footer-text {
+    background-color: #682d8f;
+    font-family: poppins;
+    color: #fff;
+    font-size: 16px;
+    width: 200px;
+    margin: -10px auto 0;
+    font-weight: 600;
+    padding: 4px 0;
+    position: relative;
+    z-index: 100;
+}
+#sanofi-allegra-nasal-spray .video-title {
+    color: #fff;
+    font-family: poppins;
+    font-size: 20px;
+    font-weight: 600;
+}
+#sanofi-allegra-nasal-spray .rightWay,
+#sanofi-allegra-nasal-spray .instruction{
+    cursor: pointer;
+}
+/*Sanofi Allegra Nasal Spray css End*/
+		
+		

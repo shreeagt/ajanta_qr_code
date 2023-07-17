@@ -27,6 +27,10 @@ Route::get('/test', function() {
     return view('test');
 });
 
+Route::get('/qrcode', function() {
+    return view('qrcode');
+});
+
 
 
 Route::group(['namespace' => 'App\Http\Controllers'], function()

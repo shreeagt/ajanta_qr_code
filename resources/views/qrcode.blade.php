@@ -16,7 +16,8 @@
     <style>
         @import  url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
         .main-container{
-            background-image: url('https://edumedc.b-cdn.net/pm/brivex/background-image.png');
+            /* background-image: url('https://edumedc.b-cdn.net/pm/brivex/background-image.png'); */
+            background-image: url('/assets/images/qr_code_banner.jpg');
             background-size: cover;
             background-position: center center;
         }
@@ -34,10 +35,8 @@
     <style>
         @import  url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
         .main-container{
-            /* background-image: url('https://edumedc.b-cdn.net/pm/brivex/background-image.png'); */
-            background-image: url('/assets/images/qr_code_banner.jpg');
+            background-image: url('https://edumedc.b-cdn.net/pm/brivex/background-image.png');
             background-size: cover;
-            width:100vw;
             background-position: center center;
         }
         h4{
@@ -51,15 +50,14 @@
             max-width: 300px;
         }
 
-        .profile-container{
-            /* border: 1px solid #1d1d1b; */
-            border:none;
-            background: #ed3237;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            padding: 12px;
-        }
+        .profile-container {
+                border: none;
+                width: 150px;
+                background: #4bc2b4;
+                height: 150px;
+                border-radius: 50%;
+                padding: 12px;
+            }
 
         .profile-container img{
             border-radius: 50%;
@@ -82,7 +80,7 @@
             font-weight: 500;
         }
     </style>
-    <div class=" main-container d-flex vh-100 justify-content-center align-items-center">
+    <div class="container main-container d-flex vh-100 justify-content-center align-items-center">
         <div class="row">
             <div class="col-12 col-md-10 mx-auto text-center">
                 <div class="profile-container my-4 mx-auto">
@@ -177,6 +175,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <script src="{{asset('js/video.min.js')}}"></script>
+    
 <script>
 $(document).ready(function(){
     jQuery(document).ready(function(){

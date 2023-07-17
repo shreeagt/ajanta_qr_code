@@ -10,19 +10,41 @@ body {
 }
 
 body.text-center {
-    background: #71bbd9;
+    /* background: #71bbd9; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgb(0, 0, 0); */
+    /* color: #522a6e!important; */
+    position: relative;
+    background-image: url('/assets/images/qrcode_banner.jpg');
+
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 0;
+    padding: 10PX;
 }
 
     main.form-signin {
     min-width: 500px;
     align-items: center;
-    background: rgba(255,255,255,0.3);
+    /* background: rgba(255,255,255,0.3); */
+    background: rgba(113,187,217,0.5);
     padding: 20px;
     border-radius:20px;
     /* background: #71bbd9; */
 }
 
-
+a.logo {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
 
 
 @media screen and (max-width: 540px) {   
@@ -38,6 +60,9 @@ body.text-center {
 }
 
 </style>
+<a href="#" class="logo">
+    <img src="{{ asset('assets/images/instareel.png') }}" class="img-fluid mt-2" alt="" style="max-width:150px;">
+</a>
 @section('content')
     <form method="post" action="{{ route('login.perform') }}">
         
@@ -64,12 +89,13 @@ body.text-center {
             @endif
         </div>
 
-        <div class="form-group mb-3">
+        {{-- <div class="form-group mb-3">
             <label for="remember">Remember me</label>
             <input type="checkbox" name="remember" value="1">
-        </div>
+        </div> --}}
 
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+        {{-- <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button> --}}
+        <button class=" btn-lg btn-primary" type="submit">Login</button>
         
         @include('auth.partials.copy')
     </form>

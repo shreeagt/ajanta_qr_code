@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="{{asset('theme/css/dashbord_navitaion.css')}}">
 <!-- Responsive stylesheet -->
 <link rel="stylesheet" href="{{asset('theme/css/responsive.css')}}">
+<link rel='stylesheet' href='https://foliotek.github.io/Croppie/croppie.css'>
 <!-- Favicon -->
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
 <link href="images/favicon.ico" sizes="128x128" rel="shortcut icon" />
@@ -36,12 +37,14 @@
     <div class="header__container pt20 pb20 pl30 pr30">
       <div class="row justify-between items-center">
         <div class="col-sm-4 col-xl-2">
-          <div class="text-center text-lg-start d-flex mb15-520">
+          <div class="text-center text-lg-start d-flex align-items-center mb15-520">
             <div class="fz20 me-4">
               <a href="#" class="dashboard_sidebar_toggle_icon text-thm1 vam"><i class="fa-sharp fa-solid fa-bars-staggered"></i></a>
             </div>
             <div class="dashboard_header_logo">
-              <a href="/" class="logo">Qr Code<span class="text-thm">.</span></a>
+              <a href="/" class="logo">
+                <img src="{{ asset('assets/images/instareel.png') }}" class="logo-img img-fluid" name="logo-img" width="100" /> 
+              </a>
             </div>
           </div>
         </div>
@@ -98,6 +101,7 @@
 <!-- Wrapper End -->
 <script src="{{asset('theme/js/jquery-3.6.0.js')}}"></script>
 <script src="{{asset('theme/js/jquery-migrate-3.0.0.min.js')}}"></script>
+<script src='https://foliotek.github.io/Croppie/croppie.js'></script>
 <script src="{{asset('theme/js/popper.min.js')}}"></script>
 <script src="{{asset('theme/js/bootstrap.min.js')}}"></script> 
 <script src="{{asset('theme/js/bootstrap-select.min.js')}}"></script>
@@ -149,5 +153,64 @@
       });
     });
 </script>
+
+
+<script>
+  // Start upload preview image
+$(".gambar").attr("src", "https://user.gadjian.com/static/images/personnel_boy.png");
+          var $uploadCrop,
+          tempFilename,
+          rawImg,
+          imageId;
+          function readFile(input) {
+             if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                $('.upload-demo').addClass('ready');
+                $('#cropImagePop').modal('show');
+                      rawImg = e.target.result;
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+                else {
+                  swal("Sorry - you're browser doesn't support the FileReader API");
+              }
+          }
+
+          $uploadCrop = $('#upload-demo').croppie({
+            viewport: {
+              width: 300,
+              height: 300,
+              type: 'circle'
+            },
+            enforceBoundary: false,
+            enableExif: true
+          });
+          $('#cropImagePop').on('shown.bs.modal', function(){
+            // alert('Shown pop');
+            $uploadCrop.croppie('bind', {
+                  url: rawImg
+                }).then(function(){
+                  console.log('jQuery bind complete');
+                });
+          });
+
+          $('.item-img').on('change', function () { imageId = $(this).data('id'); tempFilename = $(this).val();
+                                                   $('#cancelCropBtn').data('id', imageId); readFile(this); });
+          $('#cropImageBtn').on('click', function (ev) {
+            $uploadCrop.croppie('result', {
+              type: 'base64',
+              format: 'png',
+              shape: 'circle',
+              size: {width: 300, height: 300}
+            }).then(function (resp) {
+              $('#item-img-output').attr('src', resp);
+              $('#photo-cropped').attr('value', resp);
+              $('#cropImagePop').modal('hide');
+            });
+          });
+      // End upload preview image
+</script>
+
 </body>
 </html>

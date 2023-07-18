@@ -20,6 +20,11 @@
             background-size: cover;
             background-position: center center;
         }
+
+        *{
+            margin: 0;
+            padding:0;
+        }
         h4{
             font-family: 'Questrial', sans-serif;
             font-size: 20px;
@@ -71,39 +76,49 @@
         .profile-details .profile-name{
             color: #1d1d1b;
             font-family: 'Questrial', sans-serif;
-            font-size: 20px;
+            font-size: 15px;
             font-weight: 700;
         }
 
-        .profile-details .profile-designation{
+        .profile-details .profile-designation {
             font-family: 'Questrial', sans-serif;
-            font-size: 18px;
+            font-size: 15px;
             color: #1d1d1b;
             font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        img.logo-img.img-fluid {
+            height: 100px;
         }
     </style>
     <div class=" main-container d-flex vh-100 justify-content-center align-items-center">
         <div class="row">
             <div class="col-12 col-md-10 mx-auto text-center">
-                <div class="profile-container my-4 mx-auto">
+                <div class="  mx-auto">
+                    <img src="{{ asset('assets/images/instareel.png') }}" class="logo-img img-fluid" name="logo-img" /> 
+                </div>
+                <div class="profile-container  mx-auto">
                     <img src="{{ asset('logos/'.$doctor->logo) }}" class="doctor-img img-fluid" name="doctor-img" /> 
                 </div>
-                <div class="profile-details text-center mt-3">
-                    <h4 class="profile-name">Dr. {{ $doctor->firstname }} {{ $doctor->lastname }} </h4>
+                <div class="profile-details text-center mt-2">
+                    <h4 class="profile-name">Dr. {{ $doctor->firstname }} </h4>
+
+                    <p class="profile-designation">{{ $doctor->lastname }} </p>
                     <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
                     {{-- <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p> --}}
                 </div>
-                <h4 class="mt-4">Click below to view more information on:</h4>
+                <h4 class="mt-2">Click below to view more information on:</h4>
                 
-                <div class="p-3">
+                <div class="p-1">
                     <button class="btn video-btn">
-                        <img src="https://edumedc.b-cdn.net/pm/brivex/button-1.png" data-toggle="modal" data-target="#VideoLanguageModal" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/images/dos.png') }}" data-toggle="modal" data-target="#VideoLanguageModal" class="img-fluid" alt="">
                     </button>
                     <a href="https://edumedc.b-cdn.net/pm/brivex/PCS02722037_Brivex-Ajanta.pdf" class="btn pdf-btn" target="_blank">
-                        <img src="https://edumedc.b-cdn.net/pm/brivex/button-2.png" class="img-fluid" alt="">
+                        <img src="{{ asset('assets/images/symtons.png') }}" class="img-fluid" alt="">
                     </a>
                 </div>
-                <h4 class="mt-4">From Makers of</h4>
+                <h4 class="mt-2">From Makers of</h4>
                 <img src="{{ asset('assets/images/instareel.png') }}" class="img-fluid mt-2" alt="" style="max-width:150px;">
             </div>
         </div>

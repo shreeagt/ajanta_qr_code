@@ -1,6 +1,30 @@
 @extends('layouts.app-master')
 
 @section('content')
+
+<style>
+    
+    label.cabinet{
+	display: block;
+	cursor: pointer;
+}
+
+label.cabinet input.file{
+	position: relative;
+	height: 100%;
+	width: auto;
+	opacity: 0;
+	-moz-opacity: 0;
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  margin-top:-30px;
+}
+
+#upload-demo{
+	width: 340px;
+	height: 340px;
+  padding-bottom:15px;
+}
+</style>
     <div class="bg-light p-4 rounded">
         <h1>Add Doctors</h1>
         <div class="lead">
@@ -96,7 +120,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="logo" class="form-label">CLinic Logo</label>
+                    <label for="logo" class="form-label">Clinic Logo</label>
                     <input value="{{ old('logo') }}" 
                         type="file" 
                         class="form-control" 
@@ -106,6 +130,41 @@
                         <span class="text-danger text-left">{{ $errors->first('logo') }}</span>
                     @endif
                 </div>
+
+
+                
+                <!-- partial:index.partial.html -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label for="logo" class="form-label">Doctor Image</label> 
+                        <label class="cabinet center-block">
+                            <figure>
+                                <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                <figcaption><i class="fa fa-camera"></i></figcaption>
+                        </figure>
+                            <input type="file" class="item-img file center-block" name="file_photo"/>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        </div>
+                        <div class="modal-body">
+                        <div id="upload-demo" class="center-block"></div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" id="cropImageBtn" class="btn btn-primary">Crop</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
                
 
                 <button type="submit" class="btn btn-primary">Save Doctor</button>

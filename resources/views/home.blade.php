@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" crossorigin="anonymous">
+
     <link rel="stylesheet" href="{{asset('css/qrstyle.css')}}">  
     <link href="{{asset('css/video-js.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/index.css')}}" rel="stylesheet">
@@ -14,6 +15,24 @@
     <title>Qrcode</title>
 
     <style>
+
+        html{
+            overflow: hidden;
+        }
+
+        body {
+            overflow: hidden;
+        }
+        .btn {
+            /* filter: drop-shadow(0 5px 0 #15111a);    */
+            filter: drop-shadow(0 5px 0 #585161);   
+        }
+
+        .btn:active {
+            filter: drop-shadow(0 0 0 #585161);
+            transform: translate(0, 5px);
+            }
+
         @import  url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
         .main-container{
             background-image: url('https://edumedc.b-cdn.net/pm/brivex/background-image.png');
@@ -34,6 +53,9 @@
             width: 800px;
             height: 450px;
         }
+
+
+
     </style>
 </head>
     <style>
@@ -53,73 +75,152 @@
 
         .video-btn,
         .pdf-btn{
-            max-width: 300px;
+            width: 250px;
         }
 
         .profile-container{
-            /* border: 1px solid #1d1d1b; */
-            border:none;
-            background: #ed3237;
+            border: 5px solid #ed3237;
+            /* border:none; */
+            /* background: #ed3237; */
             width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            padding: 12px;
+            height: 200px;
+            border-radius: 10px;
+            /* padding: 12px; */
         }
 
         .profile-container img{
-            border-radius: 50%;
+            /* border-radius: 50%; */
             width: 100%;
             height: 100%;
             box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
         }
 
-        .profile-details .profile-name{
-            color: #1d1d1b;
-            font-family: 'Questrial', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-        }
+        .profile-details .profile-name {
+                color: #0c0433;
+                font-family: 'Questrial', sans-serif;
+                font-size: 15px;
+                font-weight: bolder;
+                margin-bottom: 15px;
+            }
 
-        .profile-details .profile-designation {
-            font-family: 'Questrial', sans-serif;
-            font-size: 15px;
-            color: #1d1d1b;
-            font-weight: 500;
-            margin-bottom: 5px;
-        }
+            .profile-details .profile-designation {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15px;
+                color: #1d1d1b;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
 
         img.logo-img.img-fluid {
             height: 100px;
         }
+
+        .btn-secondary {
+            color: #fff;
+            background-color: #d53944; /* Fallback color for older browsers that don't support gradients */
+            background-image: linear-gradient(to bottom right, #d53944, #eb878b);
+            /* border-color: #d0486d; */
+            border: none;
+        }
+
+        .btn-secondary:hover {
+            color: #fff;
+            background-color: #1cb29c;
+            border-color: #1cb29c;
+        }
+
+        .logo-cover.mx-auto {
+            border: 1px solid #fff;
+            display: inline-block;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 2px;
+            max-width:150px;
+            background: aliceblue;
+        }
+
+        p.profile-designation {
+            font-weight: 900;
+            color: #a78b8b;
+        }
+
+        .profile-designation i.fa {
+            margin-right: 10px;
+            color: #d9415d;
+        }
+
+        img {
+            vertical-align: middle;
+            /* height: auto; */
+            width: 100%;
+            border: 0;
+        }
+
+        @media only screen and (max-width:767px){
+            .main-container{
+                background-image: url('/assets/images/qr_code_mobile.jpg');
+            }
+
+            p.profile-designation {
+                color: #fff;
+                margin-bottom:0px;
+            }
+
+            .video-btn, .pdf-btn {
+                width: 270px;
+            }
+        }
+
+        @media only screen and (max-width:700px){
+            .profile-details .profile-name {
+                margin-bottom: 5px;
+            }
+
+            .profile-details .profile-designation {
+                    margin-bottom: 5px;
+                }
+        }
     </style>
     <div class=" main-container d-flex vh-100 justify-content-center align-items-center">
         <div class="row">
-            <div class="col-12 col-md-10 mx-auto text-center">
-                <div class="  mx-auto">
+            <div class="col-12  mx-auto text-center">
+                <div class="logo-cover  mx-auto">
                     <img src="{{ asset('assets/images/instareel.png') }}" class="logo-img img-fluid" name="logo-img" /> 
                 </div>
+                <p class="profile-designation">{{ $doctor->lastname }} </p>
                 <div class="profile-container  mx-auto">
                     <img src="{{ asset('logos/'.$doctor->logo) }}" class="doctor-img img-fluid" name="doctor-img" /> 
                 </div>
-                <div class="profile-details text-center mt-2">
-                    <h4 class="profile-name">Dr. {{ $doctor->firstname }} </h4>
+     
+                <div class="profile-details text-left d-inline-block mt-2">
+                    <h4 class="profile-name text-center">Dr. {{ $doctor->firstname }} </h4>
 
-                    <p class="profile-designation">{{ $doctor->lastname }} </p>
-                    <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
+                    
+                    <p class="profile-designation"><i class="fa fa-phone" aria-hidden="true"></i> {{ $doctor->contacno }} </p>
+                    <p class="profile-designation"><i class="fa fa-map-marker"></i> {{ $doctor->city }} </p>
+                    <p class="profile-designation"><i class="fa fa-envelope"></i> {{ $doctor->email }} </p>
                     {{-- <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p> --}}
                 </div>
-                <h4 class="mt-2">Click below to view more information on:</h4>
+                {{-- <h4 class="mt-2">Click below to view more information on:</h4> --}}
                 
                 <div class="p-1">
-                    <button class="btn video-btn">
-                        <img src="{{ asset('assets/images/dos.png') }}" data-toggle="modal" data-target="#VideoLanguageModal" class="img-fluid" alt="">
+                    <button class="btn video-btn text-center  btn-secondary rounded-pill mb-2" data-toggle="modal" data-target="#VideoLanguageModal" class="" alt="">
+                       Do's And Don't Glaucoma
                     </button>
-                    <a href="https://edumedc.b-cdn.net/pm/brivex/PCS02722037_Brivex-Ajanta.pdf" class="btn pdf-btn" target="_blank">
-                        <img src="{{ asset('assets/images/symtons.png') }}" class="img-fluid" alt="">
+
+                    {{-- <button class="btn video-btn">
+                        <img src="{{ asset('assets/images/dos.png') }}" data-toggle="modal" data-target="#VideoLanguageModal" class="" alt="">
+                    </button> --}}
+
+                    {{-- <a href="https://edumedc.b-cdn.net/pm/brivex/PCS02722037_Brivex-Ajanta.pdf" class="btn pdf-btn" target="_blank">
+                        <img src="{{ asset('assets/images/symtons.png') }}" class="" alt="">
+                    </a> --}}
+                    <a href="https://edumedc.b-cdn.net/pm/brivex/PCS02722037_Brivex-Ajanta.pdf" class="btn pdf-btn text-center  btn-secondary rounded-pill mb-2" target="_blank">
+                  Symtoms of Glaucoma
                     </a>
                 </div>
-                <h4 class="mt-2">From Makers of</h4>
-                <img src="{{ asset('assets/images/instareel.png') }}" class="img-fluid mt-2" alt="" style="max-width:150px;">
+                {{-- <h4 class="mt-2">From Makers of</h4> --}}
+                {{-- <img src="{{ asset('assets/images/instareel.png') }}" class="img-fluid mt-2" alt="" style="max-width:150px;"> --}}
             </div>
         </div>
     </div>

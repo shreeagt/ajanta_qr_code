@@ -9,6 +9,11 @@ body {
 
 }
 
+h1.h3.mb-3.fw-normal {
+    color: #ed3237;
+    font-weight: bold;
+}
+
 body.text-center {
     /* background: #71bbd9; */
     display: flex;
@@ -34,7 +39,7 @@ body.text-center {
     min-width: 500px;
     align-items: center;
     /* background: rgba(255,255,255,0.3); */
-    background: rgba(113,187,217,0.5);
+    background: rgba(113,187,217,0.7);
     padding: 20px;
     border-radius:20px;
     /* background: #71bbd9; */
@@ -46,6 +51,12 @@ a.logo {
     top: 10px;
 }
 
+
+@media screen and (max-width: 768px){
+    body.text-center {
+    background-image: url('/assets/images/qr_code_log_mobile.jpg');
+}
+}
 
 @media screen and (max-width: 540px) {   
      main.form-signin {

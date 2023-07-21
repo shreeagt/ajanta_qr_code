@@ -44,7 +44,7 @@ label.cabinet input.file{
                 <input type="text" name="lastname" id="lastname" class="form-control" value="{{ $doctor->lastname }}">
             </div>
             <div class="form-group">
-                <label for="contacno">Contact No</label>
+                <label for="contacno">Speciality</label>
                 <input type="contacno" name="contacno" id="contacno" class="form-control" value="{{ $doctor->contacno }}">
             </div>
             <div class="form-group">
@@ -56,19 +56,32 @@ label.cabinet input.file{
                 <input type="file" name="logo" id="logo" class="form-control" value="logo">
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" class="form-control" value="{{ $doctor->email }}">
+                <label for="doctors code">Doctors Code:</label>
+                <input type="text" name="email" id="email" class="form-control" value="{{ $doctor->email }}">
             </div>
 
+            <div class="form-group">
+                <label for="croppedPhoto" class="form-label">Dr. Photo</label>
+                <input value="{{ $doctor->croppedPhoto }}" 
+                type="hidden" 
+                class="form-control" 
+                name="croppedPhoto" 
+                id="photo-cropped"
+                placeholder="Dr. Photo" >
+            </div>
+            
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <label for="logo" class="form-label">Doctor Image</label> 
                         <label class="cabinet center-block">
                             <figure>
-                                <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                @if ($doctor->croppedPhoto)
+                                    <img src="{{ asset($doctor->croppedPhoto) }}" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                @else
+                                    <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                @endif
                                 <figcaption><i class="fa fa-camera"></i></figcaption>
-                        </figure>
+                            </figure>
                             <input type="file" class="item-img file center-block" name="file_photo"/>
                         </label>
                     </div>

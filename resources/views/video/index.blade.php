@@ -21,7 +21,7 @@
                     <th>Clinick Name</th>  
                     <th>Speciality</th>   
                     <th>City</th>
-                    <th>Designation</th> 
+                    <th>Doctors Code</th> 
                     <th>Logo</th>
                 </tr>
             @endif

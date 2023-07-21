@@ -73,12 +73,12 @@ label.cabinet input.file{
 
                
                 <div class="mb-3">
-                    <label for="email" class="form-label">Designation</label>
+                    <label for="email" class="form-label">Doctors Code</label>
                     <input value="{{ old('email') }}"
                         type="text" 
                         class="form-control" 
                         name="email" 
-                        placeholder="Designation" required>
+                        placeholder="Doctors Code" required>
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>
                     @endif
@@ -131,23 +131,34 @@ label.cabinet input.file{
                     @endif
                 </div>
 
-
-                
-                <!-- partial:index.partial.html -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <label for="logo" class="form-label">Doctor Image</label> 
-                        <label class="cabinet center-block">
-                            <figure>
-                                <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
-                                <figcaption><i class="fa fa-camera"></i></figcaption>
-                        </figure>
-                            <input type="file" class="item-img file center-block" name="file_photo"/>
-                        </label>
-                    </div>
+                 <!-- partial:index.partial.html -->
+                 <div class="mb-3">
+                    <label for="croppedPhoto" class="form-label">Dr. Photo</label>
+                        <input value="{{ old('croppedPhoto') }}" 
+                        type="hidden" 
+                        class="form-control" 
+                        name="croppedPhoto" 
+                        id="photo-cropped"
+                        placeholder="Dr. Photo" required>
+                    @if ($errors->has('croppedPhoto'))
+                        <span class="text-danger text-left">{{ $errors->first('croppedPhoto') }}</span>
+                    @endif
                 </div>
-            </div>
+                
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <label class="cabinet center-block">
+                                <figure>
+                                    <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                    <figcaption><i class="fa fa-camera"></i></figcaption>
+                            </figure>
+                                <input type="file" class="item-img file center-block" name="file_photo"/>
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div>
 
             <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">

@@ -17,9 +17,9 @@
             <div class="sidebar_list_item">
               <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.index') ? 'active' : '' }} items-center "><i class="flaticon-house mr15"></i>Users</a>
             </div>
-            <div class="sidebar_list_item">
+            {{-- <div class="sidebar_list_item">
               <a href="{{ route('roles.index') }}" class="{{ request()->routeIs('roles.index') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Roles</a>
-            </div>
+            </div> --}}
             <div class="sidebar_list_item">
               <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
             </div>

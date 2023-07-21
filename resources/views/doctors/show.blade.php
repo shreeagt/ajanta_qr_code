@@ -14,10 +14,11 @@
                         <th>ID</th>
                         <th>Dr. Name</th>
                         <th>Clinic Name</th>
-                        <th>Contact No</th>
+                        <th>Speciality</th>
                         <th>City</th>
                         <th>Logo</th>
-                        <th>Email</th>
+                        <th>Dr. Photo</th>
+                        <th>Doctors Code</th>
                         <th>Link</th>
                         <th>Actions</th>
                     </tr>
@@ -34,7 +35,15 @@
                                     <img src="{{ asset('logos/'.$doctor->logo) }}" alt="Logo" width="50" height="50">
                                 @else
                                     No Logo
-                                @endif</td>
+                                @endif
+                            </td>
+                            <td>
+                                @if ($doctor->croppedPhoto)
+                                    <img src="{{ asset($doctor->croppedPhoto) }}" alt="Doctor Photo" width="50" height="50">
+                                @else
+                                    No Photo
+                                @endif
+                            </td>  
                             <td>{{ $doctor->email }}</td>
                             <td><a href="{{ route('doctors.link', ['doctor' => $doctor->id]) }}" class="btn btn-success">Link</td>
                             <td>
@@ -52,4 +61,3 @@
         </div>
     </div>
 @endsection
-

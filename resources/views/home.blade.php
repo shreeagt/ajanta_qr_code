@@ -185,7 +185,7 @@
         <div class="row">
             <div class="col-12  mx-auto text-center">
                 <div class="logo-cover  mx-auto">
-                    <img src="{{ asset('assets/images/instareel.png') }}" class="logo-img img-fluid" name="logo-img" /> 
+                    <img src="{{ asset($doctor->croppedPhoto) }}" class="logo-img img-fluid" name="logo-img" /> 
                 </div>
                 <p class="profile-designation">{{ $doctor->lastname }} </p>
                 <div class="profile-container  mx-auto">

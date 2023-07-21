@@ -26,6 +26,11 @@ class DoctorsController extends Controller
         mkdir($folderPath, 0777, true);
     }
 
+    $FolderPath = public_path('photos');
+    if (!file_exists($FolderPath)) {
+        mkdir($FolderPath, 0777, true);
+    }
+
     $idoctor = new Doctors;
     $idoctor->firstname = $request->input('firstname');
     $idoctor->lastname = $request->input('lastname');
@@ -33,6 +38,23 @@ class DoctorsController extends Controller
     $idoctor->contacno = $request->input('contacno');
     $idoctor->city = $request->input('city');
 
+    
+
+     // Store the photo from input field as base64 string
+if ($request->has('croppedPhoto')) {
+    $png_url = uniqid().'.png';
+    $path = public_path()."/" . "photos/" . $png_url;
+    $img = $request->input('croppedPhoto');
+    $img = substr($img, strpos($img, ',')+1);
+    $data = base64_decode($img);
+    $success = file_put_contents($path, $data);
+    // Save the base64 string to the database
+    // $idoctor->croppedPhoto = base64_encode($data);
+    $idoctor->croppedPhoto = "/" . "photos/" . $png_url;
+}
+
+    
+    
     if ($request->hasFile('logo')) {
         $logoPath = $request->file('logo')->getClientOriginalName();
         $request->file('logo')->move($folderPath, $logoPath);
@@ -77,6 +99,12 @@ class DoctorsController extends Controller
         if (!file_exists($folderPath)) {
             mkdir($folderPath, 0777, true);
         }
+
+        $FolderPath = public_path('photos');
+    if (!file_exists($FolderPath)) {
+        mkdir($FolderPath, 0777, true);
+    }
+
         // Update the doctor's details based on the form input
         $doctor->firstname = $request->input('firstname');
         $doctor->lastname = $request->input('lastname');
@@ -85,11 +113,30 @@ class DoctorsController extends Controller
         $doctor->contacno = $request->input('contacno');
         $doctor->city = $request->input('city');
 
+     // Check if a new photo is uploaded and update the photo path accordingly
+     if ($request->has('croppedPhoto')) {
+        $png_url = uniqid() . '.png';
+        $path = public_path() . "/photos/" . $png_url;
+        $img = $request->input('croppedPhoto');
+        $img = substr($img, strpos($img, ',') + 1);
+        $data = base64_decode($img);
+        $success = file_put_contents($path, $data);
+        // Save the base64 string to the database
+        $doctor->croppedPhoto = "/photos/" . $png_url;
+    } else {
+        // If no new photo is uploaded, do not update the `croppedPhoto` field
+        // This ensures the photo remains unchanged in the database
+        $doctor->croppedPhoto = $doctor->croppedPhoto;
+    }
+
+
         if ($request->hasFile('logo')) {
             $logoPath = $request->file('logo')->getClientOriginalName();
             $request->file('logo')->move($folderPath, $logoPath);
             $doctor->logo = $logoPath;
         }
+
+        // dd($request->all());
     // Retrieve the soid from the users table and assign it to the soid column of the Doctors model
     $soid = Auth::id();
     $doctor->soid = $soid;

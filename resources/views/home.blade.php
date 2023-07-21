@@ -111,9 +111,9 @@
                 margin-bottom: 15px;
             }
 
-        img.logo-img.img-fluid {
+        /* img.logo-img.img-fluid {
             height: 100px;
-        }
+        } */
 
         .btn-secondary {
             color: #fff;
@@ -135,7 +135,7 @@
             padding: 5px;
             border-radius: 5px;
             margin: 2px;
-            max-width:150px;
+            max-width:100px;
             background: aliceblue;
         }
 
@@ -161,6 +161,10 @@
                 background-image: url('/assets/images/qr_code_mobile.jpg');
             }
 
+            .logo-cover.mx-auto {
+                max-width: 100px;
+            }
+
             p.profile-designation {
                 color: #fff;
                 margin-bottom:0px;
@@ -171,7 +175,7 @@
             }
         }
 
-        @media only screen and (max-width:700px){
+        @media only screen and (max-height:700px){
             .profile-details .profile-name {
                 margin-bottom: 5px;
             }
@@ -181,15 +185,17 @@
                 }
         }
     </style>
+    <!-- <div class=" main-container d-flex vh-100 justify-content-center align-items-center"> -->
     <div class=" main-container d-flex vh-100 justify-content-center align-items-center">
         <div class="row">
             <div class="col-12  mx-auto text-center">
                 <div class="logo-cover  mx-auto">
-                    <img src="{{ asset($doctor->croppedPhoto) }}" class="logo-img img-fluid" name="logo-img" /> 
+                <img src="{{ asset('logos/'.$doctor->logo) }}" class="doctor-img img-fluid" name="doctor-img" /> 
                 </div>
                 <p class="profile-designation">{{ $doctor->lastname }} </p>
                 <div class="profile-container  mx-auto">
-                    <img src="{{ asset('logos/'.$doctor->logo) }}" class="doctor-img img-fluid" name="doctor-img" /> 
+                  
+                    <img src="{{ asset($doctor->croppedPhoto) }}" class="logo-img img-fluid" name="logo-img" />
                 </div>
      
                 <div class="profile-details text-left d-inline-block mt-2">

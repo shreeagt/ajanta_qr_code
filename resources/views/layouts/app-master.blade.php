@@ -179,9 +179,9 @@ $(".gambar").attr("src", "https://user.gadjian.com/static/images/personnel_boy.p
 
           $uploadCrop = $('#upload-demo').croppie({
             viewport: {
-              width: 300,
-              height: 300,
-              type: 'circle'
+              width: 150,
+              height: 200,
+              type: 'rectangle'
             },
             enforceBoundary: false,
             enableExif: true
@@ -201,7 +201,7 @@ $(".gambar").attr("src", "https://user.gadjian.com/static/images/personnel_boy.p
             $uploadCrop.croppie('result', {
               type: 'base64',
               format: 'png',
-              shape: 'circle',
+              shape: 'rectangle',
               size: {width: 300, height: 300}
             }).then(function (resp) {
               $('#item-img-output').attr('src', resp);

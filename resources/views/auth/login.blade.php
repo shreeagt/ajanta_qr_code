@@ -17,12 +17,13 @@ h1.h3.mb-3.fw-normal {
 body.text-center {
     /* background: #71bbd9; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: start;
     align-items: center;
     /* background-color: rgb(0, 0, 0); */
     /* color: #522a6e!important; */
     position: relative;
-    background-image: url('/assets/images/qrcode_banner.jpg');
+    background-image: url('/assets/images/qrcode_banner.gif');
 
     background-repeat: no-repeat;
     background-position-y: center;
@@ -33,6 +34,7 @@ body.text-center {
     align-items: center;
     z-index: 0;
     padding: 10PX;
+    /* margin: 50px; */
 }
 
     main.form-signin {
@@ -42,6 +44,7 @@ body.text-center {
     background: rgba(113,187,217,0.7);
     padding: 20px;
     border-radius:20px;
+    margin:20px;
     /* background: #71bbd9; */
 }
 
@@ -54,7 +57,8 @@ a.logo {
 
 @media screen and (max-width: 768px){
     body.text-center {
-    background-image: url('/assets/images/qr_code_log_mobile.jpg');
+    background-image: url('/assets/images/qr_code_log_mobile.gif');
+    justify-content: center;
 }
 }
 

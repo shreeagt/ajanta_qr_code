@@ -33,9 +33,10 @@ body.text-center {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     z-index: 0;
     padding: 10PX;
+    padding-left:10%;
     /* margin: 50px; */
 }
 
@@ -62,6 +63,7 @@ a.logo {
     body.text-center {
     background-image: url('/assets/images/qr_code_log_mobile.jpg');
     justify-content: center;
+    padding-left: initial;
 }
 }
 
@@ -82,12 +84,16 @@ a.logo {
     <img src="{{ asset('assets/images/instareel.png') }}" class="img-fluid mt-2" alt="" style="max-width:150px;">
 </a>
 @section('content')
+
     <form method="post" action="{{ route('login.perform') }}">
         
         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
         {{-- <img class="mb-4" src="{!! url('images/bootstrap-logo.svg') !!}" alt="" width="72" height="57"> --}}
         
-        <h1 class="h3 mb-3 fw-normal">Login</h1>
+        {{-- <h1 class="h3 mb-3 fw-normal">Login</h1> --}}
+        <h1 class="h3 mb-3 fw-normal">
+            <img src="/assets/images/psp.png" alt="psp" style="width:150px">
+        </h1>
 
         @include('layouts.partials.messages')
 

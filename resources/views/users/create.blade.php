@@ -37,7 +37,7 @@
 
                 <div class="mb-3">
                     {{-- <label for="name" class="form-label">Password</label> --}}
-                    <input value="ajanta" 
+                    <input value="Brivex" 
                         type="hidden" 
                         class="form-control" 
                         name="password" 

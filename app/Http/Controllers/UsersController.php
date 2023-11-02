@@ -27,8 +27,11 @@ class UsersController extends Controller
             // })
             // ->where("mapping_user.mapping_user_id","=",Auth::user()->id)
             // ->paginate(10);
+     
             $users = User::join("mapping_user","users.id","=","mapping_user.user_id")->paginate(10000000);
-            $users= DB::select("select * from users where lastname=1");
+ 
+            // $users= DB::select("select * from users where lastname=1");
+       
         } elseif (Auth::user()->hasRole('so')) {
             $users = User::join("mapping_user","users.id","=","mapping_user.user_id")
             ->whereHas('roles', function($role) {

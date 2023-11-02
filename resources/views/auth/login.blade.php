@@ -10,7 +10,8 @@ body {
 }
 
 h1.h3.mb-3.fw-normal {
-    color: #ed3237;
+    /* color: #ed3237; */
+    color: #f1eeee;
     font-weight: bold;
 }
 
@@ -23,7 +24,7 @@ body.text-center {
     /* background-color: rgb(0, 0, 0); */
     /* color: #522a6e!important; */
     position: relative;
-    background-image: url('/assets/images/qrcode_banner.gif');
+    background-image: url('/assets/images/qrcode_banner.jpg');
 
     background-repeat: no-repeat;
     background-position-y: center;
@@ -32,6 +33,7 @@ body.text-center {
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 0;
     padding: 10PX;
     /* margin: 50px; */
@@ -41,7 +43,8 @@ body.text-center {
     min-width: 500px;
     align-items: center;
     /* background: rgba(255,255,255,0.3); */
-    background: rgba(113,187,217,0.7);
+    /* background: rgba(113,187,217,0.7); */
+    background: rgb(119 24 121 / 60%);
     padding: 20px;
     border-radius:20px;
     margin:20px;
@@ -57,7 +60,7 @@ a.logo {
 
 @media screen and (max-width: 768px){
     body.text-center {
-    background-image: url('/assets/images/qr_code_log_mobile.gif');
+    background-image: url('/assets/images/qr_code_log_mobile.jpg');
     justify-content: center;
 }
 }

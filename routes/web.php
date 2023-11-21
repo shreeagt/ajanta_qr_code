@@ -81,6 +81,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
        
         Route::get('/videoList', 'VideoController@index')->name('videoList');
+        Route::get('/so_list', 'VideoController@getSoList')->name('video.solist');
        
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', PermissionsController::class);

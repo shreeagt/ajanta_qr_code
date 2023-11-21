@@ -23,6 +23,32 @@
             <div class="sidebar_list_item">
               <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
             </div>
+            <div class="sidebar_list_item" style="margin-top: 14px; margin-bottom: 14px;">
+              <a href="#" class="items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctor</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class=" items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Printing</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class=" items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Live</a>
+            </div>
+            @endrole
+            @role('team_lead')
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="{{ route('video.solist') }}" class=" items-center" ><i class="flaticon-cash-on-delivery mr15"></i>SO List</a>
+            </div>
+            <div class="sidebar_list_item">
+              <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-top: 14px; margin-bottom: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctor</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Printing</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Live</a>
+            </div>
             @endrole
             @role('so')
             {{-- <div class="sidebar_list_item">
@@ -32,6 +58,15 @@
               <a href="{{ route('doctors.show') }}" class="items-center">
                 <i class="flaticon-house mr15"></i>Doctors
               </a>
+            </div>
+            <div class="sidebar_list_item" style="margin-top: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctor</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Printing</a>
+            </div>
+            <div class="sidebar_list_item" style="margin-bottom: 14px;">
+              <a href="#" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center" ><i class="flaticon-cash-on-delivery mr15"></i>Live</a>
             </div>
             @endrole
           

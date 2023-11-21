@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,6 +13,13 @@ class HomeController extends Controller
      */
     public function index()
     {
+        // if (Auth::user()->hasRole('team_lead')) {
+        //     // If the user has the role, dump and die
+        //     dd('User has the role');
+        // } else {
+        //     // If the user doesn't have the role, dump and die
+        //     dd('User does not have the role');
+        // }
         return view('home.index');
     }
 

@@ -10,6 +10,8 @@ use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
+
 class UsersController extends Controller
 {
     /**
@@ -50,11 +52,13 @@ class UsersController extends Controller
     public function create() 
     {
         if (Auth::user()->hasRole('admin') ) {
-            $role= Role::whereIn('name',["so"])->latest()->get();
+            $role= Role::whereIn('name',["so", "team_lead"])->latest()->get();
+            $name = Role::where('name', 'team_lead')->first();
+            $team_leads = User::role($name->name)->get();
+            return view('users.create',["roles"=>$role, "team_leads" => $team_leads]);
         } elseif (Auth::user()->hasRole('so')) {
             $role= Role::whereIn('name',["doctor"])->latest()->get();
         }
-       
         return view('users.create',["roles"=>$role]);
     }
 
@@ -70,6 +74,7 @@ class UsersController extends Controller
 
     public function store(Request $request)
     {
+        
         $this->validate($request, [
             'firstname' => 'required',
             'lastname' => 'required',
@@ -85,6 +90,15 @@ class UsersController extends Controller
         $input = $request->all();      
         $input['password'] =  bcrypt($input['password']);
         $user = User::create($input);
+
+        if($request->role == 3){
+            $data = [
+                'teamlead_id' => $request->teamlead,
+                'so_id' => $user->id
+            ];
+            DB::table('teamlead_so_map')->insert($data);
+        }
+        
         $user->assignRole($request->input('role'));
         MappingUser::create(["mapping_user_id"=>\Auth::user()->id,"user_id"=>$user->id,"created_at"=>date("Y-m-d H:i:s"),"created_by"=>\Auth::user()->id]);   
     
@@ -116,7 +130,7 @@ class UsersController extends Controller
     public function edit(User $user) 
     {
         if (Auth::user()->hasRole('admin') ) {
-            $role=Role::whereIn('name',["so"])->latest()->get();
+            $role=Role::whereIn('name',["so", "team_lead"])->latest()->get();
         } elseif (Auth::user()->hasRole('so')) {
             $role=Role::whereIn('name',["doctor"])->latest()->get();
         }

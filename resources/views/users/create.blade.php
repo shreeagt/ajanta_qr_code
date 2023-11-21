@@ -102,7 +102,7 @@
                 <div class="mb-3">
                     <label for="role" class="form-label">Role</label>
                     <select class="form-control" 
-                        name="role" required>
+                        name="role" id="role" required>
                         <option value="">Select role</option>
                         @foreach($roles as $role)
                             <option value="{{ $role->id }}" >{{ $role->name }}</option>
@@ -112,6 +112,17 @@
                         <span class="text-danger text-left">{{ $errors->first('role') }}</span>
                     @endif
                 </div>
+                @if(isset($team_leads))
+                <div class="mb-3" id="additionalDiv" style="display: none;">
+                    <label for="role" class="form-label">Select Team Lead for SO</label>
+                    <select class="form-control" name="teamlead" id="teamlead">
+                        <option value="">Please select Team Lead</option>
+                        @foreach($team_leads as $tl)
+                        <option value="{{$tl->id}}">{{$tl->firstname}}</option>
+                        @endforeach
+                    </select>
+                </div>
+                @endif
                    {{-- <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input value="{{ old('username') }}"
@@ -132,4 +143,20 @@
         </div>
 
     </div>
+
+    <script>
+        $(document).ready(function(){
+            // Listen for changes in the role dropdown
+            $('#role').change(function(){
+                // Check if the selected value is 6
+                if($(this).val() == 3){
+                    // Show the additional div
+                    $('#additionalDiv').show();
+                } else {
+                    // Hide the additional div
+                    $('#additionalDiv').hide();
+                }
+            });
+        });
+    </script>
 @endsection

@@ -29,7 +29,7 @@ class RolesController extends Controller
     public function index(Request $request)
     {   
         $roles = Role::orderBy('id','DESC')->paginate(10);
-
+        
         return view('roles.index',compact('roles'))
             ->with('i', ($request->input('page', 1) - 1) * 5);
     }
@@ -90,7 +90,6 @@ class RolesController extends Controller
         $role = $role;
         $rolePermissions = $role->permissions->pluck('name')->toArray();
         $permissions = Permission::get();
-    
         return view('roles.edit', compact('role', 'rolePermissions', 'permissions'));
     }
     

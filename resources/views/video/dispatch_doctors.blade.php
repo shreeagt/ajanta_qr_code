@@ -2,7 +2,12 @@
 
 @section('content')
     <div class="bg-light p-4 rounded">
-        <h1>Doctors List</h1>
+        <h1>Dispatch Doctors</h1>
+
+        @if(Auth::user()->hasRole('admin'))    
+        <a href="{{ route('doctors.generate-pdf') }}" class="btn btn-primary">Download QR Code</a>
+        @endif
+        
         <div class="mt-2">
             @include('layouts.partials.messages')
         </div>
@@ -25,6 +30,17 @@
                     @endif
                 </tr>
             @endif
+            @if(Auth::user()->hasRole('so'))    
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Clinick Name</th>  
+                    <th>Speciality</th>   
+                    <th>City</th>
+                    <th>Designation</th>
+                    <th>Logo</th>
+                </tr>
+            @endif
             @if(Auth::user()->hasRole('rsm'))    
                 <tr>
                     <th>Id</th>
@@ -38,18 +54,6 @@
                     <th>Logo</th>
                 </tr>
             @endif
-            @if(Auth::user()->hasRole('so'))    
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Clinick Name</th>  
-                    <th>Speciality</th>   
-                    <th>City</th>
-                    <th>Designation</th>
-                    <th>Logo</th>
-                </tr>
-            @endif
-            
             </thead>
             <tbody>
             @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('team_lead'))
@@ -61,8 +65,8 @@
                         <td>{{$video->contacno}}</td>
                         <td>{{$video->city}}</td>
                         <td>{{$video->email}}</td>
-                        <td>{{$video->teamlead_firstname}}</td>
-                        <td>{{$video->user_firstname}}</td>
+                        <td>{{$video->user_firstname.' '.$video->user_lastname}}</td>
+                        <td>{{$video->teamlead_firstname.' '.$video->teamlead_lastname}}</td>
                         <td>@if ($video->logo)
                                     <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
                                 @else
@@ -70,28 +74,9 @@
                                 @endif
                         </td>
                         @if(Auth::user()->hasRole('admin'))
-                        <td><a href="{{route('approve.doctors', $video->id)}}" class="btn btn-sm btn-primary">Approve</a></td>
+                        <td><a href="{{route('get.doctors.live', $video->id)}}" class="btn btn-sm btn-primary">Make Live</a></td>
                         @endif
                     </tr> 
-                @endforeach
-            @endif
-            @if(Auth::user()->hasRole('rsm'))
-                @foreach($videos as $video)
-                    <tr>
-                        <td>{{$video->id}}</td>
-                        <td>{{$video->firstname}}</td>
-                        <td>{{$video->lastname}}</td>
-                        <td>{{$video->contacno}}</td>
-                        <td>{{$video->city}}</td>
-                        <td>{{$video->email}}</td>
-                        <td>{{$video->user_firstname}}</td>
-                        <td>{{$video->teamlead_firstname}}</td>
-                        <td>@if ($video->logo)
-                                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
-                                @else
-                                    No Logo
-                                @endif</td>
-                    </tr>
                 @endforeach
             @endif
             @if(Auth::user()->hasRole('so'))
@@ -105,6 +90,25 @@
                         <td>{{$video->contacno}}</td>
                         <td>{{$video->city}}</td>
                         <td>{{$video->email}}</td>
+                        <td>@if ($video->logo)
+                                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
+                                @else
+                                    No Logo
+                                @endif</td>
+                    </tr>
+                @endforeach
+            @endif
+            @if(Auth::user()->hasRole('rsm'))
+                @foreach($videos as $video)
+                    <tr>
+                        <td>{{$video->id}}</td>
+                        <td>{{$video->firstname}}</td>
+                        <td>{{$video->lastname}}</td>
+                        <td>{{$video->contacno}}</td>
+                        <td>{{$video->city}}</td>
+                        <td>{{$video->email}}</td>
+                        <td>{{$video->user_firstname}}</td>
+                        <td>{{$video->teamlead_firstname}}</td>
                         <td>@if ($video->logo)
                                     <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
                                 @else

@@ -30,18 +30,18 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $request)
     {
+        // dd($request->all());
         $credentials = $request->getCredentials();
-        //dd( $credentials);
-        if(!Auth::validate($credentials)):
+        if (!Auth::validate($credentials)) :
+            dd('hii');
             return redirect()->to('/')
                 ->withErrors(trans('auth.failed'));
         endif;
-
         $user = Auth::getProvider()->retrieveByCredentials($credentials);
 
         Auth::login($user, $request->get('remember'));
 
-        if($request->get('remember')):
+        if ($request->get('remember')) :
             $this->setRememberMeExpiration($user);
         endif;
 
@@ -55,9 +55,8 @@ class LoginController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    protected function authenticated(Request $request, $user) 
+    protected function authenticated(Request $request, $user)
     {
         return redirect()->intended();
     }
-
 }

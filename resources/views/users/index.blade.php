@@ -34,17 +34,17 @@
                         <td>{{ $user->email }}</td>
                         
                         <td>
-                            {{-- @foreach($user->roles as $role)
+                            @foreach($user->roles as $role)
                                 <span class="badge bg-primary">{{ $role->name }}</span>
-                            @endforeach  --}}
+                            @endforeach
                         </td>
-                        <td><a href="{{ route('users.show', $user->id) }}" class="btn btn-warning btn-sm">Show</a></td>
+                        <!-- <td><a href="{{ route('users.show', $user->id) }}" class="btn btn-warning btn-sm">Show</a></td>
                         <td><a href="{{ route('users.edit', $user->id) }}" class="btn btn-info btn-sm">Edit</a></td>
                         <td>
                             {!! Form::open(['method' => 'DELETE','route' => ['users.destroy', $user->id],'style'=>'display:inline']) !!}
                             {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm']) !!}
                             {!! Form::close() !!}
-                        </td>
+                        </td> -->
                     </tr>
                 @endforeach
             </tbody>

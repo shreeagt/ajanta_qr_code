@@ -81,8 +81,17 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
 
        
         Route::get('/videoList', 'VideoController@index')->name('videoList');
-        Route::get('/so_list', 'VideoController@getSoList')->name('video.solist');
-       
+        Route::get('/so-list', 'VideoController@getSoList')->name('video.solist');
+        Route::get('/dm-list', 'VideoController@getDmList')->name('video.dmlist');
+        Route::get('/approve_doctors/{doctor_id}', 'VideoController@approveDoctors')->name('approve.doctors');
+        Route::get('/approved-doctors', 'VideoController@getApproveDoctors')->name('getapprove.doctors');
+        Route::get('/assign_printer/{doctor_id}', 'VideoController@assignPrinter')->name('assign.printer');
+        Route::get('/printers', 'VideoController@getDoctorsPrinter')->name('get.doctors.printer');
+        Route::get('/dispatch_doctors/{doctor_id}', 'VideoController@getDoctorsDispatch')->name('get.dispatch.doctors');
+        Route::get('/dispatched-doctors', 'VideoController@getDispatchedDoctors')->name('get.dispatched.doctors');
+        Route::get('/make-live/{doctor_id}','VideoController@makeDoctorLive')->name('get.doctors.live');
+        Route::get('/live-doctors','VideoController@liveDoctors')->name('live.doctors');
+        Route::get('/all-doctors', 'VideoController@allDoctors')->name('all.doctors');
         Route::resource('roles', RolesController::class);
         Route::resource('permissions', PermissionsController::class);
 

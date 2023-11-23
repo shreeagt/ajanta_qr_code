@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\VideoModel;
 use App\Models\Doctors;
 use App\Models\User;
+use Carbon\Carbon;
 use DB;
 use Auth;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
@@ -26,15 +27,19 @@ class VideoController extends Controller
                 ->join('users', 'doctors.soid', '=', 'users.id')
                 ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
                 ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
                 ->select(
                     'doctors.*',
                     'users.firstname as user_firstname',
                     'users.lastname as user_lastname',
                     'teamlead_so_map.teamlead_id',
                     'teamlead_user.firstname as teamlead_firstname',
-                    'teamlead_user.lastname as teamlead_lastname'
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 0)
                 ->get();
             /* VideoModel::select('video.*',"video_user.firstname as videouserfirstname","video_user.lastname as videouserlastname","approvebyuser.firstname as approvebyuserfirstname","approvebyuser.lastname as approvebyuserlastname")
             ->join('mapping_user', 'video.created_by', '=', 'mapping_user.user_id')
@@ -42,6 +47,25 @@ class VideoController extends Controller
             ->join('users as approvebyuser', 'video.created_by', '=','approvebyuser.id')            
             ->latest()
             ->paginate(10);*/
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $id = Auth::user()->hasRole('rsm');
+            $id = Auth::user()->id;
+
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('doctors.rsm_id', '=', $id)
+                ->get();
         } elseif (Auth::user()->hasRole('so')) {
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
@@ -59,10 +83,20 @@ class VideoController extends Controller
         } elseif (Auth::user()->hasRole('team_lead')) {
             $id = Auth::user()->hasRole('team_lead');
             $id = Auth::user()->id;
-            $videos = DB::table('teamlead_so_map')
-                ->select('teamlead_so_map.*', 'doctors.*')
-                ->join('doctors', 'teamlead_so_map.so_id', '=', 'doctors.soid')
-                ->where('teamlead_so_map.teamlead_id', '=', $id)
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('doctors.teamlead_id', '=', $id)
                 ->get();
         }
 
@@ -171,10 +205,368 @@ class VideoController extends Controller
         return redirect()->route('videoList');
     }
 
+
     public function getSoList()
     {
         $id = Auth::user()->id;
-        $so_list = DB::table('teamlead_so_map')->join('users', 'teamlead_so_map.so_id', 'users.id')->where('teamlead_id', $id)->get();
+        if (Auth::user()->hasRole('team_lead')) {
+            $so_list = DB::table('teamlead_so_map')->join('users', 'teamlead_so_map.so_id', '=', 'users.id')->where('teamlead_id', $id)->get();
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $so_list = DB::table('teamlead_so_map')->join('users', 'teamlead_so_map.so_id', '=', 'users.id')->select('users.*')->where('users.designation', 'SO')->where('rsm_id', $id)->distinct()->get();
+        }
         return view('video.solist', compact('so_list'));
+    }
+
+    public function getDmList()
+    {
+        $id = Auth::user()->id;
+        $dm_list = DB::table('teamlead_so_map')->join('users', 'teamlead_so_map.teamlead_id', '=', 'users.id')->select('users.*')->where('rsm_id', $id)->distinct()->get();
+        return view('video.dm_list', compact('dm_list'));
+    }
+
+    public function approveDoctors($doctor_id)
+    {
+        $current_date_time = Carbon::now()->toDateTimeString();
+        DB::table('doctors')->where('id', $doctor_id)->update(['approval_status' => 1, 'approval_time' => $current_date_time]);
+        return redirect()->route('videoList');
+    }
+
+    public function getApproveDoctors()
+    {
+        if (Auth::user()->hasRole('admin')) {
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 0)
+                ->get();
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $id = Auth::user()->hasRole('rsm');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('doctors.rsm_id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('so')) {
+            $id = Auth::user()->hasRole('so');
+            $id = Auth::user()->id;
+            $videos = DB::table('users')
+                ->select('users.*', 'doctors.*')
+                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
+                ->where('users.id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('team_lead')) {
+            $id = Auth::user()->hasRole('team_lead');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('doctors.teamlead_id', '=', $id)
+                ->get();
+        }
+
+        return view('video.approve_doctors', compact('videos'));
+    }
+
+    public function assignPrinter($id)
+    {
+        $current_date_time = Carbon::now()->toDateTimeString();
+        DB::table('doctors')->where('id', $id)->update(['assign_printer' => 1, 'print_time' => $current_date_time]);
+        return redirect()->route('getapprove.doctors');
+    }
+
+    public function getDoctorsPrinter()
+    {
+        if (Auth::user()->hasRole('admin')) {
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 0)
+                ->get();
+        } elseif (Auth::user()->hasRole('so')) {
+            $id = Auth::user()->hasRole('so');
+            $id = Auth::user()->id;
+            $videos = DB::table('users')
+                ->select('users.*', 'doctors.*')
+                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
+                ->where('users.id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('team_lead')) {
+            $id = Auth::user()->hasRole('team_lead');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('doctors.teamlead_id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $id = Auth::user()->hasRole('rsm');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('assign_printer', 1)
+                ->get();
+        }
+
+        return view('video.printing_doctors', compact('videos'));
+    }
+
+    public function getDoctorsDispatch($id)
+    {
+        $current_date_time = Carbon::now()->toDateTimeString();
+        DB::table('doctors')->where('id', $id)->update(['doctors_dispatch' => 1, 'dispatch_time' => $current_date_time]);
+        return redirect()->route('get.doctors.printer');
+    }
+
+    public function getDispatchedDoctors()
+    {
+        if (Auth::user()->hasRole('admin')) {
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 0)
+                ->get();
+        } elseif (Auth::user()->hasRole('so')) {
+            $id = Auth::user()->hasRole('so');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('doctors.teamlead_id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('team_lead')) {
+            $id = Auth::user()->hasRole('team_lead');
+            $id = Auth::user()->id;
+            $videos = DB::table('teamlead_so_map')
+                ->select('teamlead_so_map.*', 'doctors.*')
+                ->join('doctors', 'teamlead_so_map.so_id', '=', 'doctors.soid')
+                ->where('teamlead_so_map.teamlead_id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $id = Auth::user()->hasRole('rsm');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('doctors_dispatch', 1)
+                ->where('doctors.rsm_id', $id)
+                ->get();
+        }
+        return view('video.dispatch_doctors', compact('videos'));
+    }
+
+    public function makeDoctorLive($id)
+    {
+        $current_date_time = Carbon::now()->toDateTimeString();
+        DB::table('doctors')->where('id', $id)->update(['live_status' => 1, 'live_time' => $current_date_time]);
+        return redirect()->route('get.dispatched.doctors');
+    }
+
+    public function liveDoctors()
+    {
+        if (Auth::user()->hasRole('admin')) {
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 1)
+                ->get();
+        } elseif (Auth::user()->hasRole('so')) {
+            $id = Auth::user()->hasRole('so');
+            $id = Auth::user()->id;
+            $videos = DB::table('users')
+                ->select('users.*', 'doctors.*')
+                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
+                ->where('users.id', '=', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('team_lead')) {
+            $id = Auth::user()->hasRole('team_lead');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('live_status', 1)
+                ->where('doctors.teamlead_id', $id)
+                ->get();
+        } elseif (Auth::user()->hasRole('rsm')) {
+            $id = Auth::user()->hasRole('rsm');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('live_status', 1)
+                ->get();
+        }
+        return view('video.live_doctors', compact('videos'));
+    }
+
+
+
+    public function allDoctors()
+    {
+        $videos = DB::table('doctors')
+            ->join('users', 'doctors.soid', '=', 'users.id')
+            ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+            ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+            ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+            ->select(
+                'doctors.*',
+                'users.firstname as user_firstname',
+                'users.lastname as user_lastname',
+                'teamlead_so_map.teamlead_id',
+                'teamlead_user.firstname as teamlead_firstname',
+                'teamlead_user.lastname as teamlead_lastname',
+                'rsm_user.firstname as rsm_firstname',
+                'rsm_user.lastname as rsm_lastname'
+            )
+            ->whereNotNull('teamlead_so_map.teamlead_id')
+            ->get();
+
+        return view('video.alldoctors', compact('videos'));
     }
 }

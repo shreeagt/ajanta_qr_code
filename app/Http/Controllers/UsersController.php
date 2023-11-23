@@ -52,7 +52,7 @@ class UsersController extends Controller
     public function create() 
     {
         if (Auth::user()->hasRole('admin') ) {
-            $role= Role::whereIn('name',["so", "team_lead"])->latest()->get();
+            $role= Role::whereIn('name',["so", "team_lead", "rsm"])->latest()->get();
             $name = Role::where('name', 'team_lead')->first();
             $team_leads = User::role($name->name)->get();
             return view('users.create',["roles"=>$role, "team_leads" => $team_leads]);
@@ -130,15 +130,22 @@ class UsersController extends Controller
     public function edit(User $user) 
     {
         if (Auth::user()->hasRole('admin') ) {
-            $role=Role::whereIn('name',["so", "team_lead"])->latest()->get();
+            $role=Role::whereIn('name',["so", "team_lead", "rsm"])->latest()->get();
+
+            $name = Role::where('name', 'team_lead')->first();
+            $team_leads = User::role($name->name)->get();
+
+            $name_rsm = Role::where('name', 'rsm')->first();
+            $rsm = User::role($name_rsm->name)->get();
         } elseif (Auth::user()->hasRole('so')) {
             $role=Role::whereIn('name',["doctor"])->latest()->get();
         }
-        
         return view('users.edit', [
             'user' => $user,
             'userRole' => $user->roles->pluck('name')->toArray(),
-            'roles' => $role
+            'roles' => $role,
+            'team_leads' => $team_leads,
+            'rsm' => $rsm
         ]);
     }
 
@@ -153,6 +160,7 @@ class UsersController extends Controller
     
     public function update(Request $request, $id)
     {
+        dd($request->all());
         // $this->validate($request, [
         //     'name' => 'required',
         //     'email' => 'required|email|unique:users,email,'.$id,

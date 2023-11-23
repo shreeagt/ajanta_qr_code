@@ -2,7 +2,12 @@
 
 @section('content')
     <div class="bg-light p-4 rounded">
-        <h1>Doctors List</h1>
+        <h1>Approved Doctors List</h1>
+
+        @if(Auth::user()->hasRole('admin'))    
+        <a href="{{ route('doctors.generate-pdf') }}" class="btn btn-primary">Download QR Code</a>
+        @endif
+        
         <div class="mt-2">
             @include('layouts.partials.messages')
         </div>
@@ -49,7 +54,6 @@
                     <th>Logo</th>
                 </tr>
             @endif
-            
             </thead>
             <tbody>
             @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('team_lead'))
@@ -70,7 +74,7 @@
                                 @endif
                         </td>
                         @if(Auth::user()->hasRole('admin'))
-                        <td><a href="{{route('approve.doctors', $video->id)}}" class="btn btn-sm btn-primary">Approve</a></td>
+                        <td><a href="{{route('assign.printer', $video->id)}}" class="btn btn-sm btn-primary">Assign Printer</a></td>
                         @endif
                     </tr> 
                 @endforeach

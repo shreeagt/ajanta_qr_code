@@ -170,7 +170,7 @@
                             @endif
                         </div>
                     </div>
-                </div><a href="#">
+                </div><a href="{{ route('videoList') }}">
                     <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div>
@@ -187,7 +187,7 @@
                             <div>Approved Doctors</div>
                         </div>
                     </div>
-                </div><a href="#">
+                </div><a href="{{ route('getapprove.doctors') }}">
                     <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div>
@@ -204,7 +204,7 @@
                             <div>Printer History</div>
                         </div>
                     </div>
-                </div><a href="#">
+                </div><a href="{{ route('get.doctors.printer') }}">
                     <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div>
@@ -221,7 +221,7 @@
                             <div>Dispatch Doctors</div>
                         </div>
                     </div>
-                </div><a href="#">
+                </div><a href="{{route('get.dispatched.doctors')}}">
                     <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                         <div class="clearfix"></div>
                     </div>
@@ -233,19 +233,24 @@
 
 
     <div class="row align-items-center">
-        
+
         <div class="col-lg-4">
 
 
             <div class="panel panel-orange">
                 <div class="panel-heading">
                     <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
+                        <div class="col-3"><i class="fa-light fa-square-check fa-4x"></i></div>
                         <div class="col-9 text-right">
                             <div class="huge">{{$live_doctors}}</div>
                             <div>Live Doctors</div>
                         </div>
                     </div>
+                    <a href="{{route('live.doctors')}}">
+                        <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
                 </div>
 
             </div>

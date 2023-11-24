@@ -126,6 +126,7 @@
             @endif
             @if(Auth::user()->hasRole('so'))
             @foreach($videos as $video)
+            
             <tr>
                 @if(Auth::user()->hasRole('so'))
                 <td>{{$video->id}}</td>

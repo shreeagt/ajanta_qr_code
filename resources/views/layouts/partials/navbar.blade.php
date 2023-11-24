@@ -6,7 +6,7 @@
 </style>
 <div class="dashboard_content_wrapper">
   <div class="dashboard dashboard_wrapper pr30 pr0-md">
-    <div class="dashboard__sidebar">
+    <div class="dashboard__sidebar" style="overflow: hidden;">
 
       <div class="dashboard_sidebar_list">
 
@@ -25,16 +25,16 @@
           <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
         </div>
         <div class="sidebar_list_item" style="margin-top: 14px; margin-bottom: 14px;">
-          <a href="{{ route('getapprove.doctors') }}" class="items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctor</a>
+          <a href="{{ route('getapprove.doctors') }}" class="items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('get.doctors.printer') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Printing</a>
+          <a href="{{ route('get.doctors.printer') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Dispatch Doctor</a>
+          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatched</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live</a>
+          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
         </div>
         @endrole
         @role('team_lead')

@@ -265,6 +265,18 @@ class VideoController extends Controller
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
             $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 1)
                 ->where('assign_printer', '=', 0)
                 ->where('soid', '=', $id)
@@ -328,6 +340,18 @@ class VideoController extends Controller
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
             $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('doctors.soid', '=', $id)
                 ->where('approval_status', '=', 1)
                 ->where('assign_printer', '=', 1)
@@ -415,6 +439,21 @@ class VideoController extends Controller
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
             $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->leftJoin('users as rsm_user', 'teamlead_so_map.rsm_id', '=', 'rsm_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                    'rsm_user.firstname as rsm_firstname',
+                    'rsm_user.lastname as rsm_lastname'
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('doctors.soid', '=', $id)
                 ->where('approval_status', '=', 1)
                 ->where('assign_printer', '=', 1)
@@ -504,6 +543,18 @@ class VideoController extends Controller
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
             $videos = DB::table('doctors')
+                ->join('users', 'doctors.soid', '=', 'users.id')
+                ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
+                ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
+                ->select(
+                    'doctors.*',
+                    'users.firstname as user_firstname',
+                    'users.lastname as user_lastname',
+                    'teamlead_so_map.teamlead_id',
+                    'teamlead_user.firstname as teamlead_firstname',
+                    'teamlead_user.lastname as teamlead_lastname',
+                )
+                ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('doctors.soid', '=', $id)
                 ->where('approval_status', '=', 1)
                 ->where('assign_printer', '=', 1)

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="bg-light p-4 rounded">
-    <h1>Doctors List</h1>
+    <h1>SO List</h1>
 
 
     <div class="mt-2">

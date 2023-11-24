@@ -139,7 +139,7 @@
     </div>
     <!-- /.row-->
 
-    <div class="row my-3 align-items-center">
+    <!-- <div class="row my-3 align-items-center">
 
         <div class="col-md-5">
             <label for="fromtime" class="form-label">From </label>
@@ -154,7 +154,7 @@
             <button class="btn btn-primary">Filter</button>
         </div>
 
-    </div>
+    </div> -->
     <div class="row">
         <div class="col-lg-3 col-md-6">
             <div class="panel panel-orange">
@@ -233,9 +233,7 @@
 
 
     <div class="row align-items-center">
-        <div class="col-lg-8">
-            <canvas id="orderChart"></canvas>
-        </div>
+        
         <div class="col-lg-4">
 
 
@@ -249,10 +247,7 @@
                         </div>
                     </div>
                 </div>
-                {{-- <a href="#">
-                        <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                          <div class="clearfix"></div>
-                        </div></a> --}}
+
             </div>
 
 

@@ -99,7 +99,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     });
 
     Route::group(['middleware' => ['auth', 'role:admin']], function () {
-        Route::get('/doctors/generate-pdf', 'DoctorsController@generateDoctorsPdf')->name('doctors.generate-pdf');
+        Route::get('/doctors/generate-pdf/{flag}', 'DoctorsController@generateDoctorsPdf')->name('doctors.generate-pdf');
     });
 
     Route::group(['middleware' => ['auth', 'role:so']], function () {

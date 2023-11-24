@@ -183,12 +183,28 @@ class DoctorsController extends Controller
         return redirect()->back()->with('success', 'Video uploaded successfully.');
     }
 
-    public function generateDoctorsPdf()
+    public function generateDoctorsPdf($flag)
     {
         $pdf = new Dompdf();
         $pdf->setPaper('A4');
-
-        $doctors = Doctors::all(); // Retrieve all doctors from the database
+        if ($flag == 'approve_doctors') {
+            $doctors = Doctors::where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 0)->get();
+        } elseif ($flag == 'printing_doctors') {
+            $doctors = Doctors::where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 0)->get();
+        } elseif ($flag == 'dispatch_doctors') {
+            $doctors = Doctors::where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 0)->get();
+        } elseif ($flag == 'live_doctors') {
+            $doctors = Doctors::where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 1)->get();
+        }
 
         $html = '<table style="border-collapse: collapse; table-layout: fixed; width: 100%;">';
 

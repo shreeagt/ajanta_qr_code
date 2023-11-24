@@ -22,7 +22,6 @@ class VideoController extends Controller
     public function index()
     {
         if (Auth::user()->hasRole('admin')) {
-            //  $videos =DB::table('users')->get(); 
             $videos = DB::table('doctors')
                 ->join('users', 'doctors.soid', '=', 'users.id')
                 ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
@@ -41,12 +40,6 @@ class VideoController extends Controller
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 0)
                 ->get();
-            /* VideoModel::select('video.*',"video_user.firstname as videouserfirstname","video_user.lastname as videouserlastname","approvebyuser.firstname as approvebyuserfirstname","approvebyuser.lastname as approvebyuserlastname")
-            ->join('mapping_user', 'video.created_by', '=', 'mapping_user.user_id')
-            ->join('users as video_user', 'video.created_by', '=','video_user.id')
-            ->join('users as approvebyuser', 'video.created_by', '=','approvebyuser.id')            
-            ->latest()
-            ->paginate(10);*/
         } elseif (Auth::user()->hasRole('rsm')) {
             $id = Auth::user()->hasRole('rsm');
             $id = Auth::user()->id;
@@ -64,22 +57,16 @@ class VideoController extends Controller
                     'teamlead_user.lastname as teamlead_lastname',
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
+                ->where('approval_status', '=', 0)
                 ->where('doctors.rsm_id', '=', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('so')) {
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
-            // $videos = VideoModel::latest()->paginate(10);
-            //$videos=DB::select('select * from doctors inner join users on doctors.soid = users.id where doctors.soid=?',[$id]);
-            $videos = DB::table('users')
-                ->select('users.*', 'doctors.*')
-                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
-                ->where('users.id', '=', $id)
+            $videos = DB::table('doctors')
+                ->where('doctors.so_id', '=', $id)
+                ->where('approval_status', '=', 0)
                 ->get();
-            // dd($videos);
-            // $vid=DB::select('select * from users inner join doctors On users.id = doctors.soid where doctors.soid=?',[$id]);
-            // $videos = DB::table('doctors')// ->selectRaw()// ->where('id','=',1)// ->get();/*VideoModel::select('video.*')/*->join('mapping_user', 'video.created_by', '=', 'mapping_user.user_id')->where('mapping_user.mapping_user_id', \Auth::user()->id)->latest()  ->paginate(10);*/
-
         } elseif (Auth::user()->hasRole('team_lead')) {
             $id = Auth::user()->hasRole('team_lead');
             $id = Auth::user()->id;
@@ -97,6 +84,7 @@ class VideoController extends Controller
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('doctors.teamlead_id', '=', $id)
+                ->where('approval_status', '=', 0)
                 ->get();
         }
 
@@ -270,15 +258,16 @@ class VideoController extends Controller
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 0)
                 ->where('doctors.rsm_id', '=', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('so')) {
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
-            $videos = DB::table('users')
-                ->select('users.*', 'doctors.*')
-                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
-                ->where('users.id', '=', $id)
+            $videos = DB::table('doctors')
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 0)
+                ->where('soid', '=', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('team_lead')) {
             $id = Auth::user()->hasRole('team_lead');
@@ -297,6 +286,7 @@ class VideoController extends Controller
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 0)
                 ->where('doctors.teamlead_id', '=', $id)
                 ->get();
         }
@@ -337,10 +327,11 @@ class VideoController extends Controller
         } elseif (Auth::user()->hasRole('so')) {
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
-            $videos = DB::table('users')
-                ->select('users.*', 'doctors.*')
-                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
-                ->where('users.id', '=', $id)
+            $videos = DB::table('doctors')
+                ->where('doctors.soid', '=', $id)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 0)
                 ->get();
         } elseif (Auth::user()->hasRole('team_lead')) {
             $id = Auth::user()->hasRole('team_lead');
@@ -359,6 +350,8 @@ class VideoController extends Controller
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 0)
                 ->where('doctors.teamlead_id', '=', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('rsm')) {
@@ -377,7 +370,10 @@ class VideoController extends Controller
                     'teamlead_user.lastname as teamlead_lastname',
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
-                ->where('assign_printer', 1)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 0)
+                ->where('doctors.teamlead_id', '=', $id)
                 ->get();
         }
 
@@ -419,6 +415,16 @@ class VideoController extends Controller
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
             $videos = DB::table('doctors')
+                ->where('doctors.soid', '=', $id)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 0)
+                ->get();
+        } elseif (Auth::user()->hasRole('team_lead')) {
+            $id = Auth::user()->hasRole('team_lead');
+            $id = Auth::user()->id;
+            $videos = DB::table('doctors')
                 ->join('users', 'doctors.soid', '=', 'users.id')
                 ->leftJoin('teamlead_so_map', 'doctors.soid', '=', 'teamlead_so_map.so_id')
                 ->leftJoin('users as teamlead_user', 'teamlead_so_map.teamlead_id', '=', 'teamlead_user.id')
@@ -432,15 +438,10 @@ class VideoController extends Controller
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
                 ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 0)
                 ->where('doctors.teamlead_id', '=', $id)
-                ->get();
-        } elseif (Auth::user()->hasRole('team_lead')) {
-            $id = Auth::user()->hasRole('team_lead');
-            $id = Auth::user()->id;
-            $videos = DB::table('teamlead_so_map')
-                ->select('teamlead_so_map.*', 'doctors.*')
-                ->join('doctors', 'teamlead_so_map.so_id', '=', 'doctors.soid')
-                ->where('teamlead_so_map.teamlead_id', '=', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('rsm')) {
             $id = Auth::user()->hasRole('rsm');
@@ -458,7 +459,10 @@ class VideoController extends Controller
                     'teamlead_user.lastname as teamlead_lastname',
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
-                ->where('doctors_dispatch', 1)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 0)
                 ->where('doctors.rsm_id', $id)
                 ->get();
         }
@@ -499,10 +503,12 @@ class VideoController extends Controller
         } elseif (Auth::user()->hasRole('so')) {
             $id = Auth::user()->hasRole('so');
             $id = Auth::user()->id;
-            $videos = DB::table('users')
-                ->select('users.*', 'doctors.*')
-                ->leftJoin('doctors', 'users.id', '=', 'doctors.soid')
-                ->where('users.id', '=', $id)
+            $videos = DB::table('doctors')
+                ->where('doctors.soid', '=', $id)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 1)
                 ->get();
         } elseif (Auth::user()->hasRole('team_lead')) {
             $id = Auth::user()->hasRole('team_lead');
@@ -520,7 +526,10 @@ class VideoController extends Controller
                     'teamlead_user.lastname as teamlead_lastname',
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
-                ->where('live_status', 1)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 1)
                 ->where('doctors.teamlead_id', $id)
                 ->get();
         } elseif (Auth::user()->hasRole('rsm')) {
@@ -539,7 +548,11 @@ class VideoController extends Controller
                     'teamlead_user.lastname as teamlead_lastname',
                 )
                 ->whereNotNull('teamlead_so_map.teamlead_id')
-                ->where('live_status', 1)
+                ->where('approval_status', '=', 1)
+                ->where('assign_printer', '=', 1)
+                ->where('doctors_dispatch', '=', 1)
+                ->where('live_status', '=', 1)
+                ->where('doctors.rsm_id', $id)
                 ->get();
         }
         return view('video.live_doctors', compact('videos'));

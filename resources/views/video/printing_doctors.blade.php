@@ -47,7 +47,7 @@
                 <th>Clinick Name</th>
                 <th>Speciality</th>
                 <th>City</th>
-                <th>Designation</th>
+                <th>Tema Lead</th>
                 <th>Logo</th>
             </tr>
             @endif
@@ -111,14 +111,12 @@
             @if(Auth::user()->hasRole('so'))
             @foreach($videos as $video)
             <tr>
-                @if(Auth::user()->hasRole('so'))
                 <td>{{$video->id}}</td>
-                @endif
                 <td>{{$video->firstname}}</td>
                 <td>{{$video->lastname}}</td>
                 <td>{{$video->contacno}}</td>
                 <td>{{$video->city}}</td>
-                <td>{{$video->email}}</td>
+                <td>{{$video->teamlead_firstname}}</td>
                 <td>@if ($video->logo)
                     <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
                     @else

@@ -155,7 +155,6 @@
         </div>
 
     </div>
-    @if(Auth::user()->hasRole('admin'))
     <div class="row">
         <div class="col-lg-3 col-md-6">
             <div class="panel panel-orange">
@@ -163,8 +162,12 @@
                     <div class="row d-flex align-items-center ">
                         <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
                         <div class="col-9 text-right">
-                            <div class="huge">6</div>
-                            <div>Total Request</div>
+                            <div class="huge">{{$doctors}}</div>
+                            @if(Auth::user()->hasRole('admin') || Auth::user()->hasRole('so'))
+                            <div>Total Doctors</div>
+                            @else
+                            <div>Uproved Doctors</div>
+                            @endif
                         </div>
                     </div>
                 </div><a href="#">
@@ -180,8 +183,8 @@
                     <div class="row d-flex align-items-center ">
                         <div class="col-3"><i class="fa fa-tasks fa-4x"></i></div>
                         <div class="col-9 text-right">
-                            <div class="huge">12</div>
-                            <div>Approved</div>
+                            <div class="huge">{{$approve_doctors}}</div>
+                            <div>Approved Doctors</div>
                         </div>
                     </div>
                 </div><a href="#">
@@ -197,7 +200,7 @@
                     <div class="row d-flex align-items-center ">
                         <div class="col-3"><i class="fa fa-print fa-4x"></i></div>
                         <div class="col-9 text-right">
-                            <div class="huge">18</div>
+                            <div class="huge">{{$print_doctors}}</div>
                             <div>Printer History</div>
                         </div>
                     </div>
@@ -214,292 +217,8 @@
                     <div class="row d-flex align-items-center ">
                         <div class="col-3"><i class="fa fa-ban fa-4x"></i></div>
                         <div class="col-9 text-right">
-                            <div class="huge">24</div>
-                            <div>Rejected Order</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    @elseif(Auth::user()->hasRole('so') )
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-orange">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">7</div>
-                            <div>Total Request</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-tasks fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">14</div>
-                            <div>Approved</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-print fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">21</div>
-                            <div>Printer History</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-red">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-ban fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">28</div>
-                            <div>Rejected Order</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    @elseif(Auth::user()->hasRole('rsm') )
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-orange">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">8</div>
-                            <div>Total Request</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-tasks fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">16</div>
-                            <div>Approved</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-print fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">24</div>
-                            <div>Printer History</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-red">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-ban fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">32</div>
-                            <div>Rejected Order</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    @elseif(Auth::user()->hasRole('team_lead') )
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-orange">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">9</div>
-                            <div>Total Request</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-tasks fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">18</div>
-                            <div>Approved</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-print fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">27</div>
-                            <div>Printer History</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-red">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-ban fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">36</div>
-                            <div>Rejected Order</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-    @elseif(Auth::user()->harRole('rsm'))
-    <div class="row">
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-orange">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">10</div>
-                            <div>Total Request</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-green">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-tasks fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">20</div>
-                            <div>Approved</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-yellow">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-print fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">30</div>
-                            <div>Printer History</div>
-                        </div>
-                    </div>
-                </div><a href="#">
-                    <div class="panel-footer"><span class="pull-left">View Details</span><span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                        <div class="clearfix"></div>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="panel panel-red">
-                <div class="panel-heading">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-3"><i class="fa fa-ban fa-4x"></i></div>
-                        <div class="col-9 text-right">
-                            <div class="huge">40</div>
-                            <div>Rejected Order</div>
+                            <div class="huge">{{$dispatch_doctors}}</div>
+                            <div>Dispatch Doctors</div>
                         </div>
                     </div>
                 </div><a href="#">
@@ -511,7 +230,7 @@
         </div>
     </div>
 
-    @endif
+
 
     <div class="row align-items-center">
         <div class="col-lg-8">
@@ -525,8 +244,8 @@
                     <div class="row d-flex align-items-center ">
                         <div class="col-3"><i class="fa fa-envelope fa-4x"></i></div>
                         <div class="col-9 text-right">
-                            <div class="huge">50</div>
-                            <div>Qr Code Batch Request</div>
+                            <div class="huge">{{$live_doctors}}</div>
+                            <div>Live Doctors</div>
                         </div>
                     </div>
                 </div>

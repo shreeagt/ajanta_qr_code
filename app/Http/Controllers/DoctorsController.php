@@ -20,17 +20,41 @@ class DoctorsController extends Controller
     {
         return view('doctors.create');
     }
+
+    private function storeFile($file)
+    {
+
+        $name = $file->getClientOriginalName();
+        $name = pathinfo($name, PATHINFO_FILENAME);
+        $name = str_replace(' ', '_', $name);
+        //unique name to image
+        $newImageName = time() . '-' . $name . '.' . $file->extension();
+        $filePath = 'inocare/' . $newImageName;
+        # store image
+        Storage::disk('s3')->put($filePath, file_get_contents($file));
+        // $bucket_name = env('AWS_BUCKET');
+        // $region = env('AWS_DEFAULT_REGION');
+
+        $bucket_name = config("filestorage.AWS_BUCKET");
+        $region = config("filestorage.AWS_DEFAULT_REGION");
+
+        $url = 'https://' . $bucket_name . '.s3.' . $region . '.amazonaws.com/' . $filePath;
+
+        return $url;
+    }
+
     public function insertdoctors(Request $request)
     {
-        $folderPath = public_path('logos');
-        if (!file_exists($folderPath)) {
-            mkdir($folderPath, 0777, true);
-        }
+        // $folderPath = public_path('logos');
+        // if (!file_exists($folderPath)) {
+        //     mkdir($folderPath, 0777, true);
+        // }
 
-        $FolderPath = public_path('photos');
-        if (!file_exists($FolderPath)) {
-            mkdir($FolderPath, 0777, true);
-        }
+        // $FolderPath = public_path('photos');
+        // if (!file_exists($FolderPath)) {
+        //     mkdir($FolderPath, 0777, true);
+        // }
+
 
         $idoctor = new Doctors;
         $idoctor->firstname = $request->input('firstname');
@@ -44,28 +68,24 @@ class DoctorsController extends Controller
 
 
         // Store the photo from input field as base64 string
-        if ($request->has('croppedPhoto')) {
-            $png_url = uniqid() . '.png';
-            $path = public_path() . "/" . "photos/" . $png_url;
-            $img = $request->input('croppedPhoto');
-            $img = substr($img, strpos($img, ',') + 1);
-            $data = base64_decode($img);
-            $success = file_put_contents($path, $data);
-            // Save the base64 string to the database
-            // $idoctor->croppedPhoto = base64_encode($data);
-            $idoctor->croppedPhoto = "/" . "photos/" . $png_url;
-        }
+        // if ($request->has('croppedPhoto')) {
+        //     $png_url = uniqid() . '.png';
+        //     $path = public_path() . "/" . "photos/" . $png_url;
+        //     $img = $request->input('croppedPhoto');
+        //     $img = substr($img, strpos($img, ',') + 1);
+        //     $data = base64_decode($img);
+        //     $success = file_put_contents($path, $data);
+        //     // Save the base64 string to the database
+        //     // $idoctor->croppedPhoto = base64_encode($data);
+        //     $idoctor->croppedPhoto = "/" . "photos/" . $png_url;
+        // }
 
 
 
         if ($request->hasFile('logo')) {
-            $logoPath = $request->file('logo')->getClientOriginalName();
-            $request->file('logo')->move($folderPath, $logoPath);
-            $logo = $request->file('logo');
-            // $logoPath = $logo->storeAs('logos', 'logo.png');
-
-            // Save the file path or URL to your model or database if needed
-            $idoctor->logo = $logoPath;
+            $logo = $this->storeFile($request->logo);
+            $idoctor->logo = $logo;
+            $idoctor->croppedPhoto = $logo;
         }
         // Retrieve the soid from the users table and assign it to the soid column of the Doctors model
         $soid = Auth::id();

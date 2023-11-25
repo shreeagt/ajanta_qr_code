@@ -11,7 +11,7 @@
     <link href="{{asset('css/video-js.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/index.css')}}" rel="stylesheet">
     <link href="{{asset('css/videoindex.css')}}" rel="stylesheet">
-    <title>Ajanta | Brivex Eye Drops</title>
+    <title>Dr.{{ $doctor->firstname }} | Ophthalmologist | In {{ $doctor->city }} | Glaucoma-Expert </title>
 
     <style>
         @import  url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
@@ -88,7 +88,7 @@
                     <img src="{{ asset($doctor->croppedPhoto) }}" class="doctor-img img-fluid" name="doctor-img" /> 
                 </div>
                 <div class="profile-details text-center mt-3">
-                    <h4 class="profile-name">Dr.{{ $doctor->firstname }} | Ophthalmologist | In {{ $doctor->city }} | Glaucoma-Expert </h4>
+                    <h4 class="profile-name">Dr.{{ $doctor->firstname }}</h4>
                     <h4 class="profile-name">{{ $doctor->lastname }} </h4>
                     <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
                     {{-- <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p> --}}

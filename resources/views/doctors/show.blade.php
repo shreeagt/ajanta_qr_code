@@ -16,9 +16,9 @@
                         <th>Clinic Name</th>
                         <th>Speciality</th>
                         <th>City</th>
+                        <!-- <th>Dr. Photo</th> -->
                         <th>Logo</th>
-                        <th>Dr. Photo</th>
-                        <th>Doctors Code</th>
+                        <!-- <th>Doctors Code</th> -->
                         <th>Link</th>
                         <th>Actions</th>
                     </tr>
@@ -32,19 +32,19 @@
                             <td>{{ $doctor->contacno }}</td>
                             <td>{{ $doctor->city }}</td>
                             <td>@if ($doctor->logo)
-                                    <img src="{{ asset('logos/'.$doctor->logo) }}" alt="Logo" width="50" height="50">
+                                    <img src="{{ $doctor->logo }}" alt="Logo" width="50" height="50">
                                 @else
                                     No Logo
                                 @endif
                             </td>
-                            <td>
+                            <!-- <td>
                                 @if ($doctor->croppedPhoto)
                                     <img src="{{ asset($doctor->croppedPhoto) }}" alt="Doctor Photo" width="50" height="50">
                                 @else
                                     No Photo
                                 @endif
-                            </td>  
-                            <td>{{ $doctor->email }}</td>
+                            </td>   -->
+                            <!-- <td>{{ $doctor->email }}</td> -->
                             <td><a href="{{ route('doctors.link', ['doctor' => $doctor->id]) }}" class="btn btn-success">Link</td>
                             <td>
                                 <a href="{{ route('doctors.edit', ['doctor' => $doctor->id]) }}" class="btn btn-info">Edit</a>

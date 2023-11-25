@@ -3,63 +3,51 @@
 @section('content')
 
 <style>
-    
-    label.cabinet{
-	display: block;
-	cursor: pointer;
-}
+    label.cabinet {
+        display: block;
+        cursor: pointer;
+    }
 
-label.cabinet input.file{
-	position: relative;
-	height: 100%;
-	width: auto;
-	opacity: 0;
-	-moz-opacity: 0;
-  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
-  margin-top:-30px;
-}
+    label.cabinet input.file {
+        position: relative;
+        height: 100%;
+        width: auto;
+        opacity: 0;
+        -moz-opacity: 0;
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        margin-top: -30px;
+    }
 
-#upload-demo{
-	width: 340px;
-	height: 340px;
-  padding-bottom:15px;
-}
+    #upload-demo {
+        width: 340px;
+        height: 340px;
+        padding-bottom: 15px;
+    }
 </style>
-    <div class="bg-light p-4 rounded">
-        <h1>Add Doctors</h1>
-        <div class="lead">
-            Add Doctors and assign role.
-        </div>
+<div class="bg-light p-4 rounded">
+    <h1>Add Doctors</h1>
 
-        <div class="container mt-4">
-            <form method="POST" action="" enctype="multipart/form-data">
-                @csrf
-                <div class="mb-3">
-                    <label for="firstname" class="form-label">Dr.Name</label>
-                    <input value="{{ old('firstname') }}" 
-                        type="text" 
-                        class="form-control" 
-                        name="firstname" 
-                        placeholder="Dr. Name" required>
+    <div class="container mt-4">
+        <form method="POST" action="" enctype="multipart/form-data">
+            @csrf
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Doctor Name</label>
+                <input value="{{ old('firstname') }}" type="text" class="form-control" name="firstname" placeholder="Doctor Name" required>
 
-                    @if ($errors->has('firstname'))
-                        <span class="text-danger text-left">{{ $errors->first('firstname') }}</span>
-                    @endif
-                </div>
+                @if ($errors->has('firstname'))
+                <span class="text-danger text-left">{{ $errors->first('firstname') }}</span>
+                @endif
+            </div>
 
-                <div class="mb-3">
-                    <label for="lastname" class="form-label">Clnic Name</label>
-                    <input value="{{ old('lastname') }}" 
-                        type="text" 
-                        class="form-control" 
-                        name="lastname" 
-                        placeholder="Clinic Name" required>
-                    @if ($errors->has('lastname'))
-                        <span class="text-danger text-left">{{ $errors->first('lastname') }}</span>
-                    @endif
-                </div>
+            <div class="mb-3">
+                <label for="lastname" class="form-label">Clinic Name</label>
+                <input value="{{ old('lastname') }}" type="text" class="form-control" name="lastname" placeholder="Clinic Name" required>
+                @if ($errors->has('lastname'))
+                <span class="text-danger text-left">{{ $errors->first('lastname') }}</span>
+                @endif
+            </div>
 
-                <!-- <div class="mb-3">
+            <!-- <div class="mb-3">
                     <label for="name" class="form-label">Password</label>
                     <input value="{{ old('password') }}" 
                         type="text" 
@@ -71,8 +59,8 @@ label.cabinet input.file{
                     @endif
                 </div> -->
 
-               
-                <div class="mb-3">
+
+            <!-- <div class="mb-3">
                     <label for="email" class="form-label">Doctors Code</label>
                     <input value="{{ old('email') }}"
                         type="text" 
@@ -82,9 +70,9 @@ label.cabinet input.file{
                     @if ($errors->has('email'))
                         <span class="text-danger text-left">{{ $errors->first('email') }}</span>
                     @endif
-                </div>
+                </div> -->
 
-                <!-- <div class="mb-3">
+            <!-- <div class="mb-3">
                     <label for="role" class="form-label">Role</label>
                     <select class="form-control" name="role" required>
                         <option value="select_role">Select Role</option>
@@ -95,44 +83,32 @@ label.cabinet input.file{
                     @endif
                 </div> -->
 
-                <div class="mb-3">
-                    <label for="contacno" class="form-label">Speciality</label>
-                    <input value="{{ old('contacno') }}" 
-                        type="text" 
-                        class="form-control" 
-                        name="contacno" 
-                        placeholder="Speciality" required>
-                    @if ($errors->has('contacno'))
-                        <span class="text-danger text-left">{{ $errors->first('contacno') }}</span>
-                    @endif
-                </div>
+            <div class="mb-3">
+                <label for="contacno" class="form-label">Speciality</label>
+                <input value="{{ old('contacno') }}" type="text" class="form-control" name="contacno" placeholder="Speciality" required>
+                @if ($errors->has('contacno'))
+                <span class="text-danger text-left">{{ $errors->first('contacno') }}</span>
+                @endif
+            </div>
 
-                <div class="mb-3">
-                    <label for="city" class="form-label">City</label>
-                    <input value="{{ old('city') }}" 
-                        type="text" 
-                        class="form-control" 
-                        name="city" 
-                        placeholder="City" required>
-                    @if ($errors->has('city'))
-                        <span class="text-danger text-left">{{ $errors->first('city') }}</span>
-                    @endif
-                </div>
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input value="{{ old('city') }}" type="text" class="form-control" name="city" placeholder="City" required>
+                @if ($errors->has('city'))
+                <span class="text-danger text-left">{{ $errors->first('city') }}</span>
+                @endif
+            </div>
 
-                <div class="mb-3">
-                    <label for="logo" class="form-label">Clinic Logo</label>
-                    <input value="{{ old('logo') }}" 
-                        type="file" 
-                        class="form-control" 
-                        name="logo" 
-                        placeholder="Logo" required>
-                    @if ($errors->has('logo'))
-                        <span class="text-danger text-left">{{ $errors->first('logo') }}</span>
-                    @endif
-                </div>
+            <div class="mb-3">
+                <label for="logo" class="form-label">Clinic Logo</label>
+                <input value="{{ old('logo') }}" type="file" class="form-control" name="logo" placeholder="Logo" required>
+                @if ($errors->has('logo'))
+                <span class="text-danger text-left">{{ $errors->first('logo') }}</span>
+                @endif
+            </div>
 
-                 <!-- partial:index.partial.html -->
-                 <div class="mb-3">
+            <!-- partial:index.partial.html -->
+            <!-- <div class="mb-3">
                     <label for="croppedPhoto" class="form-label">Dr. Photo</label>
                         <input value="{{ old('croppedPhoto') }}" 
                         type="hidden" 
@@ -143,31 +119,31 @@ label.cabinet input.file{
                     @if ($errors->has('croppedPhoto'))
                         <span class="text-danger text-left">{{ $errors->first('croppedPhoto') }}</span>
                     @endif
-                </div>
-                
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <label class="cabinet center-block">
-                                <figure>
-                                    <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
-                                    <figcaption><i class="fa fa-camera"></i></figcaption>
+                </div> -->
+
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <label class="cabinet center-block">
+                            <figure>
+                                <img src="" class="gambar img-responsive img-thumbnail" name="croppedPhoto" id="item-img-output" />
+                                <figcaption><i class="fa fa-camera"></i></figcaption>
                             </figure>
-                                <input type="file" class="item-img file center-block" name="file_photo"/>
-                            </label>
-                        </div>
+                            <input type="file" class="item-img file center-block" name="file_photo" />
+                        </label>
                     </div>
-                    
                 </div>
+
+            </div>
 
             <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         </div>
                         <div class="modal-body">
-                        <div id="upload-demo" class="center-block"></div>
+                            <div id="upload-demo" class="center-block"></div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -175,12 +151,12 @@ label.cabinet input.file{
                         </div>
                     </div>
                 </div>
-            </div>
-               
+            </div> -->
 
-                <button type="submit" class="btn btn-primary">Save Doctor</button>
-            </form>
-        </div>
 
+            <button type="submit" class="btn btn-primary">Save Doctor</button>
+        </form>
     </div>
+
+</div>
 @endsection

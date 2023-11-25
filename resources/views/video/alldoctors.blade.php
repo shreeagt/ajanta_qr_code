@@ -4,9 +4,7 @@
 <div class="bg-light p-4 rounded">
     <h1>Doctors Printer List</h1>
 
-    @if(Auth::user()->hasRole('admin'))
-    <a href="{{ route('doctors.generate-pdf') }}" class="btn btn-primary">Download QR Code</a>
-    @endif
+    
 
     <div class="mt-2">
         @include('layouts.partials.messages')

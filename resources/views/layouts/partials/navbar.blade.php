@@ -14,15 +14,15 @@
         @role('admin')
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
           <a href="{{route('home.index')}}" class=" items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
+        </div> 
+        <div class="sidebar_list_item">
+          <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.index') ? 'active' : '' }} items-center "><i class="flaticon-house mr15"></i>User Management</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
           <a href="{{route('all.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>All Doctors</a>
         </div>
         <div class="sidebar_list_item">
-          <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.index') ? 'active' : '' }} items-center "><i class="flaticon-house mr15"></i>User Management</a>
-        </div>
-        <div class="sidebar_list_item">
-          <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Doctors List</a>
+          <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Pending Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-top: 14px; margin-bottom: 14px;">
           <a href="{{ route('getapprove.doctors') }}" class="items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>

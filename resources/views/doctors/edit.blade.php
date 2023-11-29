@@ -54,13 +54,14 @@ label.cabinet input.file{
             <div class="form-group">
                 <label for="logo">Logo</label>
                 <input type="file" name="logo" id="logo" class="form-control" value="logo">
+                <input type="hidden" name="logo" value="{{$doctor->logo}}">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="doctors code">Doctors Code:</label>
                 <input type="text" name="email" id="email" class="form-control" value="{{ $doctor->email }}">
-            </div>
+            </div> -->
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="croppedPhoto" class="form-label">Dr. Photo</label>
                 <input value="{{ $doctor->croppedPhoto }}" 
                 type="hidden" 
@@ -68,9 +69,9 @@ label.cabinet input.file{
                 name="croppedPhoto" 
                 id="photo-cropped"
                 placeholder="Dr. Photo" >
-            </div>
+            </div> -->
             
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <label class="cabinet center-block">
@@ -86,9 +87,9 @@ label.cabinet input.file{
                         </label>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <!-- <div class="modal fade" id="cropImagePop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -103,7 +104,7 @@ label.cabinet input.file{
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             
             <button type="submit" class="btn btn-primary">Update</button>

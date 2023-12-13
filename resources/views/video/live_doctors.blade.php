@@ -80,7 +80,7 @@
                 <td>{{$video->teamlead_firstname}}</td>
                 <td>{{$video->user_firstname}}</td>
                 <td>@if ($video->logo)
-                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
+                    <img src="{{ $video->logo }}" alt="Logo" width="50" height="50">
                     @else
                     No Logo
                     @endif
@@ -101,7 +101,7 @@
                 <td>{{$video->user_firstname}}</td>
                 <td>
                     @if ($video->logo)
-                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
+                    <img src="{{ $video->logo }}" alt="Logo" width="50" height="50">
                     @else
                     No Logo
                     @endif
@@ -121,7 +121,7 @@
                 <td>{{$video->city}}</td>
                 <td>{{$video->teamlead_firstname}}</td>
                 <td>@if ($video->logo)
-                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
+                    <img src="{{ $video->logo }}" alt="Logo" width="50" height="50">
                     @else
                     No Logo
                     @endif
@@ -141,7 +141,7 @@
                 <td>{{$video->user_firstname}}</td>
                 <td>{{$video->teamlead_firstname}}</td>
                 <td>@if ($video->logo)
-                    <img src="{{ asset('logos/'.$video->logo) }}" alt="Logo" width="50" height="50">
+                    <img src="{{ $video->logo }}" alt="Logo" width="50" height="50">
                     @else
                     No Logo
                     @endif

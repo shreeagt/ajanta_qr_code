@@ -99,22 +99,26 @@
                 <div class="row d-flex justify-content-center">
                     @if($doctor->facebook_link!=null)
                     <div class="col-2">
-                        <a href="//{{$doctor->facebook_link}}" class="btn btn-sm btn-secondary">Fackbook Profile</a>
+                        <a href="//{{$doctor->facebook_link}}" class="btn btn-sm">
+                            <img src="/assets/images/1.png" alt="">
+                        </a>
                     </div>
                     @endif
                     @if($doctor->insta_link!=null)
                     <div class="col-2">
-                        <a href="//{{$doctor->insta_link}}" class="btn btn-sm btn-secondary">Insta Profile</a>
+                        <a href="//{{$doctor->insta_link}}" class="btn btn-sm">
+                            <img src="/assets/images/2.png" alt="">
+                        </a>
                     </div>
                     @endif
                     @if($doctor->youtube_link!=null)
                     <div class="col-2">
-                        <a href="//{{$doctor->youtube_link}}" class="btn btn-sm btn-secondary">YouTube Channel</a>
+                        <a href="//{{$doctor->youtube_link}}" class="btn btn-sm"><img src="/assets/images/3.png" alt=""></a>
                     </div>
                     @endif
                     @if($doctor->website_link!=null)
                     <div class="col-2">
-                        <a href="//{{$doctor->website_link}}" class="btn btn-sm btn-secondary">Clinic Website</a>
+                        <a href="//{{$doctor->website_link}}" class="btn btn-sm"><img src="/assets/images/4.png" alt=""></a>
                     </div>
                     @endif
                 </div>

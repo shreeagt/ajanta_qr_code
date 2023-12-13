@@ -97,24 +97,24 @@
                 <h4 class="profile-name">{{ $doctor->lastname }} </h4>
                 <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
                 <div class="row d-flex justify-content-center">
-                    @if(isset($doctor->facebook_link))
+                    @if($doctor->facebook_link!=null)
                     <div class="col-2">
-                        <a href="/{{$doctor->facebook_link}}" class="btn btn-sm btn-secondary">Fackbook Profile</a>
+                        <a href="//{{$doctor->facebook_link}}" class="btn btn-sm btn-secondary">Fackbook Profile</a>
                     </div>
                     @endif
-                    @if(isset($doctor->instagram_link))
+                    @if($doctor->insta_link!=null)
                     <div class="col-2">
-                        <a href="/{{$doctor->instagram_link}}" class="btn btn-sm btn-secondary">Insta Profile</a>
+                        <a href="//{{$doctor->insta_link}}" class="btn btn-sm btn-secondary">Insta Profile</a>
                     </div>
                     @endif
-                    @if(isset($doctor->youtube_link))
+                    @if($doctor->youtube_link!=null)
                     <div class="col-2">
-                        <a href="/{{$doctor->youtube_link}}" class="btn btn-sm btn-secondary">YouTube Channel</a>
+                        <a href="//{{$doctor->youtube_link}}" class="btn btn-sm btn-secondary">YouTube Channel</a>
                     </div>
                     @endif
-                    @if(isset($doctor->website_link))
+                    @if($doctor->website_link!=null)
                     <div class="col-2">
-                        <a href="/{{$doctor->website_link}}" class="btn btn-sm btn-secondary">Clinic Website</a>
+                        <a href="//{{$doctor->website_link}}" class="btn btn-sm btn-secondary">Clinic Website</a>
                     </div>
                     @endif
                 </div>

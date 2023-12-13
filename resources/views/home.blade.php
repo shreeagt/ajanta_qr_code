@@ -86,17 +86,15 @@
         font-weight: 500;
     }
 
-    /* Default style for the image */
-    .img-mobile-size {
-        width: 100%;
-        /* Set the default width */
+    @media (max-width:768px){
+        .desktop{
+            display: none;
+        }
     }
 
-    /* Increase size for small screens (mobile) */
-    @media (max-width: 767px) {
-        .img-mobile-size {
-            width: 120%;
-            /* Adjust the width for mobile screens as needed */
+    @media (min-width:768px){
+        .mobile{
+            display: none;
         }
     }
 </style>
@@ -111,39 +109,39 @@
                 <h4 class="profile-name">{{ $doctor->lastname }} </h4>
                 <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
                 <div class="row d-flex justify-content-center">
-                    @if($doctor->facebook_link != null)
+                    @if($doctor->facebook_link!=null)
                     <div class="col-2">
                         <a href="//{{$doctor->facebook_link}}" class="btn btn-sm">
-                            <img src="/assets/images/1.png" alt="" class="img-fluid img-mobile-size">
+                            <img class="desktop w-75" src="/assets/images/facbook_desktop.png" alt="">
+                            <img class="mobile" src="/assets/images/facbook_mobile.png" alt="">
                         </a>
                     </div>
                     @endif
-
-                    @if($doctor->insta_link != null)
+                    @if($doctor->insta_link!=null)
                     <div class="col-2">
                         <a href="//{{$doctor->insta_link}}" class="btn btn-sm">
-                            <img src="/assets/images/2.png" alt="" class="img-fluid img-mobile-size">
+                            <img class="desktop w-75" src="/assets/images/inst_desktop.png" alt="">
+                            <img class="mobile" src="/assets/images/inst_mobile.png" alt="">
                         </a>
                     </div>
                     @endif
-
-                    @if($doctor->youtube_link != null)
+                    @if($doctor->youtube_link!=null)
                     <div class="col-2">
                         <a href="//{{$doctor->youtube_link}}" class="btn btn-sm">
-                            <img src="/assets/images/3.png" alt="" class="img-fluid img-mobile-size">
+                            <img class="desktop w-75" src="/assets/images/youtube_desktop.png" alt="">
+                            <img class="mobile" src="/assets/images/youtube_mobile.png" alt="">
                         </a>
                     </div>
                     @endif
-
-                    @if($doctor->website_link != null)
+                    @if($doctor->website_link!=null)
                     <div class="col-2">
                         <a href="//{{$doctor->website_link}}" class="btn btn-sm">
-                            <img src="/assets/images/4.png" alt="" class="img-fluid img-mobile-size">
+                            <img class="desktop w-75" src="/assets/images/website_desktop.png" alt="">
+                            <img class="mobile" src="/assets/images/website_mobile.png" alt="">
                         </a>
                     </div>
                     @endif
                 </div>
-
                 {{-- <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p> --}}
             </div>
             <h4 class="mt-4">Click below to view more information on:</h4>

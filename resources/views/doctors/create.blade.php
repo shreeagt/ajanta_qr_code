@@ -85,7 +85,7 @@
 
             <div class="mb-3">
                 <label for="contacno" class="form-label">Specialty (Text, 1-50 characters):</label>
-                <input value="{{ old('contacno') }}" type="text" class="form-control" name="contacno" placeholder="Speciality" required>
+                <input value="{{ old('contacno') }}" type="text" class="form-control" name="contacno" placeholder="Specialty" required>
                 @if ($errors->has('contacno'))
                 <span class="text-danger text-left">{{ $errors->first('contacno') }}</span>
                 @endif

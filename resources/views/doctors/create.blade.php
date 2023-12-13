@@ -31,7 +31,7 @@
         <form method="POST" action="" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label for="firstname" class="form-label">Doctor Name</label>
+                <label for="firstname" class="form-label">Doctor Name (Text, 1-50 characters):</label>
                 <input value="{{ old('firstname') }}" type="text" class="form-control" name="firstname" placeholder="Doctor Name" required>
 
                 @if ($errors->has('firstname'))
@@ -40,7 +40,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="lastname" class="form-label">Clinic Name</label>
+                <label for="lastname" class="form-label">Clinic Name (Text, 1-50 characters):</label>
                 <input value="{{ old('lastname') }}" type="text" class="form-control" name="lastname" placeholder="Clinic Name" required>
                 @if ($errors->has('lastname'))
                 <span class="text-danger text-left">{{ $errors->first('lastname') }}</span>
@@ -84,7 +84,7 @@
                 </div> -->
 
             <div class="mb-3">
-                <label for="contacno" class="form-label">Speciality</label>
+                <label for="contacno" class="form-label">Specialty (Text, 1-50 characters):</label>
                 <input value="{{ old('contacno') }}" type="text" class="form-control" name="contacno" placeholder="Speciality" required>
                 @if ($errors->has('contacno'))
                 <span class="text-danger text-left">{{ $errors->first('contacno') }}</span>
@@ -92,7 +92,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="city" class="form-label">City</label>
+                <label for="city" class="form-label">City (Text, 1-30 characters):</label>
                 <input value="{{ old('city') }}" type="text" class="form-control" name="city" placeholder="City" required>
                 @if ($errors->has('city'))
                 <span class="text-danger text-left">{{ $errors->first('city') }}</span>
@@ -100,7 +100,7 @@
             </div>
 
             <div class="mb-3">
-                <label for="logo" class="form-label">Clinic Logo</label>
+                <label for="logo" class="form-label">Doctor Profile Photo (Image, JPG/PNG format):</label>
                 <input value="{{ old('logo') }}" type="file" class="form-control" name="logo" placeholder="Logo" required>
                 @if ($errors->has('logo'))
                 <span class="text-danger text-left">{{ $errors->first('logo') }}</span>

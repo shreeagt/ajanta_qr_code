@@ -35,23 +35,23 @@
             @csrf
             @method('PUT')
             <div class="form-group">
-                <label for="firstname">Dr. Name:</label>
+                <label for="firstname">Doctor Name (Text, 1-50 characters):</label>
                 <input type="text" name="firstname" id="firstname" class="form-control" value="{{ $doctor->firstname }}">
             </div>
             <div class="form-group">
-                <label for="lastname">Clinic Name:</label>
+                <label for="lastname">Clinic Name (Text, 1-50 characters):</label>
                 <input type="text" name="lastname" id="lastname" class="form-control" value="{{ $doctor->lastname }}">
             </div>
             <div class="form-group">
-                <label for="contacno">Speciality</label>
+                <label for="contacno">Specialty (Text, 1-50 characters):</label>
                 <input type="contacno" name="contacno" id="contacno" class="form-control" value="{{ $doctor->contacno }}">
             </div>
             <div class="form-group">
-                <label for="city">City</label>
+                <label for="city">City (Text, 1-30 characters):</label>
                 <input type="city" name="city" id="city" class="form-control" value="{{ $doctor->city }}">
             </div>
             <div class="form-group">
-                <label for="logo">Logo</label>
+                <label for="logo">Doctor Profile Photo (Image, JPG/PNG format):</label>
                 <input type="file" name="logo" id="logo" class="form-control" value="logo">
                 <input type="hidden" name="logo" value="{{$doctor->logo}}">
             </div>

@@ -85,6 +85,20 @@
         color: #1d1d1b;
         font-weight: 500;
     }
+
+    /* Default style for the image */
+    .img-mobile-size {
+        width: 100%;
+        /* Set the default width */
+    }
+
+    /* Increase size for small screens (mobile) */
+    @media (max-width: 767px) {
+        .img-mobile-size {
+            width: 120%;
+            /* Adjust the width for mobile screens as needed */
+        }
+    }
 </style>
 <div class="container main-container d-flex vh-100 justify-content-center align-items-center">
     <div class="row">
@@ -97,31 +111,39 @@
                 <h4 class="profile-name">{{ $doctor->lastname }} </h4>
                 <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p>
                 <div class="row d-flex justify-content-center">
-                    @if($doctor->facebook_link!=null)
+                    @if($doctor->facebook_link != null)
                     <div class="col-2">
                         <a href="//{{$doctor->facebook_link}}" class="btn btn-sm">
-                            <img src="/assets/images/1.png" alt="">
+                            <img src="/assets/images/1.png" alt="" class="img-fluid img-mobile-size">
                         </a>
                     </div>
                     @endif
-                    @if($doctor->insta_link!=null)
+
+                    @if($doctor->insta_link != null)
                     <div class="col-2">
                         <a href="//{{$doctor->insta_link}}" class="btn btn-sm">
-                            <img src="/assets/images/2.png" alt="">
+                            <img src="/assets/images/2.png" alt="" class="img-fluid img-mobile-size">
                         </a>
                     </div>
                     @endif
-                    @if($doctor->youtube_link!=null)
+
+                    @if($doctor->youtube_link != null)
                     <div class="col-2">
-                        <a href="//{{$doctor->youtube_link}}" class="btn btn-sm"><img src="/assets/images/3.png" alt=""></a>
+                        <a href="//{{$doctor->youtube_link}}" class="btn btn-sm">
+                            <img src="/assets/images/3.png" alt="" class="img-fluid img-mobile-size">
+                        </a>
                     </div>
                     @endif
-                    @if($doctor->website_link!=null)
+
+                    @if($doctor->website_link != null)
                     <div class="col-2">
-                        <a href="//{{$doctor->website_link}}" class="btn btn-sm"><img src="/assets/images/4.png" alt=""></a>
+                        <a href="//{{$doctor->website_link}}" class="btn btn-sm">
+                            <img src="/assets/images/4.png" alt="" class="img-fluid img-mobile-size">
+                        </a>
                     </div>
                     @endif
                 </div>
+
                 {{-- <p class="profile-designation">{{ $doctor->contacno }} , {{ $doctor->city }} </p> --}}
             </div>
             <h4 class="mt-4">Click below to view more information on:</h4>

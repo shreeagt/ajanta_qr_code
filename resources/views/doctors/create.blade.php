@@ -152,8 +152,25 @@
                     </div>
                 </div>
             </div> -->
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Facebook Page Profile Link</label>
+                <input type="text" class="form-control" name="facebook_link" placeholder="Facebook Page Profile Link" >
+            </div>
 
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Instagram Profile Link (Clinic/Individual)</label>
+                <input type="text" class="form-control" name="insta_link" placeholder="Instagram Profile Link (Clinic/Individual)" >
+            </div>
 
+            <div class="mb-3">
+                <label for="firstname" class="form-label">YouTube Channel</label>
+                <input type="text" class="form-control" name="youtube_link" placeholder="YouTube Channel" >
+            </div>
+
+            <div class="mb-3">
+                <label for="firstname" class="form-label">Clinic/Individual Website</label>
+                <input type="text" class="form-control" name="website_link" placeholder="Clinic/Individual Website" >
+            </div>
             <button type="submit" class="btn btn-primary">Save Doctor</button>
         </form>
     </div>

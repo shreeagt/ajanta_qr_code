@@ -45,42 +45,16 @@ class DoctorsController extends Controller
 
     public function insertdoctors(Request $request)
     {
-        // $folderPath = public_path('logos');
-        // if (!file_exists($folderPath)) {
-        //     mkdir($folderPath, 0777, true);
-        // }
-
-        // $FolderPath = public_path('photos');
-        // if (!file_exists($FolderPath)) {
-        //     mkdir($FolderPath, 0777, true);
-        // }
-
-
         $idoctor = new Doctors;
         $idoctor->firstname = $request->input('firstname');
         $idoctor->lastname = $request->input('lastname');
         $idoctor->email = $request->input('email');
         $idoctor->contacno = $request->input('contacno');
         $idoctor->city = $request->input('city');
-
-
-
-
-
-        // Store the photo from input field as base64 string
-        // if ($request->has('croppedPhoto')) {
-        //     $png_url = uniqid() . '.png';
-        //     $path = public_path() . "/" . "photos/" . $png_url;
-        //     $img = $request->input('croppedPhoto');
-        //     $img = substr($img, strpos($img, ',') + 1);
-        //     $data = base64_decode($img);
-        //     $success = file_put_contents($path, $data);
-        //     // Save the base64 string to the database
-        //     // $idoctor->croppedPhoto = base64_encode($data);
-        //     $idoctor->croppedPhoto = "/" . "photos/" . $png_url;
-        // }
-
-
+        $idoctor->facebook_link =$request->input('facebook_link');
+        $idoctor->insta_link = $request->input('insta_link');
+        $idoctor->youtube_link = $request->input('youtube_link');
+        $idoctor->website_link = $request->input('website_link');
 
         if ($request->hasFile('logo')) {
             $logo = $this->storeFile($request->logo);
@@ -93,7 +67,6 @@ class DoctorsController extends Controller
         $idoctor->teamlead_id = $data->teamlead_id;
         $idoctor->rsm_id = $data->rsm_id;
         $idoctor->soid = $soid;
-
         $idoctor->save();
         return redirect()->route('doctors.show')->with('success', 'Doctor added');
     }
@@ -121,16 +94,7 @@ class DoctorsController extends Controller
 
     public function update(Request $request, Doctors $doctor)
     {
-        // $folderPath = public_path('logos');
-        // if (!file_exists($folderPath)) {
-        //     mkdir($folderPath, 0777, true);
-        // }
-
-        // $FolderPath = public_path('photos');
-        // if (!file_exists($FolderPath)) {
-        //     mkdir($FolderPath, 0777, true);
-        // }
-
+        
         // Update the doctor's details based on the form input
         $doctor->firstname = $request->input('firstname');
         $doctor->lastname = $request->input('lastname');
@@ -138,34 +102,20 @@ class DoctorsController extends Controller
         // $doctor->role = $request->input('role');
         $doctor->contacno = $request->input('contacno');
         $doctor->city = $request->input('city');
-
-        // Check if a new photo is uploaded and update the photo path accordingly
-        // if ($request->has('croppedPhoto')) {
-        //     $png_url = uniqid() . '.png';
-        //     $path = public_path() . "/photos/" . $png_url;
-        //     $img = $request->input('croppedPhoto');
-        //     $img = substr($img, strpos($img, ',') + 1);
-        //     $data = base64_decode($img);
-        //     $success = file_put_contents($path, $data);
-        //     // Save the base64 string to the database
-        //     $doctor->croppedPhoto = "/photos/" . $png_url;
-        // } else {
-        //     // If no new photo is uploaded, do not update the `croppedPhoto` field
-        //     // This ensures the photo remains unchanged in the database
-        //     $doctor->croppedPhoto = $doctor->croppedPhoto;
-        // }
-
+        $doctor->facebook_link = $request->input('facebook_link');
+        $doctor->insta_link = $request->input('insta_link');
+        $doctor->youtube_link = $request->input('youtube_link');
+        $doctor->website_link = $request->input('website_link');
 
         if ($request->hasFile('logo')) {
             $logo = $this->storeFile($request->logo);
             $doctor->logo = $logo;
             $doctor->croppedPhoto = $logo;
-        }else{
+        } else {
             $doctor->logo = $request->logo;
             $doctor->croppedPhoto = $request->logo;
         }
 
-        // dd($request->all());
         // Retrieve the soid from the users table and assign it to the soid column of the Doctors model
         $soid = Auth::id();
         $doctor->soid = $soid;

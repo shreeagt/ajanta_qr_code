@@ -4,7 +4,7 @@
     
    
 
-    <div class="bg-light p-4 rounded">
+    <div class="bg-light p-4 rounded" style="overflow-x: auto;">
         <h2>Permissions</h2>
         <div class="lead">
             Manage your permissions here.
@@ -15,7 +15,7 @@
             @include('layouts.partials.messages')
         </div>
 
-        <table class="table table-striped">
+        <table class="table table-striped"  id="brivex-table" style="width:100%">
             <thead>
             <tr>
                 <th scope="col" width="15%">Name</th>

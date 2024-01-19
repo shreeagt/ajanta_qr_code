@@ -4,7 +4,7 @@
     
    
 
-    <div class="bg-light p-4 rounded">
+    <div class="bg-light p-4 rounded" style="overflow-x: auto">
         <h1>Users</h1>
         <div class="lead">
             Manage your users here.
@@ -15,7 +15,7 @@
             @include('layouts.partials.messages')
         </div>
 
-        <table class="table table-striped">
+        <table class="table table-striped"  id="brivex-table" style="width:100%">
             <thead>
             <tr>
                 <th scope="col" width="1%">#</th>
@@ -49,6 +49,8 @@
                 @endforeach
             </tbody>
         </table>
+
+
 
         {{-- <div class="d-flex">
             {!! $users->links() !!}

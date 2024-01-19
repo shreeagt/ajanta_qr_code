@@ -148,7 +148,7 @@ var chart = new Chart(ctx, {
             caretSize: 8,
             backgroundColor: '#fff',
             titleFontColor: "#626974",
-            bodyFontColor: "#041E42",
+            bodyFontColor: "#7b1a79",
             shadowColor: 'rgba(4, 30, 66, 0.1)',
             borderColor: '#EAEAEA'
         },

@@ -1,7 +1,7 @@
 <style>
   a.active {
-    background-color: #75bdd9;
-    color: #041E42;
+    background-color: #f8f0f8;
+    color: #7b1a79;
   }
 </style>
 <div class="dashboard_content_wrapper">
@@ -13,85 +13,86 @@
         @auth
         @role('admin')
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('home.index')}}" class=" items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
+          <a href="{{route('home.index')}}" class="{{ request()->routeIs('home.index') ? 'active' : '' }} items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
         </div> 
         <div class="sidebar_list_item">
-          <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.index') ? 'active' : '' }} items-center "><i class="flaticon-house mr15"></i>User Management</a>
+          <a href="{{ route('users.index') }}" class="{{ request()->routeIs('users.index') || request()->routeIs('users.create') ? 'active' : '' }}
+            items-center "><i class="flaticon-house mr15"></i>User Management</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('all.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>All Doctors</a>
+          <a href="{{route('all.doctors')}}" class="{{ request()->routeIs('all.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>All Doctors</a>
         </div>
         <div class="sidebar_list_item">
           <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Pending Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-top: 14px; margin-bottom: 14px;">
-          <a href="{{ route('getapprove.doctors') }}" class="items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
+          <a href="{{ route('getapprove.doctors') }}" class="{{ request()->routeIs('getapprove.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('get.doctors.printer') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
+          <a href="{{ route('get.doctors.printer') }}" class="{{ request()->routeIs('get.doctors.printer') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatched</a>
+          <a href="{{route('get.dispatched.doctors')}}" class="{{ request()->routeIs('get.dispatched.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatched</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
+          <a href="{{route('live.doctors')}}" class="{{ request()->routeIs('live.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
         </div>
         @endrole
         @role('team_lead')
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('home.index')}}" class=" items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
+          <a href="{{route('home.index')}}" class="{{ request()->routeIs('home.index') ? 'active' : '' }} items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('video.solist') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>SO List</a>
+          <a href="{{ route('video.solist') }}" class="{{ request()->routeIs('video.solist') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>SO List</a>
         </div>
         <div class="sidebar_list_item">
           <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>All Doctors List</a>
         </div>
         <div class="sidebar_list_item" style="margin-top: 14px;">
-          <a href="{{route('getapprove.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
+          <a href="{{route('getapprove.doctors')}}" class="{{ request()->routeIs('getapprove.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('get.doctors.printer') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
+          <a href="{{ route('get.doctors.printer') }}" class="{{ request()->routeIs('get.doctors.printer') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
+          <a href="{{route('get.dispatched.doctors')}}" class="{{ request()->routeIs('get.dispatched.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
+          <a href="{{route('live.doctors')}}" class="{{ request()->routeIs('live.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
         </div>
         @endrole
         @role('rsm')
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('home.index')}}" class=" items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
+          <a href="{{route('home.index')}}" class="{{ request()->routeIs('home.index') ? 'active' : '' }} items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('video.dmlist') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>DM List</a>
+          <a href="{{ route('video.dmlist') }}" class="{{ request()->routeIs('video.dmlist') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>DM List</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('video.solist') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>SO List</a>
+          <a href="{{ route('video.solist') }}" class="{{ request()->routeIs('video.solist') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>SO List</a>
         </div>
         <div class="sidebar_list_item">
           <a href="{{ route('videoList') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>All Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-top: 14px;">
-          <a href="{{route('getapprove.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
+          <a href="{{route('getapprove.doctors')}}" class="{{ request()->routeIs('getapprove.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Approved Doctors</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{ route('get.doctors.printer') }}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
+          <a href="{{ route('get.doctors.printer') }}" class="{{ request()->routeIs('get.doctors.printer') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
+          <a href="{{route('get.dispatched.doctors')}}" class="{{ request()->routeIs('get.dispatched.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
+          <a href="{{route('live.doctors')}}" class="{{ request()->routeIs('live.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
         </div>
         @endrole
         @role('so')
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('home.index')}}" class=" items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
+          <a href="{{route('home.index')}}" class="{{ request()->routeIs('home.index') ? 'active' : '' }} items-center"><i class="fa-solid fa-gauge mr15"></i>Dashboard</a>
         </div>
         <div class="sidebar_list_item">
-          <a href="{{ route('doctors.show') }}" class="items-center">
+          <a href="{{ route('doctors.show') }}" class="{{ request()->routeIs('doctors.show') ? 'active' : '' }} items-center">
             <i class="flaticon-house mr15"></i>All Doctors
           </a>
         </div>
@@ -102,10 +103,10 @@
           <a href="{{ route('get.doctors.printer') }}" class="{{ request()->routeIs('videoList') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Under Printing</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('get.dispatched.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
+          <a href="{{route('get.dispatched.doctors')}}" class="{{ request()->routeIs('get.dispatched.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Qr Dispatch</a>
         </div>
         <div class="sidebar_list_item" style="margin-bottom: 14px;">
-          <a href="{{route('live.doctors')}}" class=" items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
+          <a href="{{route('live.doctors')}}" class="{{ request()->routeIs('live.doctors') ? 'active' : '' }} items-center"><i class="flaticon-cash-on-delivery mr15"></i>Live Qr</a>
         </div>
 
         @endrole

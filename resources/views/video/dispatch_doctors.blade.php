@@ -1,16 +1,16 @@
 @extends('layouts.app-master')
 
 @section('content')
-<div class="bg-light p-4 rounded">
+<div class="bg-light p-4 rounded" style="overflow-x: auto">
     <h1>Dispatch Doctors</h1>
     @if(Auth::user()->hasRole('admin'))
-    <a href="{{ route('doctors.generate-pdf', 'dispatch_doctors') }}" class="btn btn-primary">Download QR Code</a>
+    <a href="{{ route('doctors.generate-pdf', 'dispatch_doctors') }}" class="btn btn-primary dl-qrcode">Download QR Code</a>
     @endif
     <div class="mt-2">
         @include('layouts.partials.messages')
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped"  id="brivex-table" style="width:100%">
         <thead>
             @if(Auth::user()->hasRole('admin'))
             <tr>

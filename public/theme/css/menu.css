@@ -54,7 +54,7 @@
 .header.home9_style a.menubar span,
 .header.home9_style a.menubar:before,
 .header.home9_style a.menubar:after{
-  background: #041E42;
+  background: #7b1a79;
 }
 .header.home3_style .mobile_menu_bar a.mobile_logo,
 .header.home3_style .mobile_menu_widget_icons a.cart_btn,
@@ -68,7 +68,7 @@
 .header.home7_style .mobile_menu_widget_icons a.cart_btn,
 .header.home9_style .mobile_menu_bar a.mobile_logo,
 .header.home9_style .mobile_menu_widget_icons a.cart_btn{
-  color: #041E42;
+  color: #7b1a79;
 }
 .header.home3_style .mobile_menu_widget_icons a.cart_btn,
 .header.home4_style .mobile_menu_widget_icons a.cart_btn,
@@ -471,7 +471,7 @@
   border-right: none;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-  color: #041E42;
+  color: #7b1a79;
   content: "\f105";
   display: block;
   font-family: "Font Awesome 6 Pro";
@@ -1025,7 +1025,7 @@
   line-height: 28px;
 }
 .content_sidebar_contents_details .para{
-  color: #041E42;
+  color: #7b1a79;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 400;
@@ -1038,7 +1038,7 @@
   margin-left: 20px;
 }
 .content_sidebar_contents_details ul li{
-  color: #041E42;
+  color: #7b1a79;
   font-family: 'Jost';
   font-style: normal;
   font-weight: 400;
@@ -1102,7 +1102,7 @@
 }
 .leftside_navbar_menu .navbar-nav .nav-item .nav-link{
   border-left: 2px solid transparent;
-  color: #041E42;
+  color: #7b1a79;
   font-family: Jost;
   font-size: 16px;
   font-weight: 500;
@@ -1172,7 +1172,7 @@
 .leftside_navbar_menu.mobile_version_dpartment .navbar-nav .nav-item .nav-link{
   border-left: 2px solid transparent;
   border-bottom: 1px solid #EAEAEA;
-  color: #041E42;
+  color: #7b1a79;
   font-family: Jost;
   font-size: 16px;
   font-weight: 500;
@@ -1236,7 +1236,7 @@
   text-align: center;
 }
 .hsidebar_footer_content .list_last_content .para{
-  color: #041E42;
+  color: #7b1a79;
   font-family: Jost;
   font-size: 14px;
   font-weight: 500;
@@ -1293,7 +1293,7 @@
   background-color: #F3F5F6;
   border-radius: 8px;
   cursor: pointer;
-  color: #041E42;
+  color: #7b1a79;
   font-size: 10px;
   height: 40px;
   line-height: 40px;
@@ -1312,7 +1312,7 @@
   background-color: #F3F5F6;
   border-radius: 8px;
   cursor: pointer;
-  color: #041E42;
+  color: #7b1a79;
   font-size: 10px;
   height: 40px;
   left: -15px;

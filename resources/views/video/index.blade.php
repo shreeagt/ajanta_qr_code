@@ -1,13 +1,13 @@
 @extends('layouts.app-master')
 
 @section('content')
-<div class="bg-light p-4 rounded">
+<div class="bg-light p-4 rounded" style="overflow-x: hidden;">
     <h1>Doctors List</h1>
     <div class="mt-2">
         @include('layouts.partials.messages')
     </div>
 
-    <table class="table table-striped">
+    <table class="table table-striped"  id="brivex-table" style="width:100%">
         <thead>
             @if(Auth::user()->hasRole('admin'))
             <tr>

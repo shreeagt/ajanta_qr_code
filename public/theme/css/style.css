@@ -19305,6 +19305,13 @@ a.btn.btn-primary.dl-qrcode {
   background: #7a1878;
   border: none;
 }
+
+.btn-primary {
+  color: #fff;
+  background-color: #7a1878;
+  border-color: #7a1878;
+}
+
 /* label {
   font-weight: 600;
   color: #212529;

@@ -160,7 +160,6 @@ class UsersController extends Controller
     
     public function update(Request $request, $id)
     {
-        dd($request->all());
         // $this->validate($request, [
         //     'name' => 'required',
         //     'email' => 'required|email|unique:users,email,'.$id,
